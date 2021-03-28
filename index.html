@@ -80,7 +80,8 @@
 				</tr>
 			</thead>
 			<tbody>
-				{% for file in site.static_files | sort: "path" %}
+				{% assign staticfiles = site.static_files | sort: "path" %}
+				{% for file in staticfiles %}
 				{% assign filepath = file.path | remove: file.name %}
 				{% if filepath contains page.dir %}
 				<tr class="name">
