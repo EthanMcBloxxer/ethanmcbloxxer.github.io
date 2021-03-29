@@ -1,7 +1,7 @@
 # Executable
 Original: https://calamari.cc/release/Calamari.exe
 Alternate: https://cdn.calamari.cc/Calamari.exe
-Mirror: ./Calamari.exe
+Mirror: ./calamari.exe
 
 # Login
 U & K: Ralsei
