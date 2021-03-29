@@ -1,0 +1,10 @@
+# Executable
+Original: https://calamari.cc/release/Calamari.exe
+Alternate: https://cdn.calamari.cc/Calamari.exe
+Mirror: ./Calamari.exe
+
+# Login
+U & K: Ralsei
+P & S: s8fsFjT6VyDmKKTO+gxVBQ==
+
+using SEED encryption, https://encode-decode.com/seed-encrypt-online/ (K = key, S = string)
