@@ -1,0 +1,20 @@
+(https://)i2p.rocks.
+
+I found it when looking into BitTorrent and publicly available tracers or whatever. I never did finish that scavenge.
+
+I then continued to look inside of every single part of the website until I found a "Lokinet" link, which led me on another giant scavenge to figure out what it was. Turns out, it's another thing like Tor and i2p. I think. I never did finish that scavenge.
+
+At some point later on, I indexed the site with some random online tool, like sitemap-generator.com or something like that. I found a ton of files inside the /files directory (i2p.rocks/files), and decided to take a look.
+
+Luckily, the server was hosted on nginx with directory listing on. I could see all of the files in /files on i2p.rocks.
+
+Quite a few of them reside here on .public, but those are mostly videos.
+
+In the end, I figured out
+
+- the owner's name is (probably) jeff
+- his github account is 'majestrate'
+- https://i2p.rocks/alexcube is probably my new favorite page
+- there's a xmpp server that I couldn't figure out how to connect to
+- the owner literally made lokinet (I think)
+- somehow, https://social.i2p.rocks/jeff exists as a fediverse profile but I can't figure out how to access it. Probably with i2p.
