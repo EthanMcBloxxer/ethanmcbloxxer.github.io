@@ -1,5 +1,6 @@
 Inside of jindex, it would be better to scrap the "path" thing and just have folders sitting at the top.
 
+{% raw %}
 ```liquid
 {% assign folders = "" %}
 {% for file in site.static_files %}
@@ -13,3 +14,4 @@ Inside of jindex, it would be better to scrap the "path" thing and just have fol
   </a>
 {% endfor %}
 ```
+{% endraw %}
