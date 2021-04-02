@@ -40,8 +40,8 @@ In a basic example,
 	@boolean=y
 	@otherName=30
 	
-	?otherName != 20 {
-		;otherName !=20 {
+	?@otherName != 20 {
+		;@otherName !=20 {
 			_2000
 			say("looping")
 		}
