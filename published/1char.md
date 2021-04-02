@@ -42,8 +42,8 @@ In a basic example,
 	
 	?@otherName != 20 {
 		;@otherName !=20 {
-			_2000
 			say("looping")
+			_2000
 		}
 		say("otherName == 20, loop break")
 	}
