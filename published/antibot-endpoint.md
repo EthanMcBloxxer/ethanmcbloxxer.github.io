@@ -1,10 +1,6 @@
-For [EthanMcBloxxer/antibot-endpoint](https://github.com/EthanMcBloxxer/antibot-endpoint).
+<!-- I want to give up on interacting with this so badly, why can't they just HAVE ANOTHER REPOSITORY with this information? -->
 
-An API endpoint of codehouseRBLX/AntiBot's API.
+You can create a custom instance of [AntiBot](https://github.com/codehouseRBLX/AntiBot) on Replit which allows you to use your own domain with AntiBot, like `scammer-sword.yourname.repl.co`. Just fork their project on Replit, run it, and change `APIurl` to your Replit URL inside of `AntiBotMain.lua`.
 
-You can change `APIurl` to `https://antibot-endpoint.ethanmcbloxxer.repl.co` inside of your `AntiBotMain.lua`.
-
-This doesn't have any advantages to using, but it does contain much less files.  
-The primary use case would be that you want a custom domain for your AntiBot, like `scammer-sword.yourname.repl.co`.
-
-I **highly** recommend making an `HTTPRequest` to this endpoint at `/ping` when the game starts. Replit could put your repl to sleep if you don't have the "Hacker" plan otherwise.
+I **highly** recommend making a `GetRequest` to this endpoint at `/ping` when the game starts.  
+Replit could put your repl to sleep if you don't have the "Hacker" plan otherwise.
