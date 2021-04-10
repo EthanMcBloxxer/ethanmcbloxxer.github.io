@@ -6,8 +6,8 @@ The file or files created, modified, or removed in this commit and the revisions
 
 ## Reasons
 1. These file(s) could already be under a different license. If this is the case, the license may be included inside of the commit's description or title.
-2. I may wish for the file(s) to have more public grants. This is mostly on files deemed to be software source.
-3. The file(s) might be work which I require a specific license for, such as compiled binaries that I'd like to stay compiled.
+2. I may wish for the file(s) to have more public grants. This is mostly on files deemed to be software source code.
+3. The file(s) might be work in which I require a specific license, such as compiled binaries that I'd like to stay compiled.
 4. I might want the files to be in the public domain with no credit needed to me whatsoever.
 
 This is a template that isn't custom-made for this specific case, so there might be another unspecified reason why I might be revoking the license.
@@ -27,4 +27,4 @@ If the license is not specified in the following places:
 * A comment by EthanMcBloxxer on the commit
 * This document
 
-then you can assume that no rights are granted to you to use the file(s) and they are reserved to the original copyright holder, or, in the absense of one as well, the repository owner.
+then you can assume that no rights are granted to you to use the file(s) and they are reserved to the original copyright holder, or, in the absence of one as well, the repository owner.
