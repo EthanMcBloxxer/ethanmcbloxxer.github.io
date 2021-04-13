@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/ethanmcbloxxer
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ethanmcbloxxer.github.io
+  * I am ethanmcbloxxer (https://keybase.io/ethanmcbloxxer) on keybase.
+  * I have a public key ASBNnEAa-hsyocuXQQv6Ibu-Ym582wKkoMW6dUwZxZrpKwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01204d9c401afa1b32a1cb97410bfa21bbbe626e7cdb02a4a0c5ba754c19c59ae92b0a",
+      "host": "keybase.io",
+      "kid": "01204d9c401afa1b32a1cb97410bfa21bbbe626e7cdb02a4a0c5ba754c19c59ae92b0a",
+      "uid": "ae0fec07ee508e6dcb645cea736a8619",
+      "username": "ethanmcbloxxer"
+    },
+    "merkle_root": {
+      "ctime": 1614133214,
+      "hash": "bec6e479f92b8e545a821ab5353aa3433fd1a2088717e234c95ec474ff827bd1338582153a7189b8838a6794a7138274b66b48307a6f626c3661295c5eeb14c9",
+      "hash_meta": "bdbcb286f7359e829580c28ec585a774d6561da032a0ba525f4a6b3bb3e0c16b",
+      "seqno": 19205301
+    },
+    "service": {
+      "entropy": "9t/6NpDCmSvJXhemJ9+nFtLF",
+      "hostname": "ethanmcbloxxer.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.0"
+  },
+  "ctime": 1614133271,
+  "expire_in": 504576000,
+  "prev": "bac9478aadd70dbb7e3a191f7ff346a5afeb82976efb64564bf0d4bd2d82b98e",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgTZxAGvobMqHLl0EL+iG7vmJufNsCpKDFunVMGcWa6SsKp3BheWxvYWTESpcCCcQguslHiq3XDbt+Ohkff/NGpa/rgpdu+2RWS/DUvS2CuY7EIDYkAa//hxRd8NRVzhu+79dAAE6VFfrFxKwMovtPq0PFAgHCo3NpZ8RAn6LPanHtDeTZ2YQLAHlgwL1zg0TV7eIIIGACbyhIwCch/ptOV/vjf16xrg8W1/V6GUrWff2XSPvnnw4onAT4A6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICVb1AhAKThLdm0IdntTB2DavthXz8gFEfdrXONSIpt4o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ethanmcbloxxer
+
+==================================================================

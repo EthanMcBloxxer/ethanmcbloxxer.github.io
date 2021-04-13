@@ -1,0 +1,110 @@
+<header>Last revised on 13th April, 2021</header>
+
+<p>
+	We use <a href="https://amplitude.com">Amplitude Analytics</a>.
+	<br>
+	It collects your country (such as The US), language (such as English), and OS platform/carrier (such as Windows or iPhone/Verizon) anonymously.
+	<br>
+	This data is only kept on Amplitude&#39;s servers for 90 days, then removed.
+</p>
+
+<p>
+	It does also create a <a href="https://www.allaboutcookies.org">cookie</a> with your device ID and another encrypted string (and possibly other cookies).
+	<br>
+	You can use <a href="http://www.w3.org/TR/tracking-dnt/">Do Not Track</a> and <a href="https://globalprivacycontrol.org/">Global Privacy Control</a> to opt-out, as we only load the analytics with both of these disabled. You can also use the &quot;do not track&quot; button in the footer on certain pages, or do <code>amplitude.getInstance().setOptOut(true);</code> in the console.
+</p>
+
+<p>You can enable Do Not Track with these methods:</p>
+
+<details>
+	<summary>Chrome and Chromium-based browsers, like Opera and Brave</summary>
+
+	<ol>
+		<li>Open your <a href="chrome://settings/cookies#doNotTrack">settings page</a></li>
+		<li>Turn on <strong>Send a &quot;Do not track&quot; request with your browsing traffic</strong></li>
+	</ol>
+
+	<img src="/img/dnt-chrome.png" />
+</details>
+
+
+<details>
+	<summary>Chromium Package</summary>
+
+	<ol>
+		<li>Open your <a href="chrome://settings/privacy">settings page</a><br></li>
+		<li>Click <strong>More</strong><br></li>
+		<li>Turn on <strong>Send a &quot;Do Not Track&quot; request with your browsing traffic</strong><br></li>
+	</ol>
+
+	<img src="/img/dnt-chromium.png" />
+</details>
+
+
+<details>
+	<summary>Firefox and Firefox Profiles, like Tor Browser</summary>
+
+	<ol>
+		<li>Open your <a href="about:preferences#privacy">settings page</a><br></li>
+		<li>Scroll down to <strong>Send websites a &quot;Do Not Track&quot; signal that you don&#39;t want to be tracked</strong><br></li>
+		<li>Toggle <strong>Always</strong><br></li>
+	</ol>
+
+	<img src="/img/dnt-firefox.png" />
+</details>
+
+
+<details>
+	<summary>Microsoft Edge</summary>
+
+	<ol>
+		<li>Open your <a href="edge://settings/privacy">settings page</a><br></li>
+		<li>Scroll down to <strong>Privacy</strong><br></li>
+		<li>Turn on <strong>Send &quot;Do Not Track&quot; requests</strong><br></li>
+	</ol>
+
+	<img src="/assets/img/embed/dnt-edge.png" />
+</details>
+
+
+<details>
+	<summary>Internet Explorer</summary>
+
+	<ol>
+		<li>Click on the gear near the top right</li>
+		<li>Hover over <strong>Safety</strong></li>
+		<li>Click <strong>Turn on Do Not Track requests</strong></li>
+	</ol>
+
+	<img src="/assets/img/embed/dnt-ie.png" />
+</details>
+
+
+<details>
+	<summary>Other Browsers</summary>
+	We don&#39;t have every browser here, so please look up how to turn on Do Not Track requests for your browser, or look in its settings. If you can&#39;t find anything about it, try setting <code>navigator.doNotTrack</code> to <code>&quot;1&quot;</code> in its source code or flag settings.
+</details>
+
+<p>
+	And to turn on Global Privacy Control, go to the <a href="https://globalprivacycontrol.org/#download">official website</a> and download one of the supporting extensions or browsers.
+	<br>
+	Like Do Not Track, you can also set <code>navigator.globalPrivacyControl</code> to <code>&quot;1&quot;</code> if none of these extensions or browsers appeal to you.
+</p>
+
+<p>
+	As of right now, deleting your data prior to the 90-day expiration is only possible with your Amplitude ID or Amplitude Device ID.
+</p>
+
+<p>
+	If you have it, then you can email <code>ethanmcbloxxer@protonmail.com</code> with the topic &quot;Delete my Amplitude data&quot; and the message containing your Amplitude ID or Amplitude Device ID.
+	<br>
+	Please also specify whether the message contains your Amplitude ID or Amplitude Device ID.
+</p>
+
+<p>	
+	If you don&#39;t have it, you can retrieve your aDevice ID by opening the site&#39;s cookies and looking at the part of the cookie beginning with <code>amp</code> before a period.
+</p>
+
+<p>
+	<img src="/img/privacy-cookie-menu.png" alt="preview showing the cookie menu with the part before period highlighted">
+</p>
