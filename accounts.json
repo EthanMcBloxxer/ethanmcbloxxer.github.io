@@ -1,0 +1,320 @@
+[
+	{
+		"service": "About.me",
+		"encoded": "aboutme",
+		"website": "https://about.me/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Amplitude",
+		"encoded": "amplitude",
+		"website": "https://amplitude.com/",
+		"username": "ethanmcbloxxer@protonmail.com"
+	},
+	{
+		"service": "AnimePlanet",
+		"encoded": "animeplanet",
+		"website": "https://anime-planet.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Apple",
+		"encoded": "apple",
+		"website": "https://apple.com/",
+		"username": "ethanmcbloxxer@protonmail.com"
+	},
+	{
+		"service": "Archive.org",
+		"encoded": "archive",
+		"website": "https://archive.org/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Aternos",
+		"encoded": "aternos",
+		"website": "https://aternos.org/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Badlion",
+		"encoded": "badlion",
+		"website": "https://badlion.net/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Blizzard (Battle)",
+		"encoded": "battle",
+		"website": "https://battle.net/",
+		"username": "EthanMcBloxy#1463"
+	},
+	{
+		"service": "BuyMeACoffee",
+		"encoded": "buymeacoffee",
+		"website": "https://buymeacoffee.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Cloudflare",
+		"encoded": "cloudflare",
+		"website": "https://cloudflare.com/",
+		"username": "ethanmcbloxxer@protonmail.com"
+	},
+	{
+		"service": "Discord",
+		"encoded": "discord",
+		"website": "https://discord.com/",
+		"username": "EthanMcBloxxer#2089"
+	},
+	{
+		"service": "Disroot",
+		"encoded": "disroot",
+		"website": "https://disroot.org/",
+		"username": "ethanmcbloxxer"
+	},
+	{
+		"service": "Duolingo",
+		"encoded": "duolingo",
+		"website": "https://duolingo.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "EasyExploits",
+		"encoded": "easyexploits",
+		"website": "https://easyexploits.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Epic Games",
+		"encoded": "epicgames",
+		"website": "https://epicgames.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Evernote",
+		"encoded": "evernote",
+		"website": "https://evernote.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Fandom",
+		"encoded": "fandom",
+		"website": "https://fandom.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "GitHub",
+		"encoded": "github",
+		"website": "https://github.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "GOG",
+		"encoded": "gog",
+		"website": "https://gog.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Google",
+		"encoded": "google",
+		"website": "https://google.com/",
+		"username": "ethanmcbloxxer@protonmail.com"
+	},
+	{
+		"service": "Grammarly",
+		"encoded": "grammarly",
+		"website": "https://grammarly.com/",
+		"username": "ethanmcbloxxer@protonmail.com"
+	},
+	{
+		"service": "Gravatar",
+		"encoded": "gravatar",
+		"website": "https://gravatar.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Guilded",
+		"encoded": "guilded",
+		"website": "https://guilded.gg/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Hacker News",
+		"encoded": "hackernews",
+		"website": "https://news.ycombinator.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Heroku",
+		"encoded": "heroku",
+		"website": "https://heroku.com/",
+		"username": "ethanmcbloxxer@protonmail.com"
+	},
+	{
+		"service": "Hypixel",
+		"encoded": "hypixel",
+		"website": "https://hypixel.net/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Keybase",
+		"encoded": "keybase",
+		"website": "https://keybase.io/",
+		"username": "ethanmcbloxxer"
+	},
+	{
+		"service": "Kit.co",
+		"encoded": "kit",
+		"website": "https://kit.co/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "LBRY",
+		"encoded": "lbry",
+		"website": "https://lbry.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Mastodon",
+		"encoded": "mastodon",
+		"website": "https://mastodon.online/",
+		"username": "@ethanmcbloxxer@mastodon.online"
+	},
+	{
+		"service": "Matrix",
+		"encoded": "matrix",
+		"website": "https://matrix.to/",
+		"username": "@ethanmcbloxxer:matrix.org"
+	},
+	{
+		"service": "Mega",
+		"encoded": "mega",
+		"website": "https://mega.nz/",
+		"username": "ethanmcbloxxer@protonmail.com"
+	},
+	{
+		"service": "Microsoft",
+		"encoded": "microsoft",
+		"website": "https://microsoft.com/",
+		"username": "ethanmcbloxxer@protonmail.com"
+	},
+	{
+		"service": "Minecraft",
+		"encoded": "minecraft",
+		"website": "https://minecraft.net/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Mozilla",
+		"encoded": "mozilla",
+		"website": "https://mozilla.org/",
+		"username": "ethanmcbloxxer@protonmail.com"
+	},
+	{
+		"service": "RBXCity",
+		"encoded": "rbxcity",
+		"website": "https://rbxcity.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Reddit",
+		"encoded": "reddit",
+		"website": "https://reddit.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Roblox",
+		"encoded": "roblox",
+		"website": "https://roblox.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "RubyGems",
+		"encoded": "rubygems",
+		"website": "https://rubygems.org/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Skindex",
+		"encoded": "skindex",
+		"website": "https://minecraftskins.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "SkyRealms",
+		"encoded": "skyrealms",
+		"website": "https://skyrealms.games/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Spotify",
+		"encoded": "spotify",
+		"website": "https://spotify.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "StackOverflow",
+		"encoded": "stackoverflow",
+		"website": "https://stackoverflow.com/",
+		"username": "11653162"
+	},
+	{
+		"service": "Steam",
+		"encoded": "steam",
+		"website": "https://steampowered.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Teknik",
+		"encoded": "teknik",
+		"website": "https://teknik.io/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "ToS;DR",
+		"encoded": "tosdr",
+		"website": "https://tosdr.org/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Twitch",
+		"encoded": "twitch",
+		"website": "https://twitch.tv/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Twitter",
+		"encoded": "twitter",
+		"website": "https://twitter.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Ubisoft",
+		"encoded": "ubisoft",
+		"website": "https://ubisoft.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Ubuntu",
+		"encoded": "ubuntu",
+		"website": "https://ubuntu.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Unity",
+		"encoded": "unity",
+		"website": "https://unity.com/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "WeAreDevs",
+		"encoded": "wearedevs",
+		"website": "https://wearedevs.net/",
+		"username": "EthanMcBloxxer"
+	},
+	{
+		"service": "Wikipedia",
+		"encoded": "wikipedia",
+		"website": "https://wikipedia.org/",
+		"username": "EthanMcBloxxer"
+	}
+]
