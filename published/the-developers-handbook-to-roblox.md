@@ -1,14 +1,6 @@
----
-layout: post
-title: The Developer's Handbook to Roblox
-subtitle: Ins and Outs to Roblox Development
-cover-img: /assets/img/posts/cover/roblox-studio.png
-thumbnail-img: /assets/img/posts/thumb/roblox-studio.svg
-share-img: /assets/img/posts/thumb/roblox-studio.png
-last-updated: 2020-12-4
-tags: [lua]
-comments: true
----
+# The Developer's Handbook to Roblox
+*Ins and Outs to Roblox Development*  
+*Created on October 30th, 2020*
 
 Hey there! So you want to know how to use Roblox Studio.  
 I’m going to tell you everything there is to know about it, scripting, modeling, GUI designing, terrain editing, remoting, and more.  
@@ -333,6 +325,6 @@ You probably, in any game, need to use math somewhere, whether it be coin multip
 
 <div align="center"><button type="button" onclick="window.location.href='#';" style="background-color: #4CAF50;  border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">Return to Top</button></div>
 
-<p/>
+<br/>
 
-# MORE COMING SOON!
+This document isn't complete. If you'd like to contribute, go ahead and edit this at https://github.com/EthanMcBloxxer/.public/published/the-developers-handbook-to-roblox.md

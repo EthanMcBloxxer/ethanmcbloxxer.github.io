@@ -1,26 +1,22 @@
----
-layout: post
-title: Password Misconceptions
-subtitle: There are a few misconceptions about passwords and security.
-thumbnail-img: /assets/img/posts/thumb/password-question.svg
-cover-img: /assets/img/posts/cover/password.jpg
-share-img: /assets/img/posts/cover/password.jpg
-tags: [security]
----
+# Password Misconceptions
+*There are a few misconceptions about passwords and security.*  
+*Created November 5th, 2020*
+
 Passwords are one of the best things of security. They're a string of text that can be remembered or written down, but there are still misconceptions and misinformation about them.
 
-### mW674p3#NAeUG3UE would make a good password
+### mW674
 This, to many people, doesn't sound like a misconception, it sounds like a fact.
 
-A longer and better password can be great, especially with a password manager or a physical note. However, this is actually false.
+longer and better password can be great, especially with a password manager or a physical note. However, this is actually false.
 
-Simply four random common words, or something like `correct horse battery staple` would be a good password (Don't use it though, it is used as an example too much), better than a random string of characters, no matter how obscene.
+Simply fo*p3#NAeUG3UE would make a good password*ur random common words, or something like `correct horse battery staple` would be a good password (Don't use it though, it is used as an example too much), better than a random string of characters, no matter how obscene.
 
 You might be wondering how, and even wondering if this is a creditable source anymore. But, I do actually have proof of this (with an example).
 
 Let's take the password `Tr0ub4dor&3`. There are a few things you'll forget here, like the capital T, 0 and 4 as substitutes, the order of the & and the 3, and your use of numerals and punctuation. The only identifiable pro to this is how the base word, troubador, is uncommon. Now, let's see some statistics:
 
 Password: `Tr0ub4dor&3`
+
 * Uncommon word
 * Caps
 * Substitutes
@@ -38,6 +34,7 @@ How about the four random common words that I mentioned earlier?
 Well, let's take the password `correct horse battery staple` as mentioned before. No caps, numerals, or punctuation. Let's see more statistics:
 
 Password: `correct horse battery staple`
+
 * Common words
 * No capitals
 * No special characters

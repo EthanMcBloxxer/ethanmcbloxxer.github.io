@@ -1,10 +1,14 @@
 ---
 layout: post
-title: Opera GX Review
-subtitle: "Reviewing Version: 72.0.3815.xxx"
+title: 
+subtitle: ""
 thumbnail-img: /assets/img/posts/thumb/opera-gx.svg
 tags: [apps, web]
 ---
+
+# Opera GX Review
+*Reviewing Version: 72.0.3815.xxx*  
+*Created on December 21st, 2020*
 
 #### What is Opera GX? {#what-is-opera-gx}
 Opera GX is a browser created for "gamers". In reality, it's just normal Opera with a few unnecessary features removed and necessary features added. It wasn't built from scratch, but instead used normal Opera as a base.

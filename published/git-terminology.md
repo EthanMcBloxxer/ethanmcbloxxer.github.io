@@ -1,10 +1,6 @@
----
-layout: post
-title: Git Terminology
-subtitle: Understanding what all this git stuff means
-thumbnail-img: assets/img/posts/thumb/git.svg
-tags: [git]
----
+# Git Terminology
+*Understanding what all this git stuff means*  
+*Created on February 7th, 2021*
 
 I'm still a bit novice to Git, even after more than a year of *kind of* using it often. I'll be explaining most terms that are useful in the best way I can.
 

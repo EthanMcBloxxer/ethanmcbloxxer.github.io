@@ -1,10 +1,6 @@
----
-layout: post
-title: Wikitweaks
-subtitle: A usercss for Wikipedia
-thumbnail-img: /assets/img/posts/thumb/wikipedia.svg
-tags: [web, css]
----
+# Wikitweaks
+*A UserCSS for Wikipedia*  
+*Created on December 23rd, 2020*
 
 I've been looking around at [userstyles.org](https://userstyles.org/) and decided to make my own Wikipedia custom stylesheet. It's not as cool as [n0x's Wikipedia Material Design](https://userstyles.org/styles/119976/wikipedia-material-design) (which I highly recommend for a more modern Wikipedia), but it'll do the job if you hate serif fonts. The below code may update at any time, and I didn't make it into an updating userstyle. Updates probably won't be that significant, though.
 

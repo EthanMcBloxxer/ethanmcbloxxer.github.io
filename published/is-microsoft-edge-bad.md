@@ -1,16 +1,9 @@
----
-layout: post
-title: Is Microsoft Edge bad?
-subtitle: Could Edge be a normal webbrowser?
-tags: [apps, web]
-thumbnail-img: /assets/img/posts/thumb/edge.png
-cover-img: /assets/img/posts/cover/edge.png
-share-img: /assets/img/posts/cover/edge.png
-comments: true
----
+# Is Microsoft Edge bad?
+*Could Edge be a normal webbrowser?*  
+*Created October 30th, 2020*
 
 Most people hate on Edge for a number of reasons, but is it actually bad?  
-<br/>
+
 Well, my answer to this question is **no**.
 Edge is introducing more features, better user interface, and even much better browsing power by switching to a revision of Chromium (the open-source project that powers Chrome). Microsoft even tries to make it very easy for people to switch from web browsers like chrome, because they can merge favorite sites, passwords, and more from Chrome, Firefox, IE, older versions of Edge, and even HTML files of favorites, which means that you can import these from almost any web browser.  
 Then, because Edge is using Chromium, you can install Chrome-Based addons/extensions to Edge, as well as the native Microsoft-Based extensions from the Microsoft Store and other locations. However, Edge still doesn't want to use better search engines by default, like [Google](https://www.google.com/), [DuckDuckGo](https://www.duckduckgo.com/), or [Ecosia](https://www.ecosia.org/). Again, this is by default, so it is actually changeable the same way that Chrome is (from the dropdown in [edge://settings/search](edge://settings/search)).  

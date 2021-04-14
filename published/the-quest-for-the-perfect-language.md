@@ -1,9 +1,6 @@
----
-layout: post
-title: The Quest for the Perfect Language
-subtitle: Looking at the top 10 languages and finding the best
-tags: [language]
----
+# The Quest for the Perfect Language
+*Looking at the top 10 languages and deciding on the best*  
+*Created on January 17th, 2021*
 
 In this post, I'll be looking at the top 10 by native speakers, and seeing which of them meets my set criteria for being a language better than English, or in a way, perfect.
 

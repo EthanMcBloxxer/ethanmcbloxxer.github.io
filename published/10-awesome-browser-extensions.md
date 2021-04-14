@@ -1,9 +1,6 @@
----
-layout: post
-title: 10 Awesome Browser Extensions
-subtitle: My 10 Favorite Web Browser Extensions
-tags: [web]
----
+# 10 Awesome Browser Extensions
+*My 10 Favorite Web Browser Extensions*  
+*Created on January 28th, 2021*
 
 This is my list of 10 browser extensions that work on Chrome and other chromium-based browsers, which includes Edge, Opera, and Brave. Some of them might even be supported on Firefox!
 

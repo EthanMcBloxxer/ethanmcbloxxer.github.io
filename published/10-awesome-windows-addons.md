@@ -1,11 +1,6 @@
----
-layout: post
-title: 10 Awesome Windows Add-Ons
-subtitle: Push Windows to its limits, or enhance it slightly.
-share-title: 10 Windows Extensions
-share-description: Windows Extensions and Add-ons to enhance your Windows experience
-tags: [windows]
----
+# 10 Awesome Windows Add-Ons
+*Push Windows to its limits, or just enhance it slightly.*  
+*Created on November 1st, 2020*
 
 Have you ever wished Windows had slight alterations? Well, here are 10 different applications that wished the same thing!
 

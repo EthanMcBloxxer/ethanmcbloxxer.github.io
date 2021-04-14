@@ -1,8 +1,6 @@
----
-layout: post
-title: Don't link to "Here"
-subtitle: You shouldn't use "here" for links
----
+# Don't link to "Here"
+*Why you shouldn't use "here" for links*  
+*Created on March 27th, 2021*
 
 TL;DR: Stop saying you can download something [here](https://example.com/) or that you should [click here](https://example.com/) to see something since it doesn't make sense in most occasions, like mobile devices, screen readers, and grammar cohesion.
 

@@ -1,11 +1,6 @@
----
-layout: post
-title: "ProtonMail: Privacy-Centered Email"
-subtitle: A easy-to-switch Gmail alternative for privacy
-thumbnail-img: assets/img/posts/thumb/protonmail.svg
-cover-img: assets/img/posts/cover/protonmail.png
-tags: [email]
----
+# ProtonMail: Privacy-Centered Email
+*A easy-to-switch Gmail alternative for privacy*  
+*Created on February 21st, 2021*
 
 It's recently come to my attention via multiple methods, such as the [DuckDuckGo help pages](https://help.duckduckgo.com/duckduckgo-help-pages/features/email/) when I was looking in to the search bar on the home page. On the DuckDuckGo help pages, multiple email providers are offered, but [ProtonMail](https://protonmail.com) is the only one with a viable free plan.
 

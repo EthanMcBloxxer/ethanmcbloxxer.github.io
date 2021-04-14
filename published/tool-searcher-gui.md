@@ -1,9 +1,6 @@
----
-layout: post
-title: Tool Searcher GUI
-subtitle: An awesome GUI for any games that use tools
-tags: [exploits]
----
+# Tool Searcher GUI
+*An awesome GUI for any games that use tools*  
+*Created September 6th, 2020*
 
 Hi again, internet randoms!  
 Today I will be giving you an awesome GUI for any games that still use tools.

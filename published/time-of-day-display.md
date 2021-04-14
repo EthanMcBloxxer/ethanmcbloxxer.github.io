@@ -1,9 +1,6 @@
----
-layout: post
-title: Time of Day Display (TODD)
-subtitle: A HUD near the chat to tell the time
-tags: [exploits]
----
+# Time of Day Display (TODD)
+*A HUD near the chat to tell the time*  
+*Created on August 24th, 2020*
 
 This is a neat lil' widget that shows up next to your chat, or in place of chat if chat is disabled. Tells the time of day in the selected format. The format is swappable (12hr - 24hr) by clicking on the widget. Unfortunately, this does not detect whether or not the topbar or main menu button is disabled. Otherwise, this looks really formal and almost as if it should be in Roblox. (if you want you can beautify the source, but I overcomplicated it so it isn't as simple as it sounds.)  
 <sup>*button is the size of 2 buttons combined, like chat + main menu.</sup>

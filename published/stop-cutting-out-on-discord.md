@@ -1,10 +1,6 @@
----
-layout: post
-title: Easily stop cutting out on Discord
-subtitle: No longer will you stop being heard in the middle of sentences!
-thumbnail-img: /assets/img/posts/thumb/discord.png
-tags: [apps]
----
+# Easily stop cutting out on Discord
+*No longer will you stop being heard in the middle of sentences!*  
+*Created November 6th, 2020*
 
 So you've experienced cutting out. Either your friends tell you that you are, or you hear your friends cutting out. Today, I'll tell you the secret to stop cutting out on Discord.
 

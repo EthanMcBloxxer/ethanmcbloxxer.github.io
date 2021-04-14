@@ -1,9 +1,6 @@
----
-layout: post
-title: Device Naming Guidelines
-subtitle: The guidelines in which I name my devices
-tags: [computers]
----
+# Device Naming Guidelines
+*The guidelines in which I name my devices*  
+*Created February 17th, 2021*
 
 ## Quick Syntax
 OS(ver).TP-Name

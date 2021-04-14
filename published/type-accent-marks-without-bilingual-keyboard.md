@@ -1,15 +1,8 @@
----
-layout: post
-title: Typing Accent Marks without a Bilingual Keyboard
-subtitle: Use the ENG-INTL keyboard modifier to type accent marks
-thumbnail-img: assets/img/posts/thumb/ė.png
-cover-img: assets/img/posts/cover/keyboard.jpg
-share-title: ENG-INTL Keyboard
-share-description: Learn to type accent marks without a special keyboard!
-tags: [typing, language]
----
+# Typing Accent Marks without a Bilingual Keyboard
+*Using the ENG-INTL keyboard modifier to type accent marks*  
+*Created on October 31st, 2020*
 
-Have you ever wanted to type accent marks for multilingual typing?
+Have you ever needed to type accent marks for multilingual typing?
 Today, I'll teach you about an integrated Windows feature to do just that by simply typing the accent (' " \` ~ ^) and then the proceeding character.  
 
 You can also type other symbols with CTRL+ALT+$key, and those are as follows: äåé®þüúíóöáßðøæ©ñµ¡²³¤€¼½¾‘’¥×¿ç.  

@@ -1,11 +1,8 @@
----
-layout: post
-title: EthanMcBloxxer's Subtitle Etiquette
-subtitle: A simple and minimal syntax for writing subtitles
-tags: [utility]
----
+# EthanMcBloxxer's Subtitle Etiquette
+*A simple and minimal syntax for writing subtitles*  
+*Created on February 6th, 2021*
 
-### Basic reference:
+## Basic reference:
 - Keep periods on the inside of open/close tags (like this.)
 - Never use UPPERCASE for tag insides, use only lowercase for sounds
 - (sound), [descriptive subtitles], {editorial note}
@@ -15,7 +12,7 @@ tags: [utility]
 - **shouting** (if possible try not to uppercase or add exclamation points to this)
 
 
-### Example reference:
+## Example reference:
 
 [You are facing a stage.]
 

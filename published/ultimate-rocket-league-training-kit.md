@@ -1,11 +1,9 @@
----
-layout: post
-title: Ultimate Rocket League Training Kit
-subtitle: An archive of useful training sequences
-tags: [gaming]
----
+# Ultimate Rocket League Training Kit
+*An archive of useful training sequences for Rocket League*  
+*Created November 29th, 2020*
 
-#### Hello there, fellow rocketeer!
+Hello there, fellow rocketeer!
+
 I've been hard at work creating a wide variety of training packs for you to enhance your skills from just the humble bronze 1 all the way to champion. There are a lot, so make sure to save the post if you are interested. Also, take note that the provided "skill levels" at the end of each skill are estimates and you may personally be able to perform any number of these. For now, here's a table of contents:
 
 * Shooting
@@ -30,8 +28,7 @@ I've been hard at work creating a wide variety of training packs for you to enha
 * Ceiling
 * Wall Shots
 
-
-___
+-----
 
 ## Shooting
 #### Simple
@@ -139,8 +136,8 @@ located in Beckwith Park [Midnight]
 ![Skill Level: Silver](/assets/img/embed/rl-silver.png)
 
 
-Yes, every shot is completable and has been thoroughly tested.  
-If you believe there is an error or a mistake, please say so.  
-This document may update at any time without notice; however, no removals will be made.
+Every shot is completable and has been thoroughly tested.
 
-<a href="https://www.reddit.com/r/RocketLeague/comments/k3lmkv/" title="Reddit"><i title="Originally on Reddit" class="fab fa-reddit-alien"></i> Originally posted on Reddit</a>
+If you believe there is an error or a mistake, please say so.
+
+This document may update at any time without notice, but no removals will be made.
