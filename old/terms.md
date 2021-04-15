@@ -1,0 +1,9 @@
+---
+layout: page
+title: Terms
+subtitle: Terms of Service
+permalink: /terms.html
+comments: true
+---
+
+Please do not copy any code or media without crediting us. A comment in the DOM or Credits page is sufficient. We can't legally make you comply with this because we don't log your IP address, so we can't ban you from the website or have legal action taken. Most of our media is CC0-licensed anyways, but we still would appreciate a mention.

@@ -1,0 +1,45 @@
+---
+common-css:
+  - "/assets/bootstrap/css/bootstrap.min.css"
+  - "/assets/fa/css/all.css"
+  - "/assets/css/beautifuljekyll.css"
+common-js:
+  - "/assets/js/jquery-3.5.1.js"
+  - "/assets/js/beautifuljekyll.js"
+  - "/assets/js/popper/createPopper.js"
+  - "/assets/bootstrap/js/bootstrap.min.js"
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.language | default: site.language | default: 'en' }}">
+
+  {% include head.html %}
+
+  <body>
+
+    <div role="main" class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %} main-content">
+      {% if page.before-content %}
+        <div class="before-content">
+          {% for file in page.before-content %}
+            {% include {{ file }} %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {{ content }}
+
+      {% if page.after-content %}
+        <div class="after-content">
+          {% for file in page.after-content %}
+            {% include {{ file }} %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% include footer-minimal.html %}
+
+    {% include footer-scripts.html %}
+
+  </body>
+</html>

@@ -1,0 +1,29 @@
+---
+common-css:
+  - "/assets/bootstrap/css/bootstrap.min.css"
+  - "/assets/fa/css/all.css"
+  - "/assets/css/beautifuljekyll.css"
+common-js:
+  - "/assets/js/jquery-3.5.1.js"
+  - "/assets/js/beautifuljekyll.js"
+  - "/assets/js/popper/createPopper.js"
+  - "/assets/bootstrap/js/bootstrap.min.js"
+  - "/assets/js/swal.js"
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.language | default: site.language | default: 'en' }}">
+{% include head.html %}
+
+<body>
+
+  {% include nav.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+  {% include footer-scripts.html %}
+
+</body>
+</html>

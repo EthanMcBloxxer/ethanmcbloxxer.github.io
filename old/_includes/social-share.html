@@ -1,0 +1,39 @@
+<!-- Check if any share-links are active -->
+{% assign any-share-links = false %}
+{% for links in site.share-links-active %}
+  {% if links[1] == true %}
+    {% assign any-share-links = true %}
+  {% endif %}
+{% endfor %}
+
+<style>
+  .share-button {
+    padding: 15px;
+    font-size: 25px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 3px
+  }
+  .share-button:hover {
+    opacity: 0.7;
+  }
+</style>
+<script>function copy_url() {navigator.clipboard.writeText('{{ page.url | absolute_url | url_encode }}'); swal("Copied!", "If it didn't work, then manually copy {{ page.url | absolute_url | url_encode }} or try again.", "success");}</script>
+
+{% if any-share-links %}
+
+<section align="center" id="social-share-section">
+  <span class="sr-only">Share: </span>
+  <a href="javascript:;" onclick="copy_url()" class="share-button fas fa-link" style="color: white; background: #45bbff;" title="Copy Link"></a>
+  <a href="mailto:?subject=Check out {{ page.title }}, it's a great read.&body={{ page.url | absolute_url | url_encode }}" class="share-button fas fa-envelope" style="color: white; background: #a4c639;" title="Email this"></a>
+  <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}" class="share-button fab fa-twitter" style="color: white; background: #55ACEE;" title="Tweet this Article"></a>
+  <a href="https://facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" class="share-button fab fa-facebook-f" style="color: white; background: #3B5998;" title="Share on Facebook"></a>
+  <a href="https://reddit.com/submit?url={{ page.url | absolute_url | url_encode }}&title={{ page.title | url_encode }}" class="share-button fab fa-reddit-alien" style="color: white; background: #ff5700;" title="Post to Reddit"></a>
+  <a href="https://linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | url_encode }}" class="share-button fab fa-linkedin-in" style="color: white; background: #007bb5;" title="Share on LinkedIn"></a>
+  <a href="https://vk.com/share.php?url={{ page.url | absolute_url | url_encode }}" class="share-button fab fa-vk" style="color: white; background: #587ea3;" title="Share on VK"></a>
+  <a href="http://pinterest.com/pin/create/button/?url={{ page.url | absolute_url | url_encode }}&media={{ page.share-img | page.thumbnail-img | page.cover-img | '' }}&description={{ page.title | url_encode }}" class="share-button fab fa-pinterest-p" style="color: white; background: #cb2027;" title="Pin It!"></a>
+</section>
+
+{% endif %}

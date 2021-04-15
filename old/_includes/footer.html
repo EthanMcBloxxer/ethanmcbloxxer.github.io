@@ -1,0 +1,57 @@
+<footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      {% include social-networks-links.html %}
+      {% if page.footer-extra %}
+        <div class="footer-custom-content">
+          {% for file in page.footer-extra %}
+            {% include {{ file }} %}
+          {% endfor %}
+        </div>
+      {% endif %}
+      <p class="copyright text-muted">
+      {% if site.author %}
+        {{ site.author }}
+      {% endif %}
+      &nbsp;&bull;&nbsp;
+      {{ site.time | date: '%Y' }}
+
+      {% if site.url-pretty %}
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
+        </span>
+      {% endif %}
+
+      &nbsp;&bull;&nbsp;
+      <a href="javascript:swal('Tracking', 'You have successfully opted-out of analytics-based tracking.', 'info');" onclick="amplitude.getInstance().setOptOut(true);">do not track</a>
+
+      {% if site.matomo %}
+        {% if site.matomo.opt-out %}
+          &nbsp;&bull;&nbsp;
+          <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">do not track</a>
+        {% endif %}
+      {% endif %}
+      </p>
+      <p class="copyright text-muted">
+        <span class="text-muted">
+          <a href="/terms.html">Terms</a>
+        </span>
+        &nbsp;&bull;&nbsp;
+        <span class="text-muted">
+          <a href="/privacy.html">Privacy</a>
+        </span>
+        &nbsp;&bull;&nbsp;
+        <span class="text-muted">
+          <a href="/credits.html">Credits</a>
+        </span>
+        &nbsp;&bull;&nbsp;
+        <span class="text-muted">
+          <a href="/donate/">Donate</a>
+        </span>
+      </p><p/>
+      </div>
+    </div>
+  </div>
+</footer>

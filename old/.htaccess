@@ -1,0 +1,57 @@
+Options +Indexes
+IndexOptions FancyIndexing SuppressIcon
+ErrorDocument 400 /errors/400.html
+ErrorDocument 401 /errors/401.html
+ErrorDocument 402 /errors/402.html
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html
+ErrorDocument 405 /errors/405.html
+ErrorDocument 406 /errors/406.html
+ErrorDocument 407 /errors/407.html
+ErrorDocument 408 /errors/408.html
+ErrorDocument 409 /errors/409.html
+ErrorDocument 410 /errors/410.html
+ErrorDocument 411 /errors/411.html
+ErrorDocument 412 /errors/412.html
+ErrorDocument 413 /errors/413.html
+ErrorDocument 414 /errors/414.html
+ErrorDocument 415 /errors/415.html
+ErrorDocument 500 /errors/500.html
+ErrorDocument 501 /errors/501.html
+ErrorDocument 502 /errors/502.html
+ErrorDocument 503 /errors/503.html
+ErrorDocument 504 /errors/504.html
+ErrorDocument 505 /errors/505.html
+Redirect 301 /blog/ /
+Redirect 301 /geolocater/ /geolocator/
+Redirect 301 /pastebin/misc/ /pastebin#misc
+Redirect 301 /pastebin/code/ /pastebin#code
+Redirect 301 /pastebin/link/ /pastebin#links
+Redirect 301 /pastebin/links/ /pastebin#links
+Redirect 301 /pastebin/img/ /pastebin#image
+Redirect 301 /pastebin/imgs/ /pastebin#image
+Redirect 301 /pastebin/image/ /pastebin#image
+Redirect 301 /pastebin/images/ /pastebin#image
+Redirect 301 /pastebin/script/ /pastebin#scripts
+Redirect 301 /pastebin/scripts/ /pastebin#scripts
+Redirect 301 /pastebin/youtubescript/ /pastebin#scripts
+Redirect 301 /pastebin/youtubescripts/ /pastebin#scripts
+Redirect 301 /pastebin/youtube-script/ /pastebin#scripts
+Redirect 301 /pastebin/youtube-scripts/ /pastebin#scripts
+Redirect 301 /pastebin/youtube_script/ /pastebin#scripts
+Redirect 301 /pastebin/youtube_scripts/ /pastebin#scripts
+Redirect 301 /pastebin/youtubescript/ /pastebin#scripts
+Redirect 301 /pastebin/roblox/ /pastebin#roexploits
+Redirect 301 /pastebin/roexploits/ /pastebin#roexploits
+Redirect 301 /pastebin/robloxscript/ /pastebin#roexploits
+Redirect 301 /pastebin/robloxscripts/ /pastebin#roexploits
+Redirect 301 /pastebin/roblox-script/ /pastebin#roexploits
+Redirect 301 /pastebin/roblox-scripts/ /pastebin#roexploits
+Redirect 301 /pastebin/roblox_script/ /pastebin#roexploits
+Redirect 301 /pastebin/roblox_scripts/ /pastebin#roexploits
+Redirect 301 /pastebin/robloxexploit/ /pastebin#roexploits
+Redirect 301 /pastebin/robloxexploits/ /pastebin#roexploits
+Redirect 301 /pastebin/roblox-exploit/ /pastebin#roexploits
+Redirect 301 /pastebin/roblox-exploits/ /pastebin#roexploits
+Redirect 301 /pastebin/roblox_exploit/ /pastebin#roexploits
+Redirect 301 /pastebin/roblox_exploits/ /pastebin#roexploits

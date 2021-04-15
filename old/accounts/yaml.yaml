@@ -1,0 +1,9 @@
+---
+layout: none
+---
+{% for item in site.data.accounts %}{{ item.encoded }}: {
+    unformatted: "{{ item.service }}",
+    website: "{{ item.website }}",
+    username: "{{ item.username }}"
+}
+{% endfor %}

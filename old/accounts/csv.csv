@@ -1,0 +1,7 @@
+---
+layout: none
+---
+Service,Website,Username
+
+{% for item in site.data.accounts %}{{ item.service }},{{ item.website }},{{ item.username }}
+{% endfor %}

@@ -1,0 +1,27 @@
+---
+layout: page
+title: Accounts
+subtitle: Validate EthanMcBloxxer Accounts
+permalink: /accounts/
+---
+
+<div align="center"><a href="/accounts/json.json">json</a> <a href="/accounts/yaml.yaml">yaml</a> <a href="/accounts/xml.xml">xml</a> <a href="/accounts/csv.csv">csv</a></div><br/>
+
+<table style="width: 100%;">
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Name / ID / Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in site.data.accounts %}
+    <tr id="{{- item.service | replace: ' ', '_' -}}">
+      <td><a href="{{- item.website -}}">{{- item.service -}}</a></td>
+      <td>{{- item.username -}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<br/>

@@ -1,0 +1,102 @@
+---
+layout: page
+title: AltGen
+subtitle: altgen.club
+permalink: /altgen/
+---
+<head><style>
+  input[type=text], select {
+    width: 350px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=password], select {
+      width: 350px;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=button] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+</style></head>
+
+<center style="margin-left:auto;margin-right:auto;padding:30px;border-radius:5px;margin-top:auto;transition:all .2s ease-out;">
+  <div id="form">
+    <input autocomplete="off" type="text" id="gameid" name="url" placeholder="Roblox Game ID">
+    <select id="servertype" name="type" onChange="if (this.value == 'vip') {document.getElementById('vipid').style = 'display: inline-block;'} else {document.getElementById('vipid').style = 'display: none;'};">
+      <option selected="selected" style="display:none;">Server Type</option>
+      <option value="populated">Populated</option>
+      <option value="unpopulated">Unpopulated</option>
+      <option value="vip">VIP</option>
+    </select>
+    <input autocomplete="off" type="text" id="vipid" name="url" placeholder="VIP Link" style="display: none;">
+    <input id="Start Game" type="submit" value="Launch" onClick="launchGame();">
+  </div>
+</center>
+<script>
+  function launchGame() {
+    var gameid = document.getElementById("gameid").value;
+    var populated = document.getElementById("servertype").value;
+    if (populated == "populated") {populated = "true";} else if (populated == "unpopulated") {populated = "false";}
+    var keyUrl = "https://altgen.club/send.php?t=gen";
+    this.launchFrame = $("<iframe>").hide();
+
+    if (populated == "vip") {
+      var vipLink = document.getElementById("vipid").value;
+      var vipUrl = "https://altgen.club/vip.php?i=" + gameid + "&g=" + vipLink;
+      fetch(vipUrl)
+        .then(response => response.text())
+        .then((response) => {
+          if (response != "Invalid Cookie!") {
+            this.launchFrame.attr(response);
+          } else {
+            document.getElementById("Start Game").value = "Click Again!";
+            setTimeout(document.getElementById("Start Game").value = "Launch", 2000);
+          }
+        })
+        .catch(err => console.log(err));
+    } else {
+      fetch(keyUrl)
+        .then(reponse => response.text())
+        .then((response) => {
+          var key = response;
+          if (response != "Used Cookie!") {
+            this.launchFrame.attr("src", "roblox-player:1+launchmode:play+gameinfo:" + key + "+launchtime:" + (+new Date) + "+placelauncherurl:https://assetgame.roblox.com/game/PlaceLauncher.ashx?request=RequestGame&placeId=" + gameid + "&isPlayTogetherGame=" + populated + "+robloxLocale:en_us+gameLocale:en_us");
+          } else {
+            document.getElementById("Start Game").value = "Click Again!";
+            setTimeout(document.getElementById("Start Game").value = "Launch", 2000);
+          }
+        })
+    }
+  }
+</script>

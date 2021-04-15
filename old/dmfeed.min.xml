@@ -1,0 +1,27 @@
+---
+layout: null
+permalink: /dm/feed.min.xml
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+  <title>The Daily DM</title>
+  <description>The Daily DM, a DM provided (almost) every day by ethanmcbloxxer.github.io.</description>
+  <link>https://ethanmcbloxxer.github.io/dm/</link>
+  <atom:link href="https://ethanmcbloxxer.github.io/dm/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>
+		i've been working on a theme that resembles this very highly, so if you want to make your own website that looks like this than go to ethanmcbloxxer.github.io/jekyll-theme-discord or EthanMcBloxxer/jekyll-theme-discord#readme.
+      </title>
+      <description>
+        A DM sent to you via ethanmcbloxxer.github.io's Daily DM feed.
+      </description>
+
+      <pubDate>Sun, 21 Feb 2021 00:00:00 EST</pubDate>
+      <link>https://ethanmcbloxxer.github.io/dm/</link>
+    </item>
+</channel>
+
+</rss>

@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ethanmcbloxxer.github.io
+Token: f059c1722e0a38b7344e36ce69a6a8a5282b7cdfeba20f25d6d7835fc4ea0dc2

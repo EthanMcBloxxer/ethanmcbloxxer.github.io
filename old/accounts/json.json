@@ -1,0 +1,13 @@
+---
+layout: none
+---
+[
+    {% for item in site.data.accounts %}
+    {
+        "service": "{{ item.service }}",
+        "encoded": "{{ item.encoded }}",
+        "website": "{{ item.website }}",
+        "username": "{{ item.username }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+]
