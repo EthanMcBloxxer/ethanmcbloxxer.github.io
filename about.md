@@ -184,3 +184,7 @@ I want `ethanmcbloxxer.com`, `emb.com`, or `blox.er`.
   * bloxxer.page.link
   * bloxxers.page.link
   * bloxxing.page.link (automated)
+
+<hr/>
+
+yes, I did also play Club Penguin a little bit
