@@ -1,6 +1,7 @@
 ---
 ---
 
+{% capture markdown %}
 ## Hey, I'm Ethan.
 
 I'm EthanMcBloxxer, a programmer, gamer, and photoshopper. I skipped first grade and have had experience with coding from a young age. I know English, Spanish, and a bit of Japanese.
@@ -184,7 +185,121 @@ I want `ethanmcbloxxer.com`, `emb.com`, or `blox.er`.
   * bloxxer.page.link
   * bloxxers.page.link
   * bloxxing.page.link (automated)
+{% endcapture %}
 
-<hr/>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>EthanMcBloxxer</title>
+		<meta property="og:site_name" content="EthanMcBloxxer">
+		<meta property="og:title" content="Homepage">
+		<meta name="description" content="A homepage for EthanMcBloxxer, with information, a blog, and some random CC by NC-ND 4-licensed files.">
+		<meta name="keywords" content="ethanmcbloxxer">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://ethanmcbloxxer.github.io/">
+		<link rel="canonical" href="https://ethanmcbloxxer.github.io/">
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+		<style id="landing">
+			html {
+				position: relative;
+				min-height: 100%;
+			}
+			body {
+				color: white;
+				font-size: 1.25rem;
+				font-family: 'Lato', 'Open Sans', 'Calibri', 'Ubuntu', 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif, monospace;
+				background-color: hsl(213, 16%, 24%);
+				background-image: url("/background.png");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			main {
+				margin: 1rem 12.5% 1rem 12.5%;
+				overflow: auto;
+				height: 95vh;
+				outline: none;
+				width: 75%;
+			}
+			@media screen and (min-width: 768px) {main {
+				margin: 1rem 25% 1rem 25%;
+				width: 50%;
+			}}
+			abbr, abbr[title] {
+				text-decoration: none !important;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			
+			::-webkit-scrollbar {
+				background-color: #363e49;
+			}
+			::-webkit-scrollbar-thumb {
+				background-color: #363e49;
+			}
+			::-webkit-scrollbar-thumb:hover {
+				background-color: #49525f;
+			}
+			::-webkit-scrollbar-thumb:active {
+				background-color: #4c5767;
+			}
+			::-webkit-scrollbar-corner {
+				background-color: #363e49;
+			}
+			* {
+				scrollbar-color: #363e49 #363e49;
+			}
+		</style>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+		<script>
+			if (window.navigator.doNotTrack != "1" && !navigator.globalPrivacyControl) {
+				(function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+				;r.type="text/javascript"
+				;r.integrity="sha384-girahbTbYZ9tT03PWWj0mEVgyxtZoyDF9KVZdL+R53PP5wCY0PiVUKq0jeRlMx9M"
+				;r.crossOrigin="anonymous";r.async=true
+				;r.src="https://cdn.amplitude.com/libs/amplitude-7.2.1-min.gz.js"
+				;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+				console.log("[Analytics] Error: could not load SDK")}}
+				;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+				;function s(e,t){e.prototype[t]=function(){
+				this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+				var o=function(){this._q=[];return this}
+				;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+				;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+				;return this}
+				;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+				;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+				;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId", "enableTracking", "setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+				;function v(e){function t(t){e[t]=function(){
+				e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+				for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+				e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+				;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+				;e.amplitude=n})(window,document);
+				amplitude.getInstance().init("4148a0961d085ef4aa4646d0c86297d1", null, {
+						trackingOptions: {
+							city: false,
+							dma: false,
+							ip_address: false
+						},
+						cookieExpiration: 90,
+						secureCookie: true,
+						disableCookies: true,
+						includeReferrer: true
+					}
+				);
+				amplitude.getInstance().logEvent("Post View", {url: document.location.href});
+			}
+		</script>
+	</head>
 
-yes, I did also play Club Penguin a little bit
+	<body data-new-gr-c-s-check-loaded="14.1006.0" data-gr-ext-installed="">
+		<main>
+			{{ markdown | markdownify | smartify }}
+		</main>
+	</body>
+</html>
