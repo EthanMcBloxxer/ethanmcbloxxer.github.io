@@ -120,7 +120,7 @@ I'm terrible at modeling. Why is this a section? I tried it for Roblox and Unity
 (many translations are based off EthanTheKiller, as that is the improvised meaning of EthanMcBloxxer)
 
 IPA (Phonetics)
-: [iθənmɪkblɑksər](/.public/pronunciation-joanna.mp3)
+: [iθənmɪkblɑksər](/pronunciation-joanna.mp3)
 
 English (English)
 : EthanMcBloxxer
