@@ -2,7 +2,6 @@
 layout: page
 title: Credits
 subtitle: 3rd Party Works
-permalink: /credits.html
 comments: true
 ---
 

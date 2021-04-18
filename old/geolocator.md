@@ -2,8 +2,6 @@
 layout: page
 title: Geolocator
 subtitle: "Your Coordinates:"
-permalink: /geolocator/
-redirect_from: /geolocater/
 ---
 
 <p class="box-warning"><strong>Warning:</strong> By accessing this page, you allow us to use the location data provided to us by your browser. Rest assured, we don't save any of it.</p>

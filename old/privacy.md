@@ -2,7 +2,6 @@
 layout: page
 title: Privacy
 subtitle: Privacy Policy
-permalink: /privacy.html
 comments: true
 js: "/assets/js/details-polyfill.js"
 ---

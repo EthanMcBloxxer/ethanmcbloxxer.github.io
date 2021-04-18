@@ -22,7 +22,6 @@ js: js.js
 ext-js: //javascript.js/js/js.js
 css: css.css
 ext-css: //cascadingstylesheet.css/css/css.css
-permalink: /kramdown/
 published: true
 ---
 

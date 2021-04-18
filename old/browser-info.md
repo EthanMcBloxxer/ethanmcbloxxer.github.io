@@ -2,7 +2,6 @@
 layout: page
 title: Browser Information
 subtitle: User Agent, Name, Code, Language, etc.
-permalink: /browser-info/
 ---
 
 <p class="box-warning"><strong>Warning:</strong> By accessing this page, you allow us to use the data provided to us by your browser. Rest assured, we don't save any of it.</p>

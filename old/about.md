@@ -2,7 +2,6 @@
 layout: page
 title: About Me
 subtitle: who am i?
-permalink: /about/
 js: "/assets/js/details-polyfill.js"
 ---
 

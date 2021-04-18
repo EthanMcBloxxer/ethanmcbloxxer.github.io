@@ -2,7 +2,6 @@
 layout: page
 title: Terms
 subtitle: Terms of Service
-permalink: /terms.html
 comments: true
 ---
 
