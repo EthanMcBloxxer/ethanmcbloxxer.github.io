@@ -8,10 +8,10 @@ permalink: /content
 		<title id="title"></title>
 		<script type="text/javascript">
 			for (let p of new URLSearchParams(window.location.search)) {
-				var n = p[0].toLowerCase();
-				var v = decodeURIComponent(p[1]);
+				let n = p[0].toLowerCase();
+				let v = decodeURIComponent(p[1]);
 				if (n == "content") {
-					document.getElementById("body").innerHTML += v;
+					document.getElementById("body").innerHTML = v;
 				} else if (n == "title") {
 					document.getElementById("title").innerHTML = v;
 				} else if (n == "font") {
@@ -21,9 +21,7 @@ permalink: /content
 		</script>
 	</head>
 	<body id="body">
-		<!-- use ?content=some text to display "some text", &title=Page to make the title Page, and &font=Arial to make the font Arial (as an example) -->
-		<noscript>
-			Someone wants to tell you something, but it requires JavaScript to be enabled. You either just dodged a bullet or completely failed at reading confidential information. Sorry about that.
-		</noscript>
+		Use <code>?content=some text</code> in the url to display <code>"some text"</code>, <code>&title=Page</code> to make the title <code>Page</code>, and/or <code>&font=Arial</code> to make the font <code>Arial</code> (as an example)
+		<noscript>Someone wants to tell you something, but it requires JavaScript to be enabled. You either just dodged a bullet or completely failed at reading confidential information. Sorry about that.</noscript>
 	</body>
 </html>
