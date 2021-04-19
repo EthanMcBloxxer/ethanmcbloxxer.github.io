@@ -13,10 +13,12 @@
 	{% endunless %}
 	{% endfor %}
 	{% for page in site.posts %}
+	{% unless page.url contains 'old' %}
 	<url>
 		<loc>{{ site.url }}{{ page.url | replace: 'index.html', '' }}</loc>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
+	{% endunless %}
 	{% endfor %}
 </urlset>
