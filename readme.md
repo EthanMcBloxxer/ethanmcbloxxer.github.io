@@ -5,6 +5,7 @@ Large file system objects are a last-resort, but are procedurally added to `.git
 Feel free to fork the repository at any point to save a snapshot of its history, which will be recognized as a "mirror".  
 Please don't do this to save accidentally uploaded files or folders.
 
-The repository and its contents are licensed under [CC by NC-ND 4](https://github.com/EthanMcBloxxer/.public/blob/main/license.md) unless otherwise stated. See [the license revokation template](/license-termination.md) for more information about the licensing of certain files inside of this repository.
+The repository and its contents are licensed under [CC by NC-ND 4](/license.md) unless otherwise stated. See [the license revokation template](/license-termination.md) for more information about the licensing of certain files inside of this repository.  
+Certain files are, while undocumented, under a different license. If there was previously a license, I will honor any conditions or takedown requests by default.
 
 ![status badge](https://img.shields.io/github/deployments/EthanMcBloxxer/ethanmcbloxxer.github.io/github-pages?label=deployment%20status&style=flat-square) ![size badge](https://img.shields.io/github/repo-size/EthanMcBloxxer/ethanmcbloxxer.github.io?label=size&style=flat-square) [![GitHub forks](https://img.shields.io/github/forks/EthanMcBloxxer/ethanmcbloxxer.github.io?label=mirrors&style=flat-square)](https://github.com/EthanMcBloxxer/ethanmcbloxxer.github.io/network)
