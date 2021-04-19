@@ -6,6 +6,10 @@ permalink: /content
 <html id="html">
 	<head id="head">
 		<title id="title"></title>
+	</head>
+	<body id="body">
+		Use <code>?content=some text</code> in the url to display <code>"some text"</code>, <code>&title=Page</code> to make the title <code>Page</code>, and/or <code>&font=Arial</code> to make the font <code>Arial</code> (as an example)
+		<noscript>Someone wants to tell you something, but it requires JavaScript to be enabled. You either just dodged a bullet or completely failed at reading confidential information. Sorry about that.</noscript>
 		<script type="text/javascript">
 			for (let p of new URLSearchParams(window.location.search)) {
 				let n = p[0].toLowerCase();
@@ -19,9 +23,5 @@ permalink: /content
 				}
 			}
 		</script>
-	</head>
-	<body id="body">
-		Use <code>?content=some text</code> in the url to display <code>"some text"</code>, <code>&title=Page</code> to make the title <code>Page</code>, and/or <code>&font=Arial</code> to make the font <code>Arial</code> (as an example)
-		<noscript>Someone wants to tell you something, but it requires JavaScript to be enabled. You either just dodged a bullet or completely failed at reading confidential information. Sorry about that.</noscript>
 	</body>
 </html>
