@@ -1,7 +1,7 @@
 # 1char spec
 1char is a language in which keywords consist of single characters. The language doesn't actually exist, this is just an exoskeleton. You can't really program in it.
 
-	+	Add
+	+	Add (and Concatenate)
 	-	Subtract
 	*	Multiply
 	/	Divide
@@ -15,6 +15,7 @@
 	<	Less than
 	>	Greater than
 	+=	Shorthand for val = val + __
+	*=  Shorthand for val = val × __
 	=	Set
 	
 	&	and
@@ -37,11 +38,18 @@
 In a basic example,
 
 	@variable="string text"
-	@boolean=y
-	@otherName=30
+	@boolean = y
+	@otherName= 30
+	@table =[
+		@key = "value",
+	]
 	
-	?@otherName != 20 {
-		;@otherName !=20 {
+	@say = f (@text) {
+		System.Console.Log(System.UTCTime() + " " + @text)
+	}
+
+	? @otherName != 20 {
+		;@otherName != 20 {
 			say("looping")
 			_2000
 		}

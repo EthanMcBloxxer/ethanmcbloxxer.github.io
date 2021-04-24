@@ -47,17 +47,17 @@ When you already have a Mac,
 
 With VirtualBox open, click the "New" button at the top of the screen that has an icon that looks like a spiked blue circle and select Mac OS X as the type and Mac OS X (64-bit) as the version. You can use anything you'd like for the Name field.
 
-![](/img/mac-vm-create.png)
+![](/img/mac-vm/create.png)
 
 Once you've selected "Next", you should be able to allocate memory to the virtual machine. It is recommended that you allow 4,000 (or more) megabytes of memory. I use 16,000 megabytes, but my computer's capacity is much higher. Pick an amount you can afford to spare.
 
-![](/img/mac-vm-memory.png)
+![](/img/mac-vm/memory.png)
 
 The "Hard disk" menu shows up next. Make sure you've selected "Create a virtual hard disk now", "VHD (Virtual Hard Disk)", and "Dynamically allocated" in the proceeding dialogs.
 
 Under "File location and size", change 20GB to 50GB (or higher) to make the virtual machine think that it is able to install itself. If the (virtual size) is lower, the installation media may recognize there isn't enough space to install, even when there is really infinite space on the drive.
 
-![](/img/mac-vm-disk-size.png)
+![](/img/mac-vm/disk-size.png)
 
 *the image above is incorrect, it should be "C:\Macintosh\Root.**vhd**"*
 
@@ -67,7 +67,7 @@ It should create after you continue with the creation, but don't click "Start" y
 
 With the newly created instance selected, click the yellow "Settings" gear.
 
-![](/img/mac-vm-settings.png)
+![](/img/mac-vm/settings.png)
 
 Firstly, open the "System" menu and uncheck the "Floppy" option under Boot Order. Ensure that the Chipset option is set to `ICH9`.
 
@@ -80,7 +80,7 @@ Now, in the "Storage" menu, ensure that "Use Host I/O Cache" is checked. This wi
 
 Importantly, click the "Empty" CD icon, the CD icon on the right near the "Optical Drive" dropdown, "Choose a disk file...", open the disk image, and click "Open".
 
-![](/img/mac-vm-open.png)
+![](/img/mac-vm/open.png)
 
 Once the proper disk image is selected, click "OK" so the settings are all saved.
 
