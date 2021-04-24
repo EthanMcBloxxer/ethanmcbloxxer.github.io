@@ -59,6 +59,8 @@ Under "File location and size", change 20GB to 50GB (or higher) to make the virt
 
 ![](/img/mac-vm-disk-size.png)
 
+*the image above is incorrect, it should be "C:\Macintosh\Root.**vhd**"*
+
 It should create after you continue with the creation, but don't click "Start" yet -- nothing will happen.
 
 ### Settings
@@ -93,14 +95,14 @@ Go ahead and open your command prompt (Win + -Win + "cmd") and navigate to your 
 When you are in the installation directory, run the following commands, one-by-one:
 
 ```bat
-VBoxManage.exe modifyvm "[VM Name]" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
-VBoxManage.exe modifyvm "[VM Name]" --cpu-profile "Intel Core i7-6700K"
+VBoxManage modifyvm "[VM Name]" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage modifyvm "[VM Name]" --cpu-profile "Intel Core i7-6700K"
 VBoxManage setextradata "[VM Name]" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "iMac11,3"
 VBoxManage setextradata "[VM Name]" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0"
 VBoxManage setextradata "[VM Name]" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Iloveapple"
 VBoxManage setextradata "[VM Name]" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
 VBoxManage setextradata "[VM Name]" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
-VBoxManage.exe setextradata "[VM Name]" VBoxInternal2/EfiGraphicsResolution 1920x1080
+VBoxManage setextradata "[VM Name]" VBoxInternal2/EfiGraphicsResolution 1920x1080
 ```
 
 while also replacing `"[VM Name]"` with your virtual machine name (in quotes) and `1920x1080` by your computer resolution.
