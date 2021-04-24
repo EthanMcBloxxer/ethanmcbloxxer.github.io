@@ -41,4 +41,4 @@ But we don't have any of the present-day servers as countries yet, other than Av
 
 Anyways, I hope you enjoyed more than I did. I'm still confused at why we can't just have a single server. I might even try to go back to a simple 10-person group.
 
-!["Never Again" meme: Maybe we should create a server](/assets/img/embed/discord-war-meme.png)
+!["Never Again" meme: Maybe we should create a server](/img/discord-war-meme.png)
