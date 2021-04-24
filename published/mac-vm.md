@@ -1,0 +1,126 @@
+# MacOS Virtual Machine
+
+*A guide to installing a MacOS on a Virtual Machine on Windows --- even without an Intel processor*
+
+## Legal
+
+If you follow this guide or create your own disk image, you may be in violation of Apple's End User License Agreement. The consequences of this may be dependent on your jurisdiction. Learn how legally binding an EULA is in your local court before continuing.
+
+From Apple's EULA,
+
+> ..to install, use and run up to two (2) additional copies or instances of the Apple Software within virtual operating system environments on each Mac Computer you own or control that is already running the Apple Software.
+
+This means that you can use up to two OS(X) virtual machines, but only on Mac hardware/software.
+
+Often (but not always), it isn't strictly 'illegal' if you get the installer from your own Mac, but you will not get any support from Apple.
+
+I do not condone, support, or personally allow getting a disk image illegally through piracy.
+
+## Prerequisites
+
+This guide uses the Oracle VirtualBox application and a Macintosh "Big Sur" 11.0.1 disk image.
+
+### VirtualBox
+
+Oracle's "VirtualBox" is a virtual machine management application. To install, go to [the VirtualBox downloads page](https://www.virtualbox.org/wiki/Downloads) and download the latest version 6.0 release (currently 6.1.20) which is compatible with Windows.
+
+Take note of where VirtualBox is installed. You might need it later.
+
+### Macintosh Disk Image
+
+When you already have a Mac,
+
+1. Go to the App Store and download the installer for "macOS Big Sur".
+2. Open Terminal in Applications or find it through Launchpad.
+3. Run the following commands in Terminal:
+    1. `hdiutil create -o /tmp/MacBigSur -size 12500m -volname MacBigSur -layout SPUD -fs HFS+J`
+    2. `hdiutil attach /tmp/MacBigSur.dmg -noverify -mountpoint /Volumes/MacBigSur`
+    3. `sudo /Applications/Install\ macOS\ Big\ Sur/Contents/Resources/createinstallmedia --volume /Volumes/MacBigSur --nointeraction`
+    4. `hdiutil detach /Volumes/MacBigSur/`
+    5. `hdiutil convert /tmp/MacBigSur.dmg -format UDTO -o ~/Desktop/MacBigSur.cdr`
+    6. `mv ~/Desktop/MacBigSur.cdr ~/Desktop/BigSur.iso`
+4. Move the newly created file to an external drive and then to your Windows.
+
+## Virtual Machine
+
+### Creation
+
+With VirtualBox open, click the "New" button at the top of the screen that has an icon that looks like a spiked blue circle and select Mac OS X as the type and Mac OS X (64-bit) as the version. You can use anything you'd like for the Name field.
+
+![](/img/mac-vm-create.png)
+
+Once you've selected "Next", you should be able to allocate memory to the virtual machine. It is recommended that you allow 4,000 (or more) megabytes of memory. I use 16,000 megabytes, but my computer's capacity is much higher. Pick an amount you can afford to spare.
+
+![](/img/mac-vm-memory.png)
+
+The "Hard disk" menu shows up next. Make sure you've selected "Create a virtual hard disk now", "VHD (Virtual Hard Disk)", and "Dynamically allocated" in the proceeding dialogs.
+
+Under "File location and size", change 20GB to 50GB (or higher) to make the virtual machine think that it is able to install itself. If the (virtual size) is lower, the installation media may recognize there isn't enough space to install, even when there is really infinite space on the drive.
+
+![](/img/mac-vm-disk-size.png)
+
+It should create after you continue with the creation, but don't click "Start" yet -- nothing will happen.
+
+### Settings
+
+With the newly created instance selected, click the yellow "Settings" gear.
+
+![](/img/mac-vm-settings.png)
+
+Firstly, open the "System" menu and uncheck the "Floppy" option under Boot Order. Ensure that the Chipset option is set to `ICH9`.
+
+Secondly, open the "Processor" tab and ensure that the "Enable PAE/NX" is checked. This is to ensure best compatibility with more than 4GB of memory assigned. Also set at least 2 processors (processor cores) by dragging the slider.  
+Like the memory, you can and should set more, but only if you can spare them.
+
+Next, under the "Display" menu, allocate at least 128MB of video memory. You can additionally enable 3d acceleration, but it is unnecessary.
+
+Now, in the "Storage" menu, ensure that "Use Host I/O Cache" is checked. This will result in better performance.
+
+Importantly, click the "Empty" CD icon, the CD icon on the right near the "Optical Drive" dropdown, "Choose a disk file...", open the disk image, and click "Open".
+
+![](/img/mac-vm-open.png)
+
+Once the proper disk image is selected, click "OK" so the settings are all saved.
+
+Still, **do not click "Start" yet!**
+
+### Patching
+
+In this section, we're going to use `VBoxManage.exe` through the command prompt to set some properties that we can't do on the main interface.
+
+Go ahead and open your command prompt (Win + -Win + "cmd") and navigate to your VirtualBox installation directory with `cd`. The default installation location is at `C:\Program Files\Oracle\VirtualBox\`.
+
+When you are in the installation directory, run the following commands, one-by-one:
+
+```bat
+VBoxManage.exe modifyvm "[VM Name]" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage.exe modifyvm "[VM Name]" --cpu-profile "Intel Core i7-6700K"
+VBoxManage setextradata "[VM Name]" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "iMac11,3"
+VBoxManage setextradata "[VM Name]" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0"
+VBoxManage setextradata "[VM Name]" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Iloveapple"
+VBoxManage setextradata "[VM Name]" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
+VBoxManage setextradata "[VM Name]" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
+VBoxManage.exe setextradata "[VM Name]" VBoxInternal2/EfiGraphicsResolution 1920x1080
+```
+
+while also replacing `"[VM Name]"` with your virtual machine name (in quotes) and `1920x1080` by your computer resolution.
+
+### Installing
+
+Open VirtualBox back up, and click the green "Start" arrow. 
+
+When the "Select start-up disk" dialog is shown, select the disk image.
+
+It will probably take several minutes to launch the first interface.
+
+When the installer is shown, select your language, click the arrow, and select "Disk Utility".
+
+Secondary click `VBOX HARDDISK Media` and click "Erase".
+
+Name the newly formatted drive whatever you want the main drive to be named. I name it "Root".
+
+After the disk is formatted, click "Install macOS Big Sur" and "Continue".
+
+Agree to the license agreement, select your newly formatted virtual hard drive (for me "Root") and click "Continue".
+
+Once installation is complete, the machine will restart and starts copying the first files. After that, you can begin setting the newly created virtual machine up yourself.
