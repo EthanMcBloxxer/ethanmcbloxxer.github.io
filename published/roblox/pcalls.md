@@ -56,7 +56,7 @@ Here, since the function errors (in this case we explicitly call `error`), `succ
 Remember, we can still use anonymous functions if you don't need to use the function multiple times:
 
 ```lua
-local success, message = pcall(function()
+local success, message = pcall(function(Words)
     error(Words)
 end, "this function will error now.")
 ```
