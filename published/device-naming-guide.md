@@ -8,7 +8,7 @@ TP-OS(ver)_Name.
 
 PC-Win_EthanMB would be a Windows (latest) named "EthanMB".
 
-# OS
+## OS
 
 | Type | Name | Abbreviation | Note |
 |:--|:--|:--|:--|
@@ -26,11 +26,11 @@ PC-Win_EthanMB would be a Windows (latest) named "EthanMB".
 
 You can lowercase the first letter of the OS. This is recommended.
 
-# ver
+## ver
 
 If necessary, also provide the version of the OS after the OS itself, like so: MP-iOS14_Name. This can also be used to avoid the codename insanity with Android, where MP-AND8_Name (Android Oreo) could be used instead of MP-ANO_Name.
 
-# TP
+## TP
 
 The 'type' of device it is. Use two-character formats, but 3-5 if it is absolutely necessary.
 
@@ -53,7 +53,7 @@ The 'type' of device it is. Use two-character formats, but 3-5 if it is absolute
 
 Do not make any of the letters here lowercase unless it is required by the computer.
 
-# Name
+## Name
 
 Simple- give your device a name.
 
