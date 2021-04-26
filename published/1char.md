@@ -15,7 +15,7 @@
 	<	Less than
 	>	Greater than
 	+=	Shorthand for val = val + __
-	*=  Shorthand for val = val × __
+	*=	Shorthand for val = val × __
 	=	Set
 	
 	&	and
