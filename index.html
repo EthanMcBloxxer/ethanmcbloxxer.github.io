@@ -126,7 +126,7 @@
 			<div class="center">
 				<div>
 					<h1 id="title"><a href="about">Ethan<wbr>Mc<wbr>Bloxxer</a></h1>
-					<p>C++ &bull; C# &bull; <abbr title="HTML, CSS, SASS, JavaScript, jQuery, and more">Web</abbr> &bull; <abbr title="Roblox's Lua">LuaU</abbr></p>
+					<p id="motd">C++ &bull; C# &bull; <abbr title="HTML, CSS, SASS, JavaScript, jQuery, and more">Web</abbr> &bull; <abbr title="Roblox's Lua">LuaU</abbr></p>
 				</div>
 			</div>
 		</main>
@@ -155,5 +155,47 @@
 			</p>
 		</footer>
 		<script id="analytics" src="/track.js" defer></script>
+		<script async>
+			const motds = [
+				"<code>ethanmb@VM:/mnt/c/site#</code>",
+				"josh fight",
+				"Now in Technicolor!",
+				"日本ハロー！",
+				"99.9% object-orientated",
+				"'yello'.upcase",
+				"the home of epic face",
+				"f5",
+				"Exclamation point‽",
+				"<a href='https://www.fitnessgrampacertest.com'>The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues.</a>",
+				"Memes are memes",
+				"dopamine levels stable.",
+				"IF '$MY-NAME' IS 0 THEN SAY 'I AM BROKEN' END",
+				"PROCEDURE DIVISION.",
+				"#import <std>",
+				'<span style="color:#00A">C</span><span style="color:#0A0">o</span><span style="color:#0AA">l</span><span style="color:#A00">o</span><span style="color:#A0A">r</span><span style="color:#FA0">m</span><span style="color:#AAA">a</span><span style="color:#555">t</span><span style="color:#55F">i</span><span style="color:#5F5">c</span>',
+				"latine non ego operor",
+				"cookie + parrot = 😲",
+				":woozy:",
+				"brrrrrrrrrrrrrrr",
+				"Generated with HTJS; Hyperjavastyles.",
+				"Fortran, 4chan.",
+				"navigator.onLine",
+				"D6ddXfMkmcAit2BL9jD7FAyH6Vvu38acW1",
+				"bananananas",
+				"See also: Bloxxing",
+				"ℵ₀",
+				"com.apple.macintosh.sierra.games.heroes-quest",
+				"1 Nanobyte of Everyone's Access Memory",
+				".gitawesome",
+				"--do-not-track",
+				"<yesscript></yesscript>",
+				"$kajillion",
+				"<?php echo 'where are my parenthesis?' ?>",
+				"stick",
+				"null",
+				"motd: undefined"
+			]
+			document.getElementById("motd").innerHTML = motds[Math.floor(Math.random() * motds.length)];
+		</script>
 	</body>
 </html>
