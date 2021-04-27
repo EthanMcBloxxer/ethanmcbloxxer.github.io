@@ -21,4 +21,11 @@
 	</url>
 	{% endunless %}
 	{% endfor %}
+	{% for file in site.static_files %}
+	<url>
+		<loc>{{ file.path | absolute_url }}</loc>
+		<lastmod>{{ file.modified_time | date: '%Y-%m-%d' }}</lastmod>
+		<priority>0.75</priority>
+	</url>
+	{% endfor %}
 </urlset>

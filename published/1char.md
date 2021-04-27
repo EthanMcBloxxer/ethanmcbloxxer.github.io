@@ -1,4 +1,5 @@
 # 1char spec
+
 1char is a language in which keywords consist of single characters. The language doesn't actually exist, this is just an exoskeleton. You can't really program in it.
 
 	+	Add (and Concatenate)

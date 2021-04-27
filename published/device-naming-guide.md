@@ -59,4 +59,4 @@ Simple- give your device a name.
 
 This also works with fLast, like PC-Win_jDoe (a Windows computer owned by John Doe). If preferred, you can also use the full name or add the middle name.
 
-It is recommended to append `.admin`, `.administrator`, or `.sudo` to the profile name when there is an alternative account that does not have administrator permissions (and this one does). This should only really be used in enterprise situations.
+It is recommended to append `.admin`, `.administrator`, or `.sudo` to the profile name when there is an alternative account that does not have administrator permissions (and this one does). This should only really be used in enterprise situations. Use a hyphen if a period is unavailable or bad practice.

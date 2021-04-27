@@ -51,7 +51,7 @@ It's Japanese, the language everyone thinks of alongside Chinese when asked to p
 
 ### Punjabi
 
-My first reaction to looking at this language was "what the heck is this". According to Wikipedia, it's the language of Pakistan, and has 1.2% speaking it (in March 2019). I suppose that makes sense. It's got 35 traditional characters, but different writing systems, which are in use.. with different religious groups? *What?* I think it's because it's in both Pakistan and India? Okay, I'll just say that it counts as more than 50 characters.. **what is this *language*...**
+My first reaction to looking at this language was "what the heck is this?". According to Wikipedia, it's the language of Pakistan, and has 1.2% speaking it (in March 2019). I suppose that makes sense. It's got 35 traditional characters, but different writing systems, which are in use.. with different religious groups? *What?* I think it's because it's in both Pakistan and India? Okay, I'll just say that it counts as more than 50 characters.. **what is this *language*...**
 
 ### Marathi
 
@@ -62,6 +62,7 @@ This is it, folks. The final language in the top ten (in March 2019). Well, well
 I'm only doing this to make sure that the 11th language isn't the best language in the world. It's got... 5... 1... characters. And gendered nouns.
 
 ## Conclusion
+
 At least in the top ~~10~~ **11** languages, there's no decent language that is well-established, actually makes sense, and is easy to learn. You might be able to compromise on this, but for the time being, it doesn't exist yet. I encourage you to make your own language with any free time you have. It doesn't need to be widespread, but the world needs a language with good criteria:
 
 * No weird grammar rules

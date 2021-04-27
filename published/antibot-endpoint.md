@@ -3,4 +3,4 @@ You can create a custom instance of [AntiBot](https://github.com/codehouseRBLX/A
 I **highly** recommend making a `GetRequest` to this endpoint at `/ping` when the game starts.  
 Replit could put your repl to sleep if you don't have the "Hacker" plan otherwise.
 
-*I want to give up on interacting with this so badly, why can't they just HAVE ANOTHER REPOSITORY with this information?*
+*I want to give up on interacting with this so badly, why can't they just HAVE ANOTHER REPOSITORY with this information? I even made an entire repository with an action that completely failed!*
