@@ -1,11 +1,5 @@
 [
 	{
-		"service": "About.me",
-		"encoded": "aboutme",
-		"website": "https://about.me/",
-		"username": "EthanMcBloxxer"
-	},
-	{
 		"service": "Amplitude",
 		"encoded": "amplitude",
 		"website": "https://amplitude.com/",
@@ -48,18 +42,6 @@
 		"username": "EthanMcBloxy#1463"
 	},
 	{
-		"service": "BuyMeACoffee",
-		"encoded": "buymeacoffee",
-		"website": "https://buymeacoffee.com/",
-		"username": "EthanMcBloxxer"
-	},
-	{
-		"service": "Cloudflare",
-		"encoded": "cloudflare",
-		"website": "https://cloudflare.com/",
-		"username": "ethanmcbloxxer@protonmail.com"
-	},
-	{
 		"service": "Discord",
 		"encoded": "discord",
 		"website": "https://discord.com/",
@@ -90,12 +72,6 @@
 		"username": "EthanMcBloxxer"
 	},
 	{
-		"service": "Evernote",
-		"encoded": "evernote",
-		"website": "https://evernote.com/",
-		"username": "EthanMcBloxxer"
-	},
-	{
 		"service": "Fandom",
 		"encoded": "fandom",
 		"website": "https://fandom.com/",
@@ -117,12 +93,6 @@
 		"service": "Google",
 		"encoded": "google",
 		"website": "https://google.com/",
-		"username": "ethanmcbloxxer@protonmail.com"
-	},
-	{
-		"service": "Grammarly",
-		"encoded": "grammarly",
-		"website": "https://grammarly.com/",
 		"username": "ethanmcbloxxer@protonmail.com"
 	},
 	{
