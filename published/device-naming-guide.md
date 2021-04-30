@@ -18,9 +18,11 @@ PC-Win_EthanMB would be a Windows (latest) named "EthanMB".
 | Computer | Linux (Ubuntu) | UBN |
 | Computer | Linux (Debian) | DEB |
 | Computer | Linux (Mint) | LMT |
+| Computer | Chromebook | CRB |
 | Phone | Android | AND |
 | Phone | iOS | iOS |
 | TV | KODI | KDI |
+| TV | Chromecast | CRC |
 {: rules="groups"}
 
 You can lowercase the first letter of the OS. This is recommended.
