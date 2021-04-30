@@ -13,7 +13,7 @@ PC-Win_EthanMB would be a Windows (latest) named "EthanMB".
 | Type | Name | Abbreviation |
 |:--|:--|:--|
 | Computer | Windows | WIN |
-| Computer | MacOS | MAC |
+| Computer | MacOS | MAC, OSX |
 | Computer | Linux | LNX |
 | Computer | Linux (Ubuntu) | UBN |
 | Computer | Linux (Debian) | DEB |
