@@ -10,8 +10,8 @@ PC-Win_EthanMB would be a Windows (latest) named "EthanMB".
 
 ## OS
 
-| Type | Name | Abbreviation | Note |
-|:--|:--|:--|:--|
+| Type | Name | Abbreviation |
+|:--|:--|:--|
 | Computer | Windows | WIN |
 | Computer | MacOS | MAC |
 | Computer | Linux | LNX |
@@ -19,7 +19,6 @@ PC-Win_EthanMB would be a Windows (latest) named "EthanMB".
 | Computer | Linux (Debian) | DEB |
 | Computer | Linux (Mint) | LMT |
 | Phone | Android | AND |
-| Phone | Android | AN[C] | [C] = codename first letter |
 | Phone | iOS | iOS |
 | TV | KODI | KDI |
 {: rules="groups"}
@@ -28,7 +27,7 @@ You can lowercase the first letter of the OS. This is recommended.
 
 ## ver
 
-If necessary, also provide the version of the OS after the OS itself, like so: MP-iOS14_Name. This can also be used to avoid the codename insanity with Android, where MP-AND8_Name (Android Oreo) could be used instead of MP-ANO_Name.
+If necessary, also provide the version of the OS after the OS itself, like so: MP-iOS14_Name.
 
 ## TP
 
