@@ -21,6 +21,8 @@ PC-Win_EthanMB would be a Windows (latest) named "EthanMB".
 | Computer | Chromebook | CRB |
 | Phone | Android | AND |
 | Phone | iOS | iOS |
+| Console | Xbox | XBX |
+| Console | Playstation | PST |
 | TV | KODI | KDI |
 | TV | Chromecast | CRC |
 {: rules="groups"}
@@ -47,6 +49,7 @@ The 'type' of device it is. Use two-character formats, but 3-5 if it is absolute
 | Phone (Work) | WP |
 | Phone (Telephone) | TL, TEL |
 | Television / Dongle | TV |
+| Console | CN, CON, CNSL |
 | Printer | PT, PTR, PRNT |
 | Virtual Machine | VM |
 | Other | DV |
