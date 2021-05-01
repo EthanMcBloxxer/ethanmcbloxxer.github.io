@@ -79,10 +79,17 @@
 				color: hsl(65, 89%, 56%);
 				margin: 0;
 				word-break: break-word;
+				transition: all 0.25s ease;
 			}
 			#title:hover {
 				text-shadow: 0 0 2.5px white;
 			}
+			@media screen and (max-width: 500px) {#title {
+				font-size: 3rem;
+			}}
+			@media screen and (max-width: 300px) {#title {
+				font-size: 2rem;
+			}}
 			
 			footer {
 				font-size: 1rem;
@@ -93,6 +100,9 @@
 				height: 3rem;
 				width: 100%;
 			}
+			@media screen and (max-width: 650px) {footer {
+				display: none;
+			}}
 			
 			a {
 				color: inherit;
