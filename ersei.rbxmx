@@ -801,9 +801,7 @@ spawn(function()
 			update(input)
 		end
 	end)
-end)
-
-script:Destroy()]]></ProtectedString>
+end)]]></ProtectedString>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
 				</Properties>
