@@ -81,10 +81,21 @@
 			}
 			
 			var old = document.location.href.substr(0, 33) + "old/" + document.location.href.substr(33);
-			var xhttp = new XMLHttpRequest();
+			let xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
-					document.getElementById("tip").innerHTML = "<a href=" + old + ">did you mean " + old.substr(32) + "?</a>";
+					document.getElementById("tip").innerHTML = "<a href='" + old + "'>did you mean " + old.substr(32) + "?</a>";
+				}
+				else {
+					// substr(33) + "/"
+					let xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+						if (this.readyState == 4 && this.status == 200) {
+							document.getElementById("tip").innerHTML = "<a href='" + old + "/" + "'>did you mean " + old.substr(32) + "/" + "?</a>";
+						}
+					}
+					xhttp.open("GET", old + "/", true);
+					xhttp.send();
 				}
 			};
 			xhttp.open("GET", old, true);
