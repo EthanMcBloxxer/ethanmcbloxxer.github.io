@@ -68,9 +68,27 @@
 			<div class="center">
 				<div>
 					<h1 id="title">404</h1>
-					<p><a href="/"><code>to root</code></a></p>
+					<p id="tip"><a href="/"><code>to root</code></a></p>
 				</div>
 			</div>
 		</main>
+		<script>
+			if (document.location.href.substr(0, 41) == "https://ethanmcbloxxer.github.io/.public/") {
+				document.location.href = document.location.href.replace("/.public/", "/");
+			}
+			else if (document.location.href == "https://ethanmcbloxxer.github.io/.public") {
+				document.location.href = "https://ethanmcbloxxer.github.io/";
+			}
+			
+			var old = document.location.href.substr(0, 33) + "old/" + document.location.href.substr(33);
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("tip").innerHTML = "<a href=" + old + ">did you mean " + old.substr(32) + "?</a>";
+				}
+			};
+			xhttp.open("GET", old, true);
+			xhttp.send();
+		</script>
 	</body>
 </html>
