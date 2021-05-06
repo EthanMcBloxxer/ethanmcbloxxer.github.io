@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- no style included -->
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,10 +10,39 @@
 		<meta property="og:description" content="A simple hypertext markup language template to get you started on your site." />
 		
 		<link rel="stylesheet" href="style.css">
+		
+		<!-- see comments throughout html for this in sass -->
+		<style>
+			html, body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			header {
+				 background-image: url("https://url.com/img.png");
+				 min-height: 100%;
+			}
+			header > *:not(nav) {
+				text-align: center;
+			}
+			nav > ul {
+				list-style-type: none;
+			}
+			.splash > * {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			footer {
+				width: 100%; text-align: center;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
-			<!-- header { background-image: url("https://url.com/img.png"); min-height: 100%; } -->
+			<!-- header { background-image: url("https://url.com/img.png"); min-height: 100%; > *:not(nav) { text-align: center; } } -->
 			<nav>
 				<ul>
 					<!-- nav > ul { list-style-type: none; } -->
