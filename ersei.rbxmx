@@ -651,8 +651,8 @@ end)]]></ProtectedString>
 					<Item class="UITextSizeConstraint" referent="RBX7A5C118395084C7AA3CC8129E884B44A">
 						<Properties>
 							<BinaryString name="AttributesSerialize"></BinaryString>
-							<int name="MaxTextSize">24</int>
-							<int name="MinTextSize">1</int>
+							<int name="MaxTextSize">35</int>
+							<int name="MinTextSize">5</int>
 							<string name="Name"> </string>
 							<int64 name="SourceAssetId">-1</int64>
 							<BinaryString name="Tags"></BinaryString>
@@ -742,8 +742,8 @@ end)]]></ProtectedString>
 					<Item class="UITextSizeConstraint" referent="RBX94341F9553854D0B8B1E9DC7C9F5E9A5">
 						<Properties>
 							<BinaryString name="AttributesSerialize"></BinaryString>
-							<int name="MaxTextSize">24</int>
-							<int name="MinTextSize">1</int>
+							<int name="MaxTextSize">35</int>
+							<int name="MinTextSize">5</int>
 							<string name="Name"> </string>
 							<int64 name="SourceAssetId">-1</int64>
 							<BinaryString name="Tags"></BinaryString>
