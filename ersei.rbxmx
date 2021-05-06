@@ -297,7 +297,7 @@ end)]]></ProtectedString>
 						<int name="LayoutOrder">0</int>
 						<float name="LineHeight">1</float>
 						<int name="MaxVisibleGraphemes">-1</int>
-						<string name="Name"> </string>
+						<string name="Name"></string>
 						<Ref name="NextSelectionDown">null</Ref>
 						<Ref name="NextSelectionLeft">null</Ref>
 						<Ref name="NextSelectionRight">null</Ref>
@@ -607,7 +607,7 @@ end)]]></ProtectedString>
 						<UDim2 name="Position">
 							<XS>0.5</XS>
 							<XO>0</XO>
-							<YS>0</YS>
+							<YS>0.117164604</YS>
 							<YO>0</YO>
 						</UDim2>
 						<bool name="RichText">false</bool>
@@ -619,7 +619,7 @@ end)]]></ProtectedString>
 						<UDim2 name="Size">
 							<XS>0.5</XS>
 							<XO>0</XO>
-							<YS>1</YS>
+							<YS>0.75</YS>
 							<YO>0</YO>
 						</UDim2>
 						<token name="SizeConstraint">0</token>
@@ -653,7 +653,7 @@ end)]]></ProtectedString>
 							<BinaryString name="AttributesSerialize"></BinaryString>
 							<int name="MaxTextSize">30</int>
 							<int name="MinTextSize">5</int>
-							<string name="Name"> </string>
+							<string name="Name"></string>
 							<int64 name="SourceAssetId">-1</int64>
 							<BinaryString name="Tags"></BinaryString>
 						</Properties>
@@ -698,7 +698,7 @@ end)]]></ProtectedString>
 						<UDim2 name="Position">
 							<XS>0</XS>
 							<XO>0</XO>
-							<YS>0</YS>
+							<YS>0.117164604</YS>
 							<YO>0</YO>
 						</UDim2>
 						<bool name="RichText">false</bool>
@@ -710,7 +710,7 @@ end)]]></ProtectedString>
 						<UDim2 name="Size">
 							<XS>0.5</XS>
 							<XO>0</XO>
-							<YS>1</YS>
+							<YS>0.75</YS>
 							<YO>0</YO>
 						</UDim2>
 						<token name="SizeConstraint">0</token>
@@ -744,7 +744,7 @@ end)]]></ProtectedString>
 							<BinaryString name="AttributesSerialize"></BinaryString>
 							<int name="MaxTextSize">30</int>
 							<int name="MinTextSize">5</int>
-							<string name="Name"> </string>
+							<string name="Name"></string>
 							<int64 name="SourceAssetId">-1</int64>
 							<BinaryString name="Tags"></BinaryString>
 						</Properties>
