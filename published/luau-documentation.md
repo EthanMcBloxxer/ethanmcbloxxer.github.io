@@ -2,6 +2,8 @@
 
 *A compiled list of very simply explained functions and constants part of the Luau (Roblox's sandboxed Lua) language.*
 
+[Contributions](https://github.com/EthanMcBloxxer/ethanmcbloxxer.github.io/edit/main/published/luau-documentation.md) are welcome, but you'll need a GitHub account and know how to pull request.
+
 ## Primitive
 
 tba (string, number, int, Variant, type checking, etc)
