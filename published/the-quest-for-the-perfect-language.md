@@ -38,7 +38,9 @@ Pronounced "bong luh", a mere 3% of the world (in March 2019) speak this languag
 ### Portuguese
 
 Yes! It's that one language that most applications put as a quick pick, even though you could never learn it in school. You know, that one with a weird ê. Apparently 2.8% of the world speaks it (in March 2019). Cool. Well, it actually isn't that bad. It has tonal questions, English word categorization, and gendered nouns... wait. Checking sources...
+
 ![portuguese tutoring . com excerpt](https://ethanmcbloxxer.is-ne.at/zVGJF3.png)
+
 All nouns have a gender, eh? Disqualified.
 
 ### Russian
@@ -47,7 +49,7 @@ Ra-ra-raspu-- oh. Hi. It's Russian. That one cool language that makes you sound 
 
 ### Japanese
 
-It's Japanese, the language everyone thinks of alongside Chinese when asked to provide non-Indo-European languages, because nobody cares about Hindi, Korean, Greek, or Russian. I actually tried learning a bit of it, and it's actually great. 1.665% of the world (in March 2019) speak it, so it's decently established. **And hey lookat dat nouns aren't gendered**. So, how cool is this language, and do we have a winner? No. Definately not. They use Kanji. I'm sorry everyone. Japanese doesn't have spaces, so they use Chinese in order to differentiate words. I'm dissapointed. Oh yeah, and there are a few stupid grammar rules too. Like doubling consonants. You use a small tsu (つ) to double a consonant such as ki (き), making it kki. Like in がっき *gakki* (school term), where it is pronounced gak ki. However, if your "ki" happens to be a "n", you use a normal ん, meaning んに is n ni, which basically means あんない *annai* (guide) is used with ん instead of a small tsu (っ), which would instead be あっない (a n na i). Basically, if the character's consonant is an "n", then use ん instead of っ for no reason. Oh yeah, then it's also got Katakana, which I honestly would've forgiven. It's like an import for other languages. For example, my name in Japanese is イーサンブァクサ, "ii-san buakusa".
+It's Japanese, the language everyone thinks of alongside Chinese when asked to provide non-Indo-European languages, because nobody cares about Hindi, Korean, Greek, or Russian. I actually tried learning a bit of it, and it's actually great. 1.665% of the world (in March 2019) speak it, so it's decently established. **And hey lookat dat nouns aren't gendered**. So, how cool is this language, and do we have a winner? No. Definately not. They use Kanji. I'm sorry everyone. Japanese doesn't have spaces, so they use Chinese in order to differentiate words. I'm dissapointed. Oh yeah, and there are a few stupid grammar rules too. Like doubling consonants. You use a <ruby>っ <rp>(</rp><rt>Small Tsu</rt><rp>)</rp></ruby> to double a consonant such as <ruby>き <rp>(</rp><rt>Ki</rt><rp>)</rp></ruby>, making it <ruby>きっ <rp>(</rp><rt>K Ki</rt><rp>)</rp></ruby>. Like in <ruby>がっき <rp>(</rp><rt>Gak ki</rt><rp>)</rp></ruby>. However, if your "き" happens to be a "ん", you use a normal <ruby>ん <rp>(</rp><rt>N</rt><rp>)</rp></ruby>, meaning <ruby>んに <rp>(</rp><rt>n ni</rt><rp>)</rp></ruby> is valid, which basically means <ruby>あんない <rp>(</rp><rt>An nai</rt><rp>)</rp></ruby> is used with the ん instead of a っ, which would instead be <ruby>あっない <rp>(</rp><rt>a n na i</rt><rp>)</rp></ruby>. Basically, if the character's consonant is an "n", then use ん instead of っ for no reason. Oh yeah, then it's also got Katakana, which I honestly would've forgiven. It's like an import for other languages. For example, my name in Japanese is <ruby>イーサンブァクサ <rp>(</rp><rt>i i sa n bua ku sa</rt><rp>)</rp></ruby>.
 
 ### Punjabi
 
