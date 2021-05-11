@@ -1,4 +1,4 @@
-# Luau Documentation
+# Lua*u* Documentation
 
 *A compiled list of very simply explained functions and constants part of the Luau (Roblox's sandboxed Lua) language.*
 
