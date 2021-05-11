@@ -82,7 +82,13 @@ Don't assign this with instances (or their Parent), though: there exists a metho
 
 ### `boolean`
 
-Either on or off, `true` or `false`. They can be used with ifs and conditional statements. In Luau, a value **not** either `false` or `nil` will evaluate to true and is considered truthy. `0`, `""`, etc. evaluate to true.
+Either yes or no, on or off, `true` or `false`. They can be used with ifs and conditional statements. In Luau, a value **not** either `false` or `nil` will evaluate to true and is considered truthy. `0`, `""`, etc. evaluate to true.
+
+Parenthesis allow for order of operations-based conditional statement evaluation:
+
+```lua
+print((not (1 == 1)) or (4 ~= 57)) --> true --(4 is not 57)
+```
 
 Operators can be used in conditional statements to evaluate booleans in a different way.
 
@@ -270,6 +276,99 @@ typeof(49318) --> "number"
 typeof(Instance.new("Model")) --> "Instance"
 ```
 
+## Operators
+
+tba
+
+## Logic
+
+Logic is objectively the most important part of coding. Nothing could exist without it.
+
+In Luau, there is only `if` - `elseif` - `else`. No "case" function exists.
+
+### `if`
+
+`if`s let you run code based on whether or not a conditional statement is true or false. If the statement evaluates to true, it will run. If not, it won't. It uses `then` and `end` keywords to wrap the contents inside. The `end` keyword is for the entire block.
+
+```lua
+if ConditionalStatement then
+	
+end
+```
+
+Conditional statements were previously mentioned in the `boolean` section. If a statement containing operators evaluates to true, the conditional statement is truthy and allows the block of code to continue.
+
+### `elseif`
+
+Mainly a fallback for `if` that evaluates a second conditional statement if the one above it fails. You can have infinite `elseif`s inside of an if block. It uses the `then` keyword to wrap the contents inside.
+
+```lua
+if ConditionalStatement then
+	
+elseif OtherConditionalStatement then
+	
+end
+```
+
+### `else`
+
+A final fallback for if blocks which doesn't allow for another conditional statement. It handles everything when `if` and all `elseif`s were false. No keywords are required other than itself (`else`).
+
+```lua
+if ConditionalStatement then
+	
+elseif OtherConditionalStatement then
+	
+else
+	
+end
+```
+
+`else`s are allowed without the usage of `elseif`s.
+
+## Loops
+
+There are 3 different loop types to choose from. Two of them are very similar, and one is a conventional thing you'd think of as a loop.
+
+### `for`
+
+You should already know how this works if you know another programming language, but the syntax might vary.
+
+```lua
+for i = 1, 10, 1 do
+	print(i) --[[> 1
+	               2
+	               3
+	               4
+	               5
+	               6
+	               7
+	               8
+	               9
+	               10 ]]
+end
+```
+
+For those who don't know, the first thing we're doing is assigning the locally scoped `i` to 1, which is where the loop starts at. The second parameter is the maximum (ending) value, where the loop should stop. The final value is the *step* value, which is how much `i` is automatically incremented by. This is automatically `1` when not specified.
+
+Skipping a certain loop cycle is possible with the `continue` keyword, and ending it is possible with the `break` keyword.
+
+```lua
+for i = 1, 10, 1 do
+	if i == 5 then
+		continue
+	elseif i == 7 then
+		break
+	end
+	print(i) --[[> 1
+	               2
+	               3
+	               4
+	               6
+	               7 ]]
+end
+```
+
 ## ModuleScripts
 
 These are extremely simple to understand on a basic level. There is a deeper level of understanding you can achieve, but you don't need to have an immense amount of understanding to use these.
@@ -337,7 +436,7 @@ end
 return exports
 ```
 
-and some even utilize Metatables.
+and some even utilize Metatables or Methods.
 
 Another thing to note is that code inside of the ModuleScript will be ran. Functions inside of them don't run automatically (as functions don't run without being called), so you can make code inside of the ModuleScript run on calling:
 
@@ -353,6 +452,8 @@ which would do the following in a Script:
 local bool = require(ModuleScript) --> Ran ModuleScript
 print(tostring(bool)) --> true
 ```
+
+ModuleScripts also have different variable naming conventions, specifically prefixing private (not to be tampered) values with an underscore (\_).
 
 # Concepts
 
@@ -403,6 +504,20 @@ As you can see, the "Metatable" table has a `__call` function item. When the `se
 `__call` is not the only event (metamethod). There are more as documented in the [Roblox Developer Wiki](https://developer.roblox.com/en-us/articles/Metatables#metamethods).
 
 # Builtin Functions
+
+## wait
+
+`wait` is a function which yields the current thread/script for the provided seconds (or 29 miliseconds if not provided).
+
+Unfortunately, `wait` does not wait the exact amount of time inputted, as it is based on framerate and not time. It only guarantees that the *minimum* time it waits is the provided seconds.
+
+It also returns how much time it did actually wait, so you can make use of the delta time in some scenarios.
+
+```lua
+print(wait(5)) --> 5.00318529843 --(also waits this time before outputting)
+```
+
+When using Luau, it is *highly* recommended to use the `:Wait()` method on Events to yield the thread until the event is triggered. There is also [an alternative](https://devforum.roblox.com/t/avoiding-wait-and-why/244015) which uses BindableEvents, even if they are costly.
 
 ## pcall
 
