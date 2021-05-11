@@ -171,6 +171,8 @@ end
 variable("arg1") --> "arg1"
 ```
 
+They can also be called with their name and parenthesis with arguments inside, which pass to the function's parameters.
+
 Semantically, functions are made using `function variable()` instead of `variable = function()`. The latter is assigning `variable` to an anonymous function (a function without a name, often provided to other functions since functions can be arguments) instead of making a function called `variable`.
 
 Always prefer the following:
