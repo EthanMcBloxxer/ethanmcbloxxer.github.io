@@ -6,7 +6,269 @@
 
 ## Primitive
 
-tba (string, number, int, Variant, type checking, etc)
+### Scripts
+
+Scripts are the core of Roblox's engine, and where Luau actually runs inside of Roblox.
+
+To make one, go into your Explorer menu (View → Explorer) and hover over ServerScriptService. Right click on it and then click on `Insert Object...`. Search for just "Script", and click on `Script`. You should now be in the script editor. If you ever leave the script editor you can get back into it by double clicking on the script you want to edit.
+
+On Roblox, "Script"s run on the server and "LocalScript"s run on the client. Scripts can run in Workspace, but this is only for compatibility with some features like Tools. **Never put Scripts in Workspace**. ServerScriptService is the proper alternative which does not allow exploiters to scan for vulnerabilities in your code.
+
+### LocalScripts
+
+LocalScripts function the same way as Scripts, but they only run on the local computer. These are often used for GUIs and other scenarios which you would need to send data from the client to server. This is possible with Remote Events & Functions, but that is outside the scope of this section.
+
+### Variables
+
+A variable is something that can be referenced and changed with assignments. They are always case-sensitive.
+
+There are (technically) two ways to create them:
+
+```lua
+local variable = "data"
+-- or
+variable = "data"
+```
+
+`local` is a keyword that represents a locally-scoped variable. Think of `let` in JavaScript. It only exists in the current function (which includes functions, ifs, loops, etc) or, in the absense of one, across the entire script.
+
+When there is no keyword, it creates a globally-scoped variable (`var` in JavaScript). You can use this new variable throughout the entire running script.
+
+Locally scoped variables are always preferred. Conversely to JavaScript (which is just an example language to compare to), locally-scoped variables offer a hefty (30%+) performance boost over globally scoped ones.
+
+If you need to, you can initiate a variable without a value:
+
+```lua
+local variable
+```
+
+Luau will warn you that this is unnecessary until you use it later. Doing
+
+```lua
+local variable = nil
+```
+
+Will silence this warning, as `nil` is just the absense of a value (think `null` in most other languages). Not assigning a value is the same as assigning `nil`.
+
+Assignment also permits variables being assigned to other variables in place of a data type.
+
+```lua
+local a = 1
+local b = a
+
+print(a) --> 1
+print(b) --> 1
+```
+
+### Datatypes
+
+Luau also contains many different types of data to use. As previously mentioned, there are only two ways to make a variable. This means that strings aren't prefixed with `string`, numbers not `int`, `float`, or `double`, etc.
+
+The primitive and most used values are as follows:
+
+* nil (`nil`)
+* boolean (`true` / `false`)
+* number (`13209` and `042389.0239`)
+* string (`"Hello"`, `'Hello'`, and `[[Hello]]`)
+* function (`function() end`)
+* table (`{"array item", "array item"}`, `{key = "value", item = "content"}`)
+* userdata (other type)
+
+Roblox additionally has other custom data types like `Color3`, `Vector2`, `CFrame`s, `Instance`s, [and more](https://developer.roblox.com/en-us/api-reference/data-types).
+
+#### `nil`
+
+`nil`, as aforementioned, is the absense of a value (like `null`).
+
+Don't assign this with instances (or their Parent), though: there exists a method called "Destroy" which is a better alternative that moves the instance and its children to `nil`, locks the parent property, and disconnects all connections. This will be built on in a later section.
+
+#### `boolean`
+
+Either on or off, `true` or `false`. They can be used with ifs and conditional statements. In Luau, a value **not** either `false` or `nil` will evaluate to true and is considered truthy. `0`, `""`, etc. evaluate to true.
+
+Operators can be used in conditional statements to evaluate booleans in a different way.
+
+##### `==`
+
+True when both provided operands are equivalent to one another.
+
+```lua
+if 2 + 3 == 5 then
+	print("2 + 3 = 5")
+end
+```
+
+##### `~=`
+
+True when both provided operands are **not** equivalent to one another.
+
+```lua
+if 5 ~= 3 then
+	print("5 is not 3")
+end
+```
+
+Often mistaken for `!=` from other languages.
+
+##### `>`
+
+Greater than.
+
+##### `<`
+
+Less than.
+
+##### `>=`
+
+Greater than or equal to.
+
+##### `<=`
+
+Less than or equal to.
+
+##### `and`
+
+Returns the first argument if it is false or nil, otherwise it returns the second argument.
+
+##### `or`
+
+If the first value is neither false nor nil, the or operator returns the first value. If the first value is false or nil, then it returns the second value.
+
+This can be used with assignments like so:
+
+```lua
+local x = y or 0
+print(x) --> 0 (as `y` is `nil`)
+```
+
+##### `not`
+
+Returns true if the argument is false or nil, otherwise false.
+
+#### `number`
+
+Any number falls under this type, which may be new if you know other languages. Integers, doubles, and floats are all a part of this type. If needed, you can still check whether the number is an integer with math functions:
+
+```lua
+if x ~= math.ceil(x) then
+	print(x, "is not an integer!")
+end
+```
+
+#### `string`
+
+Strings are strands of text. They can be made using either quotes (`""`), apostrophes (`''`), or double brackets (`[[]]`). Conversely to C++, apostrophes do not denote a singular character.
+
+#### `function`
+
+Functions are types that can be called on with *arguments*, which can be accepted by the function in the form of *parameters*.
+
+```lua
+local variable = function(param1)
+	print(param1)
+end
+
+variable("arg1") --> "arg1"
+```
+
+Semantically, functions are made using `function variable()` instead of `variable = function()`. The latter is assigning `variable` to an anonymous function (a function without a name, often provided to other functions since functions can be arguments) instead of making a function called `variable`.
+
+Always prefer the following:
+
+```lua
+local function variable(param1)
+	print(param1)
+end
+
+variable("arg1") --> "arg1"
+```
+
+This syntax also allows you to use methods in more advanced object-orientated programming.
+
+#### `table`
+
+A table can be created with two curly brackets (`{}`) and assigned to inside of the brackets or with dot syntax. Table values can contain **any** datatype inside of them.
+
+Note that `table` is a reserved Lua Library and you cannot name a variable "`table`".
+
+##### Arrays
+
+Arrays are tables when you simply need to store an array of values, like the current nonplayer characters inside of a game. In this case, you could do the following:
+
+```lua
+local myTable = {
+	workspace.NPC1,
+	workspace.NPC2,
+	workspace.NPC3,
+}
+```
+
+and you'd have an array. This is only really useful when you iterate through it, but you can also get the values with bracket syntax like so:
+
+```lua
+print(myTable[2]) --> workspace.NPC2
+```
+
+##### Dictionaries
+
+Dictionaries are tables where each value has a given key, like `Cash`, `Gems`, etc.
+
+```lua
+local myTable = {
+	Cash = 500,
+	Gems = 20, -- the comma can be omitted on the final value
+}
+
+myTable.ActiveBoost = "Sprint"
+
+print(myTable.Cash) --> 500
+print(myTable["Cash"]) --> 500
+print(myTable.ActiveBoost) --> "Sprint"
+print(myTable["ActiveBoost"]) --> "Sprint"
+```
+
+If needed, you can use bracket syntax to define a key or index the table with a spaced name (or reserved keyword!) or in place of dot syntax:
+
+```lua
+local myTable = {
+	["Cash and Cents"] = 500.4,
+	["Active Boost"] = "Sprint",
+	["if"] = true,
+}
+
+print(myTable.Cash and Cents) --> SYNTAX ERROR
+print(myTable["Cash and Cents"]) --> 500.4
+print(myTable.Active Boost) --> SYNTAX ERROR
+print(myTable["Active Boost"]) --> "Sprint"
+print(myTable.if) --> SYNTAX ERROR
+print(myTable["if"]) --> true
+```
+
+#### `userdata`
+
+Denotes a custom Roblox type. You can also create your own with the [`newproxy()`](https://devforum.roblox.com/t/what-is-newproxy-and-what-is-it-good-for/184454) function, but that requires extensive knowledge of types and metatables.
+
+#### `type()`
+
+`type` is a type-checking function that returns the primitive type of its only argument, as a string.
+
+```lua
+type("hello") --> "string"
+type("1948") --> "string"
+type(49318) --> "number"
+type(Instance.new("Model")) --> "userdata"
+```
+
+#### `typeof()`
+
+`typeof` is a Luau extension to `type` that also allows for custom parsing of userdata, or custom types. `type` is still useful when you only need to know if the argument is one of the primitive data types, since `type` is generally faster than `typeof`.
+
+```lua
+typeof("hello") --> "string"
+typeof("1948") --> "string"
+typeof(49318) --> "number"
+typeof(Instance.new("Model")) --> "Instance"
+```
 
 ### ModuleScripts
 
