@@ -185,6 +185,35 @@ variable("arg1") --> "arg1"
 
 This syntax also allows you to use methods in more advanced object-orientated programming.
 
+Functions can also have *return values*, which when called can be assigned to a variable for later use.
+
+```lua
+local function GetText(text)
+	return text
+end
+
+print(GetText("Yahallo")) --> "Yahallo"
+local text = GetText("Yahallo")
+print(text) --> "Yahallo"
+```
+
+A `return` keyword halts the execution of a function, so any code under it will not be run. This allows for compatibility with different return statements in logic, but not execution of code after returning.
+
+```lua
+local function WhatIsIt(value)
+	if type(value) == "string" then
+		return "It's a string!"
+	elseif type(value) == "number" then
+		return "It's a number!"
+	end
+	return "I don't know what it is..."
+	print("This is after the return keyword")
+end
+
+print(WhatIsIt(23409)) --> "It's a number!"
+print(WhatIsIt(false)) --> "I don't know what it is..."
+```
+
 #### `table`
 
 A table can be created with two curly brackets (`{}`) and assigned to inside of the brackets or with dot syntax. Table values can contain **any** datatype inside of them.
