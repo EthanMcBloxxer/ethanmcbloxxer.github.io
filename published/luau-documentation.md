@@ -557,57 +557,13 @@ print(tostring(bool)) --> true
 
 ModuleScripts also have different variable naming conventions, specifically prefixing private (not to be tampered) values with an underscore (\_).
 
-# Concepts
+## Builtins
 
-## Metatables
+Reference for built-in functions, constants, and libraries. Often called "Globals".
 
-This article is very oversimplified and doesn't touch many small details.
+### Functions
 
-Think of metatables like normal Roblox "Events". The only difference is that you don't use `:Connect` and instead assign the value to a function. This is because metatables **are** just tables with the events (metamethods) assigned to functions.
-
-To set a metatable to a table, use the `setmetatable` function, like this:
-
-```lua
-local Table = {
-  Cash = 100
-}
-local Metatable = {
-  __call = function()
-    return "A table was called!"
-  end
-}
-
-setmetatable(Table, Metatable)
-
-print(Table())       --> "A table was called!"
-print(Table["Cash"]) --> 100
-```
-
-you can also do this, which does the same thing:
-
-```lua
-local Table = setmetatable(
-  { -- table
-    Cash = 100
-  }, -- notice the comma
-  { -- metatable
-    __call = function()
-      return "A table was called!"
-    end
-  }
-)
-
-print(Table())       --> "A table was called!"
-print(Table["Cash"]) --> 100
-```
-
-As you can see, the "Metatable" table has a `__call` function item. When the `setmetatable` function sets `Metatable` to `Table`, the events (metamethods) in `Metatable` are called, in this case `__call`, which executes when the table is called like a function.
-
-`__call` is not the only event (metamethod). There are more as documented in the [Roblox Developer Wiki](https://developer.roblox.com/en-us/articles/Metatables#metamethods).
-
-# Builtin Functions
-
-## wait
+#### wait
 
 `wait` is a function which yields the current thread/script for the provided seconds (or 29 miliseconds if not provided).
 
@@ -621,7 +577,7 @@ print(wait(5)) --> 5.00318529843 --(also waits this time before outputting)
 
 When using Luau, it is *highly* recommended to use the `:Wait()` method on Events to yield the thread until the event is triggered. There is also [an alternative](https://devforum.roblox.com/t/avoiding-wait-and-why/244015) which uses BindableEvents, even if they are costly.
 
-## pcall
+#### pcall
 
 Take this example:
 
@@ -699,3 +655,69 @@ local success = xpcall(MyCoolFunction, ErrorHandler, "Just stop the function.")
 ```
 
 You also might want to know why this is useful, but this isn't really something I can just explain. It is useful when it is useful. Anyway, the example makes it so that the error handler prints `[Error Handler] Script: "Just stop the function."`. `success` is `false`, as would be expected.
+
+#### get/setmetatable
+
+Think of metatables like normal Roblox "Events". The only difference is that you don't use `:Connect` and instead assign the value to a function. This is because metatables **are** just tables with the events (metamethods) assigned to functions.
+
+To set a metatable to a table, use the `setmetatable` function, like this:
+
+```lua
+local Table = {
+  Cash = 100
+}
+local Metatable = {
+  __call = function()
+    return "A table was called!"
+  end
+}
+
+setmetatable(Table, Metatable)
+
+print(Table())       --> "A table was called!"
+print(Table["Cash"]) --> 100
+```
+
+you can also do this, which does the same thing:
+
+```lua
+local Table = setmetatable(
+  { -- table
+    Cash = 100
+  }, -- notice the comma
+  { -- metatable
+    __call = function()
+      return "A table was called!"
+    end
+  }
+)
+
+print(Table())       --> "A table was called!"
+print(Table["Cash"]) --> 100
+```
+
+As you can see, the "Metatable" table has a `__call` function item. When the `setmetatable` function sets `Metatable` to `Table`, the events (metamethods) in `Metatable` are called, in this case `__call`, which executes when the table is called like a function.
+
+`__call` is not the only event (metamethod). There are more as documented in the [Roblox Developer Wiki](https://developer.roblox.com/en-us/articles/Metatables#metamethods).
+
+You can then get the metatable of a table by doing `getmetatable` if `__metatable` is not present.
+
+#### rawget
+
+A simple function to get the real value of the second passed argument from the first argument (as a table), without invoking `__index` or `__newindex` metamethods.
+
+```lua
+rawget(Table, "Cash") --> 100
+```
+
+#### rawset
+
+Sets the value of the second passed argument to the third argument in the first argument (which has to be a table), without invoking `__index` or `__newindex` metamethods.
+
+```lua
+rawset(Table, "Cash", 500)
+```
+
+#### rawequal
+
+Checks if the provided two tables are equal without invoking the `__eq` metamethod.
