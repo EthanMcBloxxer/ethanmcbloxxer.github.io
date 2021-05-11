@@ -659,11 +659,47 @@ Reference for built-in functions, constants, and libraries. Often called "Global
 
 Prints the provided message to the output. If you use `warn`, the message will appear orange. `error` is special in that it terminates the execution of the script with the given message and also allows a "level" number argument that changes how the message links back to the script. 0 gives no information, 1 gives the position where `error` was called, and 2 links to the function that called `error`.
 
+### tostring/tonumber
+
+`tostring` converts the argument (of any type) given into a string.
+
+```lua
+print(tostring(40193)) --> 40193
+print(tostring(true)) --> "true"
+print(tostring(Vector2)) --> "table: 0x684b2c9b31db5858" --(Vector2 is technically a table/userdata that has a metatable)
+```
+
+`tonumber` is similar, but requires the first argument to be a string. A second argument is also allowed which will specify the base to interpret the number in.
+
+```lua
+print(tonumber("1337")) --> 1337
+print(tonumber("1.25")) --> 1.25
+print(tonumber("3e2")) --> 300
+print(tonumber("25", 8)) --> 21
+print(tonumber("0x100")) --> 256
+print(tonumber("roblox")) --> nil
+```
+
 ### assert
 
 Throws an error when the first argument is falsy (`false` or `nil`) with an optional second argument as the error message.
 
 Can be used in conjunction with `pcall`.
+
+### select
+
+When the first argument passed is a number, `select` will convert the arguments to a table, get the index from that argument, and convert the values back (it won't actually do that, this is just for conceptualization). If the number is negative, it will take the values from the end and back.
+
+```lua
+print(select(2, "A", "B", "C")) --> B C
+print(select(-1, "A", "B", "C")) --> C
+```
+
+When the first argument is a string and `"#"`, it will return the total amount of arguments passed to it:
+
+```lua
+print(select("#", "A", "B", "C")) --> 3
+```
 
 ### wait
 
@@ -678,6 +714,10 @@ print(wait(5)) --> 5.00318529843 --(also waits this time before outputting)
 ```
 
 When using Luau, it is *highly* recommended to use the `:Wait()` method on Events to yield the thread until the event is triggered. There is also [an alternative](https://devforum.roblox.com/t/avoiding-wait-and-why/244015) which uses BindableEvents, even if they are costly.
+
+### delay
+
+Similar to JavaScript's `setTimeout`, this takes a delay time and a function and will run the function after the specified delay time. The delayed time is very similar to the behavior of `wait`, so an alternative to this function is preferred if accuracy is needed.
 
 ### get/setfenv
 
@@ -844,3 +884,9 @@ Checks if the provided two tables are equal without invoking the `__eq` metameth
 ### collectgarbage("count")
 
 Returns the total memory in use by Lua (in kilobytes). No other parameter/argument is allowed by Luau (it must be "count").
+
+### loadstring
+
+Loads the only argument (which is a string) as Luau code, excluding binary or bytecode. It only works with `game.ServerScriptService.LoadStringEnabled` set to true, and you must do that in Studio.
+
+Some better alternatives exist which *can* execute bytecode, but that isn't a part of this function. [vLua](https://roblox.com/library/4689019964/vLua-5-1) is a good choice for that.
