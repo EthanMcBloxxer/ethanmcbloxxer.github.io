@@ -215,6 +215,18 @@ and you'd have an array. This is only really useful when you iterate through it,
 print(myTable[2]) --> workspace.NPC2
 ```
 
+Note that Lua and Luau use 1-based indexes, so `[0]` doesn't exist.
+
+An array is the same thing as a dictionary that uses bracket index counting from 1:
+
+```lua
+local myTable = {
+	[1] = workspace.NPC1,
+	[2] = workspace.NPC2,
+	[3] = workspace.NPC3,
+}
+```
+
 #### Dictionaries
 
 Dictionaries are tables where each value has a given key, like `Cash`, `Gems`, etc.
@@ -240,6 +252,14 @@ local myTable = {
 	["Cash and Cents"] = 500.4,
 	["Active Boost"] = "Sprint",
 	["if"] = true,
+	[Vector2] = {
+		"tables can be nested, and can have varying types!",
+		"this is an array, but we could make a table item inside of this too",
+		{
+			key = "value",
+			[2] = "and this is a nested dictionary (d > a > d)"
+		},
+	},
 }
 
 print(myTable.Cash and Cents) --> SYNTAX ERROR
@@ -248,6 +268,9 @@ print(myTable.Active Boost) --> SYNTAX ERROR
 print(myTable["Active Boost"]) --> "Sprint"
 print(myTable.if) --> SYNTAX ERROR
 print(myTable["if"]) --> true
+print(myTable.Vector2) --> nil (this is referencing ["Vector2"] not [Vector2])
+print(myTable[Vector2]) --> true
+print(myTable["Vector2"]) --> nil
 ```
 
 ### `userdata`
@@ -345,11 +368,23 @@ for i = 1, 10, 1 do
 	               7
 	               8
 	               9
-	               10 ]]
+	               10 <]]--
 end
 ```
 
 For those who don't know, the first thing we're doing is assigning the locally scoped `i` to 1, which is where the loop starts at. The second parameter is the maximum (ending) value, where the loop should stop. The final value is the *step* value, which is how much `i` is automatically incremented by. This is automatically `1` when not specified.
+
+You may also count down with this loop, just make `i` larger than the maximum value, and specify a negative step.
+
+```lua
+for i = 5, 1, -1 do
+	print(i) --[[> 5
+	               4
+	               3
+	               2
+	               1 <]]--
+end
+```
 
 Skipping a certain loop cycle is possible with the `continue` keyword, and ending it is possible with the `break` keyword.
 
@@ -365,9 +400,76 @@ for i = 1, 10, 1 do
 	               3
 	               4
 	               6
-	               7 ]]
+	               7 <]]--
 end
 ```
+
+This can be used in every loop type.
+
+### `while`
+
+This is probably the simplest loop of the 3, the `while` loop. It executes its body while the conditional statement given is met.
+
+```lua
+local i = 0
+
+while i ~= 10 or i < 10 do
+	i += 1
+	print(i) --[[> 1
+	               2
+		       3
+		       4
+		       5
+		       6
+		       7
+		       8
+		       9
+	               10 <]]--
+end
+```
+
+This can also be used with infinite loops, but you must also add a yield somewhere in the body or the game/script/thread will freeze. Just make a condition that will never be `false`.
+
+```lua
+while true do
+	-- code
+	wait()
+end
+```
+
+An alias for this is also
+
+```lua
+while wait() do
+	-- code
+end
+```
+
+but there are [many reasons](https://docs.google.com/document/d/1ieZ8OzXPiXe3R7rs_xWmYZOnhQevlagN0ZWwoj_zKP4/) why this is an undesirable alternative.
+
+### `repeat` `until`
+
+A bit less used, this will repeat the body until the given condition is met.
+
+```lua
+local i = 0
+
+repeat
+	i += 1
+	print(i) --[[> 1
+	               2
+		       3
+		       4
+		       5
+		       6
+		       7
+		       8
+		       9
+	               10 <]]--
+until i >= 10
+```
+
+These loops always execute the body at least once, since it executes before checking if the condition is true.
 
 ## ModuleScripts
 
