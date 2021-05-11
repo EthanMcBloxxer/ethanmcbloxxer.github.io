@@ -86,43 +86,14 @@ Either on or off, `true` or `false`. They can be used with ifs and conditional s
 
 Operators can be used in conditional statements to evaluate booleans in a different way.
 
-#### `==`
-
-True when both provided operands are equivalent to one another.
-
-```lua
-if 2 + 3 == 5 then
-	print("2 + 3 = 5")
-end
-```
-
-#### `~=`
-
-True when both provided operands are **not** equivalent to one another.
-
-```lua
-if 5 ~= 3 then
-	print("5 is not 3")
-end
-```
-
-Often mistaken for `!=` from other languages.
-
-#### `>`
-
-Greater than.
-
-#### `<`
-
-Less than.
-
-#### `>=`
-
-Greater than or equal to.
-
-#### `<=`
-
-Less than or equal to.
+| Symbol | Name | Example |
+| ------ | ---- | ------- |
+| == | Equal to | 1 == 1 |
+| ~= | Not equal to | 1 ~= 2 |
+| \> | Greater than | 2 \> 1 |
+| \< | Less than    | 2 \< 1 |
+| \>= | Greater than or equal to | 2 \>= 1 |
+| \<= | Less than or equal to | 1 \<= 1 |
 
 #### `and`
 
