@@ -84,41 +84,7 @@ Don't assign this with instances (or their Parent), though: there exists a metho
 
 Either yes or no, on or off, `true` or `false`. They can be used with ifs and conditional statements. In Luau, a value **not** either `false` or `nil` will evaluate to true and is considered truthy. `0`, `""`, etc. evaluate to true.
 
-Parenthesis allow for order of operations-based conditional statement evaluation:
-
-```lua
-print((not (1 == 1)) or (4 ~= 57)) --> true --(4 is not 57)
-```
-
-Operators can be used in conditional statements to evaluate booleans in a different way.
-
-| Symbol | Name | Example |
-| ------ | ---- | ------- |
-| == | Equal to | 1 == 1 |
-| ~= | Not equal to | 1 ~= 2 |
-| \> | Greater than | 2 \> 1 |
-| \< | Less than    | 2 \< 1 |
-| \>= | Greater than or equal to | 2 \>= 1 |
-| \<= | Less than or equal to | 1 \<= 1 |
-
-#### `and`
-
-Returns the first argument if it is false or nil, otherwise it returns the second argument.
-
-#### `or`
-
-If the first value is neither false nor nil, the or operator returns the first value. If the first value is false or nil, then it returns the second value.
-
-This can be used with assignments like so:
-
-```lua
-local x = y or 0
-print(x) --> 0 (as `y` is `nil`)
-```
-
-#### `not`
-
-Returns true if the argument is false or nil, otherwise false.
+Operators can be used in conditional statements to evaluate booleans in a different way. Read more in the Operators section.
 
 ### `number`
 
@@ -268,7 +234,7 @@ print(myTable.Active Boost) --> SYNTAX ERROR
 print(myTable["Active Boost"]) --> "Sprint"
 print(myTable.if) --> SYNTAX ERROR
 print(myTable["if"]) --> true
-print(myTable.Vector2) --> nil (this is referencing ["Vector2"] not [Vector2])
+print(myTable.Vector2) --> nil --(this is referencing ["Vector2"] not [Vector2])
 print(myTable[Vector2]) --> true
 print(myTable["Vector2"]) --> nil
 ```
@@ -301,7 +267,57 @@ typeof(Instance.new("Model")) --> "Instance"
 
 ## Operators
 
-tba
+Parenthesis allow for order of operations-based conditional statement evaluation:
+
+```lua
+print((not (1 == 1)) or (4 ~= 57)) --> true --(4 is not 57)
+```
+
+### Arithmetic
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| + | Addition | 1 + 1 == 2 |
+| - | Subtraction | 1 - 1 == 0 |
+| * | Multiplication | 5 * 5 == 25 |
+| ^ | Exponentiation | 2 ^ 4 == 16 |
+| / | Division | 10 / 5 == 2 |
+| % | Modulus (Division Remainder) | 13 % 7 == 6 |
+| - | Unary (Negation) | -2 == 0 - 2 |
+| .. | Concatenation | "Hello," .. "World!" == "Hello,World!" |
+| # | Length | #{"Item", "Item"} and #"Hi" == 2 |
+
+### Logical
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| == | Equal to | 1 == 1 |
+| ~= | Not equal to | 1 ~= 2 |
+| \> | Greater than | 2 \> 1 |
+| \< | Less than    | 2 \< 1 |
+| \>= | Greater than or equal to | 2 \>= 1 |
+| \<= | Less than or equal to | 1 \<= 1 |
+
+### Relational
+
+#### `and`
+
+Returns the first argument if it is false or nil, otherwise it returns the second argument.
+
+#### `or`
+
+If the first value is neither false nor nil, the or operator returns the first value. If the first value is false or nil, then it returns the second value.
+
+This can be used with assignments like so:
+
+```lua
+local x = y or 0
+print(x) --> 0 (as `y` is `nil`)
+```
+
+#### `not`
+
+Returns true if the argument is false or nil, otherwise false.
 
 ## Logic
 
@@ -561,9 +577,13 @@ ModuleScripts also have different variable naming conventions, specifically pref
 
 Reference for built-in functions, constants, and libraries. Often called "Globals".
 
-### Functions
+### assert
 
-#### wait
+Throws an error when the first argument is falsy (`false` or `nil`) with an optional second argument as the error message.
+
+Can be used in conjunction with `pcall`.
+
+### wait
 
 `wait` is a function which yields the current thread/script for the provided seconds (or 29 miliseconds if not provided).
 
@@ -577,7 +597,7 @@ print(wait(5)) --> 5.00318529843 --(also waits this time before outputting)
 
 When using Luau, it is *highly* recommended to use the `:Wait()` method on Events to yield the thread until the event is triggered. There is also [an alternative](https://devforum.roblox.com/t/avoiding-wait-and-why/244015) which uses BindableEvents, even if they are costly.
 
-#### pcall
+### (x)pcall
 
 Take this example:
 
@@ -656,7 +676,9 @@ local success = xpcall(MyCoolFunction, ErrorHandler, "Just stop the function.")
 
 You also might want to know why this is useful, but this isn't really something I can just explain. It is useful when it is useful. Anyway, the example makes it so that the error handler prints `[Error Handler] Script: "Just stop the function."`. `success` is `false`, as would be expected.
 
-#### get/setmetatable
+`ypcall` is another function that acts the same as `pcall`, but can yield. Since `pcall` has since been tweaked to allow yielding, it has been deprecated. It's still sometimes used for an example of a deprecated global.
+
+### get/setmetatable
 
 Think of metatables like normal Roblox "Events". The only difference is that you don't use `:Connect` and instead assign the value to a function. This is because metatables **are** just tables with the events (metamethods) assigned to functions.
 
@@ -721,3 +743,7 @@ rawset(Table, "Cash", 500)
 #### rawequal
 
 Checks if the provided two tables are equal without invoking the `__eq` metamethod.
+
+### collectgarbage("count")
+
+Returns the total memory in use by Lua (in kilobytes). No other parameter/argument is allowed by Luau (it must be "count").
