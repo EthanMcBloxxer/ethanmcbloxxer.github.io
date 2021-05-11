@@ -4,9 +4,7 @@
 
 [Contributions](https://github.com/EthanMcBloxxer/ethanmcbloxxer.github.io/edit/main/published/luau-documentation.md) are welcome, but you'll need a GitHub account and know how to pull request.
 
-## Primitive
-
-### Scripts
+## Scripts
 
 Scripts are the core of Roblox's engine, and where Luau actually runs inside of Roblox.
 
@@ -14,11 +12,11 @@ To make one, go into your Explorer menu (View → Explorer) and hover over Serve
 
 On Roblox, "Script"s run on the server and "LocalScript"s run on the client. Scripts can run in Workspace, but this is only for compatibility with some features like Tools. **Never put Scripts in Workspace**. ServerScriptService is the proper alternative which does not allow exploiters to scan for vulnerabilities in your code.
 
-### LocalScripts
+## LocalScripts
 
 LocalScripts function the same way as Scripts, but they only run on the local computer. These are often used for GUIs and other scenarios which you would need to send data from the client to server. This is possible with Remote Events & Functions, but that is outside the scope of this section.
 
-### Variables
+## Variables
 
 A variable is something that can be referenced and changed with assignments. They are always case-sensitive.
 
@@ -60,7 +58,7 @@ print(a) --> 1
 print(b) --> 1
 ```
 
-### Datatypes
+## Datatypes
 
 Luau also contains many different types of data to use. As previously mentioned, there are only two ways to make a variable. This means that strings aren't prefixed with `string`, numbers not `int`, `float`, or `double`, etc.
 
@@ -76,19 +74,19 @@ The primitive and most used values are as follows:
 
 Roblox additionally has other custom data types like `Color3`, `Vector2`, `CFrame`s, `Instance`s, [and more](https://developer.roblox.com/en-us/api-reference/data-types).
 
-#### `nil`
+### `nil`
 
 `nil`, as aforementioned, is the absense of a value (like `null`).
 
 Don't assign this with instances (or their Parent), though: there exists a method called "Destroy" which is a better alternative that moves the instance and its children to `nil`, locks the parent property, and disconnects all connections. This will be built on in a later section.
 
-#### `boolean`
+### `boolean`
 
 Either on or off, `true` or `false`. They can be used with ifs and conditional statements. In Luau, a value **not** either `false` or `nil` will evaluate to true and is considered truthy. `0`, `""`, etc. evaluate to true.
 
 Operators can be used in conditional statements to evaluate booleans in a different way.
 
-##### `==`
+#### `==`
 
 True when both provided operands are equivalent to one another.
 
@@ -98,7 +96,7 @@ if 2 + 3 == 5 then
 end
 ```
 
-##### `~=`
+#### `~=`
 
 True when both provided operands are **not** equivalent to one another.
 
@@ -110,27 +108,27 @@ end
 
 Often mistaken for `!=` from other languages.
 
-##### `>`
+#### `>`
 
 Greater than.
 
-##### `<`
+#### `<`
 
 Less than.
 
-##### `>=`
+#### `>=`
 
 Greater than or equal to.
 
-##### `<=`
+#### `<=`
 
 Less than or equal to.
 
-##### `and`
+#### `and`
 
 Returns the first argument if it is false or nil, otherwise it returns the second argument.
 
-##### `or`
+#### `or`
 
 If the first value is neither false nor nil, the or operator returns the first value. If the first value is false or nil, then it returns the second value.
 
@@ -141,11 +139,11 @@ local x = y or 0
 print(x) --> 0 (as `y` is `nil`)
 ```
 
-##### `not`
+#### `not`
 
 Returns true if the argument is false or nil, otherwise false.
 
-#### `number`
+### `number`
 
 Any number falls under this type, which may be new if you know other languages. Integers, doubles, and floats are all a part of this type. If needed, you can still check whether the number is an integer with math functions:
 
@@ -155,11 +153,11 @@ if x ~= math.ceil(x) then
 end
 ```
 
-#### `string`
+### `string`
 
 Strings are strands of text. They can be made using either quotes (`""`), apostrophes (`''`), or double brackets (`[[]]`). Conversely to C++, apostrophes do not denote a singular character.
 
-#### `function`
+### `function`
 
 Functions are types that can be called on with *arguments*, which can be accepted by the function in the form of *parameters*.
 
@@ -216,13 +214,13 @@ print(WhatIsIt(23409)) --> "It's a number!"
 print(WhatIsIt(false)) --> "I don't know what it is..."
 ```
 
-#### `table`
+### `table`
 
 A table can be created with two curly brackets (`{}`) and assigned to inside of the brackets or with dot syntax. Table values can contain **any** datatype inside of them.
 
 Note that `table` is a reserved Lua Library and you cannot name a variable "`table`".
 
-##### Arrays
+#### Arrays
 
 Arrays are tables when you simply need to store an array of values, like the current nonplayer characters inside of a game. In this case, you could do the following:
 
@@ -240,7 +238,7 @@ and you'd have an array. This is only really useful when you iterate through it,
 print(myTable[2]) --> workspace.NPC2
 ```
 
-##### Dictionaries
+#### Dictionaries
 
 Dictionaries are tables where each value has a given key, like `Cash`, `Gems`, etc.
 
@@ -275,11 +273,11 @@ print(myTable.if) --> SYNTAX ERROR
 print(myTable["if"]) --> true
 ```
 
-#### `userdata`
+### `userdata`
 
 Denotes a custom Roblox type. You can also create your own with the [`newproxy()`](https://devforum.roblox.com/t/what-is-newproxy-and-what-is-it-good-for/184454) function, but that requires extensive knowledge of types and metatables.
 
-#### `type()`
+### `type()`
 
 `type` is a type-checking function that returns the primitive type of its only argument, as a string.
 
@@ -290,7 +288,7 @@ type(49318) --> "number"
 type(Instance.new("Model")) --> "userdata"
 ```
 
-#### `typeof()`
+### `typeof()`
 
 `typeof` is a Luau extension to `type` that also allows for custom parsing of userdata, or custom types. `type` is still useful when you only need to know if the argument is one of the primitive data types, since `type` is generally faster than `typeof`.
 
@@ -301,7 +299,7 @@ typeof(49318) --> "number"
 typeof(Instance.new("Model")) --> "Instance"
 ```
 
-### ModuleScripts
+## ModuleScripts
 
 These are extremely simple to understand on a basic level. There is a deeper level of understanding you can achieve, but you don't need to have an immense amount of understanding to use these.
 
@@ -385,9 +383,9 @@ local bool = require(ModuleScript) --> Ran ModuleScript
 print(tostring(bool)) --> true
 ```
 
-## Functions
+# Concepts
 
-### Metatables
+## Metatables
 
 This article is very oversimplified and doesn't touch many small details.
 
@@ -433,9 +431,9 @@ As you can see, the "Metatable" table has a `__call` function item. When the `se
 
 `__call` is not the only event (metamethod). There are more as documented in the [Roblox Developer Wiki](https://developer.roblox.com/en-us/articles/Metatables#metamethods).
 
-### pcall
+# Builtin Functions
 
-You might want to know what `pcall` does, and it is actually extremely simple.
+## pcall
 
 Take this example:
 
@@ -513,5 +511,3 @@ local success = xpcall(MyCoolFunction, ErrorHandler, "Just stop the function.")
 ```
 
 You also might want to know why this is useful, but this isn't really something I can just explain. It is useful when it is useful. Anyway, the example makes it so that the error handler prints `[Error Handler] Script: "Just stop the function."`. `success` is `false`, as would be expected.
-
-## Constants
