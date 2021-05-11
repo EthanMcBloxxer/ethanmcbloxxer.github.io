@@ -4,6 +4,8 @@
 
 [Contributions](https://github.com/EthanMcBloxxer/ethanmcbloxxer.github.io/edit/main/published/luau-documentation.md) are welcome, but you'll need a GitHub account and know how to pull request.
 
+> This is a *living document* and can change at any time.
+
 ## Scripts
 
 Scripts are the core of Roblox's engine, and where Luau actually runs inside of Roblox.
@@ -273,6 +275,27 @@ Parenthesis allow for order of operations-based conditional statement evaluation
 print((not (1 == 1)) or (4 ~= 57)) --> true --(4 is not 57)
 ```
 
+### Assignment
+
+All assignments are statements, not expressions. This means that
+
+```lua
+print(a = 1)
+```
+
+will not set `a` to `1` nor print `1` and will instead error.
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| = | Assign | `i = 527` |
+| += | Addition | `i += 1` == `i = i + 1` |
+| -= | Subtraction | `i -= 1` == `i = i - 1` |
+| \*= | Multiplication | `i *= 3` == `i = i * 3` |
+| ^= | Exponentiation | `i ^= 3` == `i = i ^ 3` |
+| /= | Division | `i /= 3` == `i = i / 3` |
+| %= | Modulus (Division Remainder) | `i %= 3` == `i = i % 3` |
+| ..= | Concatenation | `i ..= " has been concatenated to."` == `i = i .. " has been concatenated to."` |
+
 ### Arithmetic
 
 | Operator | Description | Example |
@@ -422,6 +445,61 @@ end
 
 This can be used in every loop type.
 
+For loops also allow [iterator functions](https://devforum.roblox.com/t/all-you-need-to-know-about-iterator-functions/572366) to pass variables to them:
+
+```lua
+for ... in x do
+	
+end
+```
+
+Where `...` are the arguments that function `x` has passed to the loop. `x` is not the iterator function, but the function that returns the iterator function. `x` could look like this:
+
+```lua
+local function x(t)
+	local state = 0
+	local function iterator()
+		state += 1
+		return t[state]
+	end
+	return iterator
+end
+```
+
+and with it, you could make a loop to go through all of the values in a table:
+
+```lua
+for value in x({"item", "meti", 528}) do
+	print(value) --[[> "item"
+	                   "meti"
+			   528 <]]--
+end
+```
+
+and this is the default behavior of `ipairs`!
+
+```lua
+for index, value in ipairs({"item", "meti", 528}) do
+	print(index, value) --[[> 1, "item"
+	                          2, "meti"
+			          3, 528 <]]--
+end
+```
+
+`ipairs` is a function that returns both the current index and value of the table to the loop.
+
+`pairs` has similar behavior, but it is used on dictionaries to return the current key and value to the loop. It can be used in place of `ipairs`, but `ipairs` cannot be used in place of this.
+
+When using `ipairs` or `pairs`, it is common practice to abbreviate "index" to `i`, "key" to `k`, and "value" to `v`:
+
+```lua
+local variable = {}
+
+for k, v in pairs(variable) do
+	
+end
+```
+
 ### `while`
 
 This is probably the simplest loop of the 3, the `while` loop. It executes its body while the conditional statement given is met.
@@ -444,7 +522,7 @@ while i ~= 10 or i < 10 do
 end
 ```
 
-This can also be used with infinite loops, but you must also add a yield somewhere in the body or the game/script/thread will freeze. Just make a condition that will never be `false`.
+This can also be used with infinite loops, but you must also add a yield somewhere in the body or the game/script/thread will freeze and crash. Just make a condition that will never be `false`.
 
 ```lua
 while true do
@@ -577,6 +655,10 @@ ModuleScripts also have different variable naming conventions, specifically pref
 
 Reference for built-in functions, constants, and libraries. Often called "Globals".
 
+### print / warn / error
+
+Prints the provided message to the output. If you use `warn`, the message will appear orange. `error` is special in that it terminates the execution of the script with the given message and also allows a "level" number argument that changes how the message links back to the script. 0 gives no information, 1 gives the position where `error` was called, and 2 links to the function that called `error`.
+
 ### assert
 
 Throws an error when the first argument is falsy (`false` or `nil`) with an optional second argument as the error message.
@@ -596,6 +678,21 @@ print(wait(5)) --> 5.00318529843 --(also waits this time before outputting)
 ```
 
 When using Luau, it is *highly* recommended to use the `:Wait()` method on Events to yield the thread until the event is triggered. There is also [an alternative](https://devforum.roblox.com/t/avoiding-wait-and-why/244015) which uses BindableEvents, even if they are costly.
+
+### get/setfenv
+
+The "fenv" in this function means "function environment", and is a table of everything the function has access to. This will not include locally-scoped variables, as globally-scoped variables are stored in this environment.
+
+When getting the environment (`getfenv`), you can provide a function as the only argument to get the environment of that function, or you can use an integer to get the function based on stack:
+
+* 0 is global
+* 1 is function (same as `nil` in this function)
+* 2 is function calling function
+* 3 is function calling function calling function
+
+Remember that the function environment only has `script` by default, as globally-scoped variables are added to it.
+
+Setting the environment (`setfenv`) sets the first function argument's function environment to the second (table) argument. Global values from that environment can be referenced like normal.
 
 ### (x)pcall
 
