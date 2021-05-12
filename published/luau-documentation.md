@@ -573,7 +573,7 @@ Now, to be blunt, ModuleScripts are functions.
 
 That's it.
 
-Inside of a ModuleScript, you may notice there is a `return` keyword at the end. This is what gets returned when using the `require` keyword.
+Inside of a ModuleScript, you may notice there is a `return` keyword at the end. This is what gets returned when using the `require` keyword, but only once. Roblox stores the return value in memory so there is only one execution of a singular ModuleScript.
 
 Say I have the following code in a ModuleScript:
 
@@ -658,6 +658,8 @@ Reference for built-in functions, constants, and libraries. Often called "Global
 ### print / warn / error
 
 Prints the provided message to the output. If you use `warn`, the message will appear orange. `error` is special in that it terminates the execution of the script with the given message and also allows a "level" number argument that changes how the message links back to the script. 0 gives no information, 1 gives the position where `error` was called, and 2 links to the function that called `error`.
+
+You may also notice there is a function called `printidentity`, which prints the Script's thread security level. You can [learn about that](https://devforum.roblox.com/t/a-current-explanation-of-normal-identities-and-security-tags/219471) on your own.
 
 ### tostring/tonumber
 
