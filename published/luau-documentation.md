@@ -1,6 +1,8 @@
 # Lua*u* Documentation
 
-*A compiled list of very simply explained functions and constants part of the Luau (Roblox's sandboxed Lua) language.*
+*A tutorial for the Luau (Roblox's sandboxed Lua) language.*
+
+Luau is an extension of Lua, so you will also be learning Lua if you follow this tutorial.
 
 [Contributions](https://github.com/EthanMcBloxxer/ethanmcbloxxer.github.io/edit/main/published/luau-documentation.md) are welcome, but you'll need a GitHub account and know how to pull request.
 
