@@ -128,7 +128,7 @@ end
 variable("arg1") --> "arg1"
 ```
 
-This syntax also allows you to use methods in more advanced object-orientated programming.
+This syntax also allows you to properly define methods in more advanced object-orientated programming.
 
 Functions can also have *return values*, which when called can be assigned to a variable for later use.
 
@@ -158,6 +158,32 @@ end
 print(WhatIsIt(23409)) --> "It's a number!"
 print(WhatIsIt(false)) --> "I don't know what it is..."
 ```
+
+If you need a function with infinite optional arguments, you can specify this with the `...` parameter. The functions with this as a parameter are referred to as a [**variadic function**](https://en.wikipedia.org/wiki/Variadic_function).
+
+`print` is a variadic function that takes infinite arguments and prints them, for example.
+
+```lua
+local function Variadic(...)
+	local args = {...}
+	print(...)
+end
+```
+
+The `...` itself is a literal list of each argument as they were called, so a table with `...` as its only item (`{...}`) will be a table of all arguments, as the arguments are comma-separated. This is why it also works with print, because each argument in a list gets passed the same way.
+
+```lua
+Variadic("My name is ", false, " but you can call me Al.")
+```
+
+Would make the variadic function see this, all under `...`:
+
+```lua
+local args = {"My name is ", false, " but you can call me Al."}
+print("My name is ", false, " but you can call me Al.")
+```
+
+Remember that type checking is possible.
 
 ### `table`
 
@@ -650,6 +676,31 @@ print(tostring(bool)) --> true
 ```
 
 ModuleScripts also have different variable naming conventions, specifically prefixing private (not to be tampered) values with an underscore (\_).
+
+## Instances
+
+So you know how Luau works, but now how do we apply that to Roblox itself?
+
+To begin with, the entirety of Roblox is built upon things called "Instances". They inherit the properties of their parent on [the hierarchy](https://roblox.fandom.com/wiki/Class_reference).
+
+When you reference an instance inside of the game, you use the global `game` variable. The `game` variable points to the DataModel, which you can think of as the *entire* game, not just what you see when playing (which is the workspace).
+
+The game directly contains special instances called "Services" which cannot be created and can be semantically retrieved using the `GetService` method of `game`.
+
+```lua
+local ServerScriptService = game:GetService("ServerScriptService")
+```
+
+Workspace is a service of the DataModel which contains all of the visible parts and terrain of a Roblox game.
+Spawn locations, guns, walls, buildings, and everything interactable in the 3 dimensional scope.
+
+With workspace, it is recommended not to use `game:GetService("Workspace")` (which still works!) and instead `game.Workspace` or `workspace`. `game.Workspace` is a property of the game that will always point to workspace, and `workspace` is a seperate global which also references the workspace.
+
+We'll be using `game.Workspace`.
+
+There is another global similar to this which references the current script's path, called `script`. Because scripts are instances, you can do `script.Parent` to get the parent of the script.
+
+You can set your own coding formatting guidelines, but we will always prefer not using relative paths (like `script.Parent`) and instead absolute paths (like `game:GetService("ServerScriptService")`). If relative paths are absolutely required, you can use them.
 
 ## Builtins
 
