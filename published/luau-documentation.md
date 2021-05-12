@@ -270,13 +270,13 @@ print(myTable["Active Boost"]) --> "Sprint"
 print(myTable.if) --> SYNTAX ERROR
 print(myTable["if"]) --> true
 print(myTable.Vector2) --> nil --(this is referencing ["Vector2"] not [Vector2])
-print(myTable[Vector2]) --> true
+print(myTable[Vector2]) --> { ... }
 print(myTable["Vector2"]) --> nil
 ```
 
 ### `userdata`
 
-Denotes a custom Roblox type. You can also create your own with the [`newproxy()`](https://devforum.roblox.com/t/what-is-newproxy-and-what-is-it-good-for/184454) function, but that requires extensive knowledge of types and metatables.
+Denotes a custom Roblox type. You can also create your own with the [`newproxy()`](https://devforum.roblox.com/t/what-is-newproxy-and-what-is-it-good-for/184454) function, but that requires extensive knowledge of types and metatables (and in most cases is unnecessary).
 
 ### `type()`
 
@@ -321,13 +321,13 @@ will not set `a` to `1` nor print `1` and will instead error.
 | Operator | Description | Example |
 | -------- | ----------- | ------- |
 | `=` | Assign | `i = 527` |
-| `+=` | Addition | `i += 1` == `i = i + 1` |
-| `-=` | Subtraction | `i -= 1` == `i = i - 1` |
-| `*=` | Multiplication | `i *= 3` == `i = i * 3` |
-| `^=` | Exponentiation | `i ^= 3` == `i = i ^ 3` |
-| `/=` | Division | `i /= 3` == `i = i / 3` |
-| `%=` | Modulus (Division Remainder) | `i %= 3` == `i = i % 3` |
-| `..=` | Concatenation | `i ..= "."` == `i = i .. "."` |
+| `+=` | Addition | `i += 1 == i = i + 1` |
+| `-=` | Subtraction | `i -= 1 == i = i - 1` |
+| `*=` | Multiplication | `i *= 3 == i = i * 3` |
+| `^=` | Exponentiation | `i ^= 3 == i = i ^ 3` |
+| `/=` | Division | `i /= 3 == i = i / 3` |
+| `%=` | Modulus (Division Remainder) | `i %= 3 == i = i % 3` |
+| `..=` | Concatenation | `i ..= "." == i = i .. "."` |
 
 ### Arithmetic
 
@@ -392,6 +392,14 @@ end
 ```
 
 Conditional statements were previously mentioned in the `boolean` section. If a statement containing operators evaluates to true, the conditional statement is truthy and allows the block of code to continue.
+
+Note that familiarity with other languages can be achieved by surrounding the conditional statement in parenthesis. As said in the Operators section, parenthesis allow for order of operations parsing, but surrounding with them won't do anything.
+
+```lua
+if (ConditionalStatement) then
+	
+end
+```
 
 ### `elseif`
 
@@ -698,16 +706,48 @@ The game directly contains special instances called "Services" which cannot be c
 local ServerScriptService = game:GetService("ServerScriptService")
 ```
 
+You can think of the DataModel like a giant dictionary:
+
+```lua
+game = {
+	Workspace = {
+		Camera = {
+			ClassName = "Camera",
+		},
+		Terrain = {
+			ClassName = "Terrain",
+		},
+		Baseplate = {
+			Texture = {
+				Texture = "rbxassetid://6372755229",
+				Transparency = 0.8,
+				StudsPerTileU = 8,
+				StudsPerTileV = 8,
+				Face = Enum.NormalId.Top,
+				ClassName = "Texture",
+			},
+			ClassName = "Part",
+		},
+	},
+	Players = {},
+	
+	-- etc
+	
+}
+```
+
+There is another global similar to this which references the current script's path, called `script`. Because scripts are instances, you can do `script.Parent` to get the parent of the script.
+
+You can set your own coding formatting guidelines, but we will always prefer not using relative paths (like `script.Parent`) and instead absolute paths (like `game:GetService("ServerScriptService")`). If relative paths are absolutely required, you can use them.
+
+### Workspace
+
 Workspace is a service of the DataModel which contains all of the visible parts and terrain of a Roblox game.
 Spawn locations, guns, walls, buildings, and everything interactable in the 3 dimensional scope.
 
 With workspace, it is recommended not to use `game:GetService("Workspace")` (which still works!) and instead `game.Workspace` or `workspace`. `game.Workspace` is a property of the game that will always point to workspace, and `workspace` is a seperate global which also references the workspace.
 
 We'll be using `game.Workspace`.
-
-There is another global similar to this which references the current script's path, called `script`. Because scripts are instances, you can do `script.Parent` to get the parent of the script.
-
-You can set your own coding formatting guidelines, but we will always prefer not using relative paths (like `script.Parent`) and instead absolute paths (like `game:GetService("ServerScriptService")`). If relative paths are absolutely required, you can use them.
 
 ## Builtins
 
