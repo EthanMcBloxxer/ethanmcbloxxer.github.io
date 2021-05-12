@@ -58,7 +58,14 @@ local b = a
 
 print(a) --> 1
 print(b) --> 1
+
+a = 2
+
+print(a) --> 2
+print(b) --> 1
 ```
+
+Lua automatically handles [whether or not the variable is a reference](https://stackoverflow.com/a/11218501).
 
 ## Datatypes
 
