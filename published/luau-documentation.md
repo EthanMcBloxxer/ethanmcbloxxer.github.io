@@ -320,39 +320,39 @@ will not set `a` to `1` nor print `1` and will instead error.
 
 | Operator | Description | Example |
 | -------- | ----------- | ------- |
-| = | Assign | `i = 527` |
-| += | Addition | `i += 1` == `i = i + 1` |
-| -= | Subtraction | `i -= 1` == `i = i - 1` |
-| \*= | Multiplication | `i *= 3` == `i = i * 3` |
-| ^= | Exponentiation | `i ^= 3` == `i = i ^ 3` |
-| /= | Division | `i /= 3` == `i = i / 3` |
-| %= | Modulus (Division Remainder) | `i %= 3` == `i = i % 3` |
-| ..= | Concatenation | `i ..= " has been concatenated to."` == `i = i .. " has been concatenated to."` |
+| `=` | Assign | `i = 527` |
+| `+=` | Addition | `i += 1` == `i = i + 1` |
+| `-=` | Subtraction | `i -= 1` == `i = i - 1` |
+| `*=` | Multiplication | `i *= 3` == `i = i * 3` |
+| `^=` | Exponentiation | `i ^= 3` == `i = i ^ 3` |
+| `/=` | Division | `i /= 3` == `i = i / 3` |
+| `%=` | Modulus (Division Remainder) | `i %= 3` == `i = i % 3` |
+| `..=` | Concatenation | `i ..= "."` == `i = i .. "."` |
 
 ### Arithmetic
 
 | Operator | Description | Example |
 | -------- | ----------- | ------- |
-| + | Addition | 1 + 1 == 2 |
-| - | Subtraction | 1 - 1 == 0 |
-| * | Multiplication | 5 * 5 == 25 |
-| ^ | Exponentiation | 2 ^ 4 == 16 |
-| / | Division | 10 / 5 == 2 |
-| % | Modulus (Division Remainder) | 13 % 7 == 6 |
-| - | Unary (Negation) | -2 == 0 - 2 |
-| .. | Concatenation | "Hello," .. "World!" == "Hello,World!" |
-| # | Length | #{"Item", "Item"} and #"Hi" == 2 |
+| `+` | Addition | `1 + 1 == 2` |
+| `-` | Subtraction | `1 - 1 == 0` |
+| `*` | Multiplication | `5 * 5 == 25` |
+| `^` | Exponentiation | `2 ^ 4 == 16` |
+| `/` | Division | `10 / 5 == 2` |
+| `%` | Modulus (Division Remainder) | `13 % 7 == 6` |
+| `-` | Unary (Negation) | `-2 == 0 - 2` |
+| `..` | Concatenation | `"Hello," .. "World!" == "Hello,World!"` |
+| `#` | Length | `#{"Item", "Item"} and #"Hi" == 2` |
 
 ### Logical
 
 | Operator | Description | Example |
 | -------- | ----------- | ------- |
-| == | Equal to | 1 == 1 |
-| ~= | Not equal to | 1 ~= 2 |
-| \> | Greater than | 2 \> 1 |
-| \< | Less than    | 2 \< 1 |
-| \>= | Greater than or equal to | 2 \>= 1 |
-| \<= | Less than or equal to | 1 \<= 1 |
+| `==` | Equal to | `1 == 1` |
+| `~=` | Not equal to | `1 ~= 2` |
+| `>` | Greater than | `2 > 1` |
+| `<` | Less than    | `1 < 2` |
+| `>=` | Greater than or equal to | `2 >= 1` |
+| `<=` | Less than or equal to | `1 <= 1` |
 
 ### Relational
 
