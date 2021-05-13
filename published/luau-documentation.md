@@ -832,6 +832,10 @@ print(tonumber("0x100")) --> 256
 print(tonumber("roblox")) --> nil
 ```
 
+### \_G / shared
+
+These are global variables which serve the exact same purpose, but are different tables. They're shared across every script with the same execution level, meaning that you can assign `_G.text` to `"hello"` or `shared.text` to `"hello"` and later reference that in another script. Think of them like the automatic global ModuleScript.
+
 ### assert
 
 Throws an error when the first argument is falsy (`false` or `nil`) with an optional second argument as the error message.
@@ -1042,3 +1046,21 @@ Returns the total memory in use by Lua (in kilobytes). No other parameter/argume
 Loads the only argument (which is a string) as Luau code, excluding binary or bytecode. It only works with `game.ServerScriptService.LoadStringEnabled` set to true, and you must do that in Studio.
 
 Some better alternatives exist which *can* execute bytecode, but that isn't a part of this function. [vLua](https://roblox.com/library/4689019964/vLua-5-1) is a good choice for that.
+
+## Libraries
+
+### coroutine
+
+### debug
+
+### math
+
+### os
+
+### string
+
+### table
+
+### utf8
+
+### bit32
