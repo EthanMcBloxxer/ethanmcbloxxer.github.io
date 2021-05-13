@@ -435,6 +435,8 @@ end
 
 There are 3 different loop types to choose from. Two of them are very similar, and one is a conventional thing you'd think of as a loop.
 
+You can also use `do` and `end` without a loop to [alter the variable scope](https://stackoverflow.com/questions/23895406/why-use-a-do-end-block-in-lua).
+
 ### `for`
 
 You should already know how this works if you know another programming language, but the syntax might vary.
@@ -550,7 +552,7 @@ This is probably the simplest loop of the 3, the `while` loop. It executes its b
 ```lua
 local i = 0
 
-while i ~= 10 or i < 10 do
+while i < 10 do
 	i += 1
 	print(i) --[[> 1
 	               2
@@ -607,6 +609,8 @@ until i >= 10
 ```
 
 These loops always execute the body at least once, since it executes before checking if the condition is true.
+
+**Do not use these loops as a way to wait for an instance.** `:WaitForChild()` and `:Wait()` / `Player.CharacterAdded:Wait()` exist for a reason. Never repeat `wait()`.
 
 ## ModuleScripts
 
@@ -766,6 +770,36 @@ end
 ### Lighting
 
 Stores instances which change certain aspects of lighting and shading [(post-processing)](https://developer.roblox.com/en-us/articles/post-processing-effects). Sky instances change the sky when in this service, and [Effects](https://developer.roblox.com/en-us/api-reference/class/PostEffect) will apply changes.
+
+### ReplicatedStorage
+
+A container which instances will be replicated to the client. When the server moves an object to this service, it will also replicate across all clients. Scripts and LocalScripts will not execute here. Client modifications to children of this service will not be replicated to neither other clients or the server.
+
+This is the ideal location to store [RemoteEvents](https://developer.roblox.com/en-us/api-reference/class/RemoteEvent) and [RemoteFunctions](https://developer.roblox.com/en-us/api-reference/class/RemoteFunction).
+
+### ServerScriptService
+
+The service which contains all Scripts that will be executed on server creation. Prefer storing Scripts in this service opposed to workspace, as exploiters cannot read it.
+
+### ServerStorage
+
+An alternative to ReplicatedStorage which can only be read by the server. Store important data here, like player data or keys.
+
+### StarterGui
+
+All children of this service will get copied to every new player's PlayerGui. In order to create GUI, you must first make a `ScreenGui` instance, which acts as a container for all other GUI objects. Inside of LocalScripts here, do not refer to StarterGui as the container, but `game.Players.LocalPlayer:WaitForChild("PlayerGui")` should be used instead.
+
+### StarterPack
+
+Similar to StarterGui, all children (specifically [Tools](https://developer.roblox.com/en-us/articles/intro-to-player-tools)) will get copied to each player's Backpack.
+
+### StarterPlayer
+
+Allows modification of the player when created, like WalkSpeed and JumpPower.
+
+#### StarterPlayerScripts / StarterCharacterScripts
+
+An ideal location for LocalScripts. When referring to the player, use `game.Players.LocalPlayer`. StarterCharacterScripts should be used when the player's character is needed for the LocalScript to execute.
 
 ## Builtins
 
