@@ -751,6 +751,22 @@ With workspace, it is recommended not to use `game:GetService("Workspace")` (whi
 
 We'll be using `game.Workspace`.
 
+### Players
+
+A service which contains the data for each player in the game. It contains only [`Player`](https://developer.roblox.com/en-us/api-reference/class/Player) instances. Since workspace is the only service that contains visible parts, a seperate model is added to workspace that can be referenced with the `Character` property of Player, which contains all of the parts, textures, and meshes of a player.
+
+It also has a method to get all the players in a game: `game:GetService("Players"):GetPlayers()`, which can be used to iterate through all players in a game:
+
+```lua
+for _, Player in ipairs(game:GetService("Players"):GetPlayers()) do
+	print(Player.Name) --> EthanMcBloxxer --(if EthanMcBloxxer was the only player in the game)
+end
+```
+
+### Lighting
+
+Stores instances which change certain aspects of lighting and shading [(post-processing)](https://developer.roblox.com/en-us/articles/post-processing-effects). Sky instances change the sky when in this service, and [Effects](https://developer.roblox.com/en-us/api-reference/class/PostEffect) will apply changes.
+
 ## Builtins
 
 Reference for built-in functions, constants, and libraries. Often called "Globals".
