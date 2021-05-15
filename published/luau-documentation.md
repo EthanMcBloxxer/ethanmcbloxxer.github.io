@@ -631,16 +631,16 @@ return "This is a ModuleScript"
 and this in a Script:
 
 ```lua
-local module = require(ModuleScript) -- (replace ModuleScript with path)
-print(module) --> "This is a ModuleScript"
+local Module = require(ModuleScript) -- replace ModuleScript with path
+print(Module) --> "This is a ModuleScript"
 ```
 
-In the Script, you call the ModuleScript and the ModuleScript returns `"This is a ModuleScript"`. That return value is stored in the `module` variable, which we print.
+In the Script, you call the ModuleScript and the ModuleScript returns `"This is a ModuleScript"`. That return value is stored in the `Module` variable, which we print.
 
 The ModuleScript's code can be thought of more like this:
 
 ```lua
-function module()
+function Module()
 	return "This is a ModuleScript"
 end
 ```
@@ -649,10 +649,10 @@ Most use ModuleScripts with tables as return values, like so:
 
 ```lua
 return {
-	say = function(text)
+	Say = function(text)
 		print(text)
 	end,
-	addCash = function(player, cash)
+	AddCash = function(player, cash)
 		player.leaderstats.Cash.Value += cash -- this is just an example
 	end,
 }
@@ -661,22 +661,22 @@ return {
 which allows us to do this in Scripts:
 
 ```lua
-local module = require(ModuleScript)
+local Module = require(ModuleScript)
 
-module.say("Some text is cool") --> "Some text is cool"
-module.addCash(game.Players.EthanMcBloxxer, 1000)
+Module.Say("Some text is cool") --> "Some text is cool"
+Module.AddCash(game.Players.EthanMcBloxxer, 1000)
 ```
 
 you may also see table assignments like this, which also works:
 
 ```lua
-local exports = {}
+local Exports = {}
 
-exports.say(text)
+Exports.Say(text)
 	print(text)
 end
 
-return exports
+return Exports
 ```
 
 and some even utilize Metatables or Methods.
@@ -692,11 +692,11 @@ return true
 which would do the following in a Script:
 
 ```lua
-local bool = require(ModuleScript) --> Ran ModuleScript
-print(tostring(bool)) --> true
+local bool = require(ModuleScript) --> "Ran ModuleScript"
+print(tostring(bool)) --> "true"
 ```
 
-ModuleScripts also have different variable naming conventions, specifically prefixing private (not to be tampered) values with an underscore (\_).
+When using ModuleScripts with OOP, variable naming conventions change a bit, specifically prefixing private (not to be tampered) values with an underscore (\_). Methods which return said private value would be used instead.
 
 ## Instances
 
@@ -733,6 +733,8 @@ game = {
 				ClassName = "Texture",
 			},
 			ClassName = "Part",
+			Position = Vector3.new(0, -8, 0),
+			Size = Vector3.new(2048, 16, 2048),
 		},
 	},
 	Players = {},
@@ -816,9 +818,10 @@ You may also notice there is a function called `printidentity`, which prints the
 `tostring` converts the argument (of any type) given into a string.
 
 ```lua
-print(tostring(40193)) --> 40193
+print(tostring(40193)) --> "40193"
 print(tostring(true)) --> "true"
 print(tostring(Vector2)) --> "table: 0x684b2c9b31db5858" --(Vector2 is technically a table/userdata that has a metatable)
+print(tostring(Vector2.new(1, 5))) --> "1, 5"
 ```
 
 `tonumber` is similar, but requires the first argument to be a string. A second argument is also allowed which will specify the base to interpret the number in.
@@ -885,6 +888,8 @@ When getting the environment (`getfenv`), you can provide a function as the only
 * 1 is function (same as `nil` in this function)
 * 2 is function calling function
 * 3 is function calling function calling function
+* 4 is function calling function calling function calling function
+* etc
 
 Remember that the function environment only has `script` by default, as globally-scoped variables are added to it.
 
@@ -892,7 +897,7 @@ Setting the environment (`setfenv`) sets the first function argument's function 
 
 ### (x)pcall
 
-Take this example:
+A pcall (protected call) is a function which is similar to `try` and `catch` in most languages, but you have to implement custom logic for it to be used in that way.
 
 ```lua
 pcall(function(Words)
@@ -928,30 +933,30 @@ local function MyCoolFuction(Words)
     print(Words)
 end
 
-local success, message = pcall(MyCoolFunction, "pcalls are cool!")
+local Success, Message = pcall(MyCoolFunction, "pcalls are cool!")
 ```
 
-In this example, no errors will be created when calling the function, so `success` is `true` and `message` is `nil`. However, if we were to make a function like so:
+In this example, no errors will be created when calling the function, so `Success` is `true` and `Message` is `nil`. However, if we were to make a function like so:
 
 ```lua
 local function MyCoolFunction(Words)
     error(Words)
 end
 
-local success, message = pcall(MyCoolFunction, "this function will error now.")
+local Success, Message = pcall(MyCoolFunction, "this function will error now.")
 ```
 
-Here, since the function errors (in this case we explicitly call `error`), `success` is `false` and `message` is `"this function will error now."`. We could've also used `assert(nil, "this function will error now.")` instead of `error` (as `assert` is a function that will error if the first argument is `nil` or `false`, and errors with the second argument as the message).
+Here, since the function errors (in this case we explicitly call `error`), `Success` is `false` and `Message` is `"this function will error now."`. We could've also used `assert(nil, "this function will error now.")` instead of `error` (as `assert` is a function that will error if the first argument is `nil` or `false`, and errors with the second argument as the message).
 
 Remember, we can still use anonymous functions if you don't need to use the function multiple times:
 
 ```lua
-local success, message = pcall(function(Words)
+local Success, Message = pcall(function(Words)
     error(Words)
 end, "this function will error now.")
 ```
 
-like before, this function will make `success` `false` and `message` `"this function will error now."`.
+like before, this function will make `Success` `false` and `Message` `"this function will error now."`.
 
 Similarly, there is another function called `xpcall`. Put simply, this is `pcall` with a second function argument. This second argument will handle errors from the `pcall` and Roblox will not do anything else with it. There is a second return value you can learn more about at [the Roblox Developer Wiki](https://developer.roblox.com/en-us/api-reference/lua-docs/Lua-Globals#variables) as that is out of the tutorial's scope.
 
@@ -964,10 +969,10 @@ local function ErrorHandler(Message)
     print("[Error Handler] "..Message)
 end
 
-local success = xpcall(MyCoolFunction, ErrorHandler, "Just stop the function.")
+local Success = xpcall(MyCoolFunction, ErrorHandler, "Just stop the function.")
 ```
 
-You also might want to know why this is useful, but this isn't really something I can just explain. It is useful when it is useful. Anyway, the example makes it so that the error handler prints `[Error Handler] Script: "Just stop the function."`. `success` is `false`, as would be expected.
+You also might want to know why this is useful, but this isn't really something I can just explain. It is useful when it is useful. Anyway, the example makes it so that the error handler prints `[Error Handler] Script: "Just stop the function."`. `Success` is `false`, as would be expected.
 
 `ypcall` is another function that acts the same as `pcall`, but can yield. Since `pcall` has since been tweaked to allow yielding, it has been deprecated. It's still sometimes used for an example of a deprecated global.
 
@@ -1051,13 +1056,257 @@ Some better alternatives exist which *can* execute bytecode, but that isn't a pa
 
 ### coroutine
 
-### debug
+A co-routine is Luau's version of another thread in a single script. A big usage of these would be code after an infinite loop, since the loop never breaks and you may need to code after it. To do this simply, both of the following work:
 
-### math
+```lua
+coroutine.resume(coroutine.create(function(parameter)
+	while true do
+		print(parameter) --> "Something to print" (x1, xinf)
+		wait()
+	end
+end), "Something to print")
+
+print("Outside of the coroutine loop") --> "Outside of the coroutine loop" (x1)
+```
+
+```lua
+coroutine.wrap(function(parameter)
+	while true do
+		print(parameter) --> "Something to print" (x1, xinf)
+		wait()
+	end
+end)("Something to print")
+
+print("Outside of the coroutine loop") --> "Outside of the coroutine loop" (x1)
+```
+
+although this is somewhat basic usage of coroutines. Some more advanced usage could be in custom objects' asynchronous methods.
+
+A quick thing to note: Lua is a single-threaded language. Coroutines are just a replacement for more threads and are not proper threads. When a coroutine yields, another coroutine or the main thread regains control. In the above example, the coroutine's execution stops during the `wait()`, the bottom print statement runs, and the coroutine's loop continues again.
+
+If the main thread or a coroutine calls a blocking operation, no other coroutine or the main thread can continue running.
+
+#### create
+
+Makes a new coroutine with the body of the given function. If you print this, it will return `thread: ` and a hexadecimal memory address of the new coroutine.
+
+#### resume
+
+Either starts or continues the provided coroutine's execution. All arguments other than the coroutine are passed to the coroutine's function. It returns true if no errors were raised, and any values returned by the function or passed by `yield`.
+
+#### wrap
+
+Returns a function that, when called, resumes the passed function as a coroutine.
+
+#### yield
+
+When called inside a coroutine, it suspends its execution and makes `resume` return any additional arguments passed to it. After resuming, it will begin the coroutine back at the yield point and return any values passed again by `resume`.
+
+```lua
+local thread = coroutine.create(function(x)
+	print(x) --> 1 --(x was defined in the first resume as 1)
+	print(coroutine.yield(2)) --> 3 --(resume was called again with 3, and the coroutine starts here)
+	return 4
+end)
+
+print(coroutine.resume(thread, 1)) --> 2 --(yield makes resume return its arguments, here 2)
+print(coroutine.resume(thread, 3)) --> 4 --(4 was returned by the coroutine since the yield resumed at that statement)
+```
+
+Another function exists called `isyieldable` which should be used to check whether the current coroutine is yieldable. This exists in the main thread.
+
+#### running
+
+Returns the current running coroutine. This can be the main thread.
+
+```lua
+thread = coroutine.create(function()
+	print(getfenv(0)["thread"] == coroutine.running()) --> true
+end)
+
+coroutine.resume(thread)
+```
+
+#### status
+
+Returns the status of the current running coroutine, as one of these strings:
+
+* `running`: Currently running.
+* `normal`: Has resumed another coroutine and is waiting for it to yield or return.
+* `suspended`: Waiting for a `resume`, either because it hasn't been run yet or it was yielded.
+* `dead`: Either returned or thrown an error. The coroutine is unusable.
+
+#### spawn
+
+This is not a function of the `coroutine` library, but an independent alternative that behaves on its own. While not deprecated, [coroutines are a much better option](https://gist.github.com/evaera/3db84579866c099cdd5bb2ff37947cec).
+
+If the usage of this is required, then provide a function to it. After about a `wait()` or longer (or never), it will execute the function in a new thread. No guarantees can be made of when it does execute, if at all.
+
+### [math](https://developer.roblox.com/en-us/api-reference/lua-docs/math)
+
+An interface to C's math library through Luau.
 
 ### os
 
+Provides functions that can be used when time parsing is necessary. No system alterations are possible.
+
+#### time
+
+When no arguments are passed, it will return the number of seconds since the Unix Epoch (January 1st, 1970 at 00:00:00) under the current UTC (Universal Time Coordinated, -00:00) time.
+
+If a dictionary is passed with keys "year", "month", "day", "hour", "min" (minute), and "sec" (second), it will return the number of seconds since that time instead.
+
+#### date
+
+Formats the given string with the given time (or what `os.time()` returns if not provided), with the specifiers from [strftime](http://www.strftime.net). Values smaller than a second aren't supported.
+
+When the format string is either `"*t"` (local time) or `"!*t"` (UTC) it will return a dictionary with the same keys as required with `os.time`, with "wday" (weekday), "yday" (year day, which can be 366), and "isdst" (a boolean, "is daylight savings time") added.
+
+#### difftime
+
+Returns the number of seconds from the first time to the second time (where the first time is greater than the second), provided both times are in "seconds since Unix Epoch" format.
+
+```lua
+local Time = os.time()
+
+wait(30)
+
+print(os.difftime(os.time(), Time)) --> 30 --(although it could also be 29 or 31 as this depends on the behavior of wait())
+```
+
+If you forget which order the arguments go in, just use `math.abs()` to get the absolute value of the difference.
+
+#### clock
+
+Returns the processor time used by Luau in seconds. It has precision of around a microsecond and is intended for use with benchmarking.
+
+#### tick
+
+This is not a function of the `os` library, but an independent alternative which returns the number of seconds since the Unix Epoch, but in the local timezone. As such, its only usage is time differences and benchmarking, but `os.clock` would be a better alternative for both use cases.
+
 ### string
+
+A library which contains generic string manipulation functions.
+
+#### byte
+
+Returns the decimal-formatted Unicode Codepoints of characters `i` through `j` in the given string. By default, `i` is `1` and `j` is `i`.
+
+```lua
+local CodepointH, CodepointE, AnotherThing = string.byte("Hello, world!", 1, -1)
+print(string.byte("Hello, world!", 1, -1)) --> 72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33
+print(CodepointH, CodepointE, AnotherThing) --> 72, 101, 108
+```
+
+#### char
+
+Converts the provided decimal-formatted Unicode Codepoints into a string.
+
+```lua
+string.char(72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33) --> "Hello, world!"
+```
+
+#### find
+
+Finds the first match of the given [pattern](https://developer.roblox.com/en-us/articles/string-patterns-reference) in the given string, returning the beginning and end positions (or `nil` if no match was found). Two other arguments are allowed, where to start and whether to perform a plain search (change pattern to raw string).
+
+```lua
+local Pattern = "^%s+[%w%p%s]*%s+$"
+string.find("	   A random string with some whitespace on the ends.   	", Pattern) --> 1, 57
+string.find("The same pattern on a string without whitespace on the ends.", Pattern) --> nil
+string.find("  	  The same pattern on a string with whitespace on one end.", Pattern) --> nil
+string.find("The same pattern on a string with whitespace on the other end.  	  ", Pattern) --> nil
+
+string.find(" This is a string using a raw search. ", "raw search", 1, true) --> 27, 36
+string.find(" This is a string using a raw search (still). ", "%w-%u[%l%p%s]*%w*", 1, true) --> nil
+string.find(" This is a string using a pattern search. ", "%w-%u[%l%p%s]*%w*") --> 2, 42
+```
+
+#### format
+
+Formats the given string (which is a [formattable string](https://developer.roblox.com/en-us/articles/Format-String)) with the given arguments. Throws an error if an argument of the incorrect type is given.
+
+```lua
+string.format("We're running Roblox %s", version()) --> "We're running Roblox 0.478.1.422443"
+string.format("Your team has %i points.", 15) --> "Your team has 15 points"
+```
+
+#### gmatch
+
+Returns an iterator function that provides each capture to the loop.
+
+```lua
+for word in string.gmatch("We're matching each word & punctuation character here.", "[%w%p]+") do
+	print(word) --[[> We're
+	                  matching
+	                  each
+	                  word
+	                  &
+	                  punctuation
+	                  character
+	                  here. <]]--
+end
+```
+
+#### gsub
+
+Returns a copy of the given string where all (or a provided number) occurances of the given pattern are replaced with the given replacement. After those arguments, you can provide a maximum number of replacements to perform.
+
+The replacement can be a string, which replaces directly, a table, which defines what to replace (key) with (value), or a function, which has the match passed to it and returns what to replace with.
+
+```lua
+string.gsub("I love tacos!", "tacos", "Roblox") --> "I love Roblox!", 1
+string.gsub("I like red!", "%w+", "word") --> "word word word", 3
+string.gsub("I play Roblox.", "%w+", {I="Je", play="joue à"}) --> "Je joue à Roblox.", 3
+string.gsub("I have 2 cats.", "%d+", function(Match)
+	return tonumber(Match) * 12
+end) --> "I have 24 cats.", 1
+string.gsub("aaa", "a", "b", 2) --> "bba", 2
+```
+
+#### len
+
+Returns the length of the provided string. The `#` (length) operator can be used in place of this. Both return the amount of characters in the string.
+
+#### lower
+
+Changes all uppercase letters to lowercase.
+
+#### match
+
+Returns the given string's first pattern match. Returns `nil` if none were found. Another optional argument specifies what character to start the pattern search at.
+
+```lua
+string.match("wor wod wro wrd wdo wdr", "%w+") --> wor
+```
+
+#### rep
+
+Repeats the given string (concatenates the given string with itself) the given number of times.
+
+#### reverse
+
+Reverses the given string.
+
+#### split
+
+Splits the given string into an ordered table based on the given separator, with whitespace preserved. The separator is `,` if not given.
+
+#### sub
+
+Returns the substring of the given string, which begins at `i` and ends at `j`. If `j` is `-1`, it represents the end of the string. By default, `i` is `1` and `j` is `-1`. To find the positions you need, press the insert key to better visualize at which character you're at.
+
+Remember you can always use Studio's command bar to print the string with trial and error. It shouldn't take too long to get the proper values.
+
+```lua
+string.sub("!fly me", 2) --> "fly me" --("f" is the 2nd character and we end at the last character, "m")
+string.sub("This sentence shouldn't have an ellipsis...", 1, 41) --> "This sentence shouldn't have an ellipsis." --("." is the 41st character)
+string.sub("It is 10:05 AM.", 7, -5) --> "10:05" --("1" is the 7th character, "." is the -1st character, and "5" is the -5th character)
+```
+
+#### upper
+
+Changes all lowercase letters to uppercase.
 
 ### table
 
