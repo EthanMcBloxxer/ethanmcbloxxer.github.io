@@ -1231,7 +1231,7 @@ A library which contains generic string manipulation functions.
 
 #### byte
 
-Returns the decimal-formatted Unicode Codepoints of characters `i` through `j` in the given string. By default, `i` is `1` and `j` is `i`.
+Returns the decimal-formatted codepoints of characters `i` through `j` in the given string. By default, `i` is `1` and `j` is `i`.
 
 ```lua
 local CodepointH, CodepointE, AnotherThing = string.byte("Hello, world!", 1, -1)
@@ -1241,7 +1241,7 @@ print(CodepointH, CodepointE, AnotherThing) --> 72, 101, 108
 
 #### char
 
-Converts the provided decimal-formatted Unicode Codepoints into a string.
+Converts the provided decimal-formatted codepoints into a string.
 
 ```lua
 string.char(72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33) --> "Hello, world!"
@@ -1352,5 +1352,32 @@ Changes all lowercase letters to uppercase.
 ### table
 
 ### utf8
+
+Basic UTF-8 encoding support.
+
+#### char
+
+Converts the provided decimal-formatted Unicode Codepoints into a string. This has much more support for characters than `string.char`.
+
+```
+utf8.char(24432) --> 彰
+string.char(24432) --> error --(invalid value)
+```
+
+#### codes
+
+Returns an iterator function to loop through each position and codepoint in the provided string.
+
+```lua
+for pos, code in utf8.codes("Hello") do
+	print(pos, code) --[[> 1, 72
+	                       2, 101
+	                       3, 108
+	                       4, 108
+	                       5, 111 <]]--
+end
+```
+
+#### codepoint
 
 ### bit32
