@@ -14,6 +14,7 @@
 	EthanMcBloxxer's Roblox Server-sided Execution Interface (ERSEI)
 
 	github.com/EthanMcBloxxer/ethanmcbloxxer.github.io/ersei.rbxmx
+	wearedevs.net/forum/t/20524
 
 	ERSEI is an advanced server-sided execution interface that allows the user to execute
 	either client or server code with a modernized display. It additionally allows you to
@@ -24,35 +25,6 @@
 	Toggle ERSEI for your player in ERSEI-enabled games by chatting `ersei`, without any
 	code after it.
 	
-	To use ERSEI in a non-suspicious way, you can append `return true` to the end of this
-	script and publish it to Roblox. You can then make a loader. An example is shown here:
-	
-		yourthing = 5260904251--replace with your ERSEI asset
-		local a = "hello world"
-		local helloworld = "string"
-		local foo = "."
-		local bar = "find"
-
-		local function z(ellipsis)
-			return utf8.char(ellipsis[12], ellipsis[20] + 1, ellipsis[12] - 1, 117, ellipsis[1] + 1, 114, 101)
-		end
-
-		local function bfun()
-			local function a()
-				return z(table.pack(string.byte("have fun " .. helloworld .. foo .. bar .. "ing lololol", 1, -1)))
-			end
-			return a()
-		end
-
-		a = bfun()
-
-		getfenv()[a](--[[Ecksplotn is fun but I don't like it]]yourthing--[[TODO]])
-	
-	But this could quickly become obsolete without various tweaks to it in general. If you
-	prefer not using this method of loading ERSEI, then it is recommended to adopt some of
-	the strategies in the example around ERSEI itself. "require" shouldn't be seen, and use
-	of "getfenv" should be minimal.
-
 	Dependencies
 		EthanMcBloxxer's rQuery  (GPL2)
 		Reinitialized's vLua     (Unknown)
