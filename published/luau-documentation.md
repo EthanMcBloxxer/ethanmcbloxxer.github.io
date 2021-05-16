@@ -1142,9 +1142,50 @@ This is not a function of the `coroutine` library, but an independent alternativ
 
 If the usage of this is required, then provide a function to it. After about a `wait()` or longer (or never), it will execute the function in a new thread. No guarantees can be made of when it does execute, if at all.
 
-### [math](https://developer.roblox.com/en-us/api-reference/lua-docs/math)
+### math
 
 An interface to C's math library through Luau.
+
+`x` is the first given value, and `y` is the second given value, which only exists when mentioned.
+
+| Function | Description | Type |
+|---|---|---|
+| abs | Returns the absolute value of `x`. |
+| acos | Returns the arc cosine of `x`. | Radians |
+| asin | Returns the arc sine of `x`. | Radians |
+| atan | Returns the arc tangent of `x`. | Radians |
+| atan2 | Returns the arc tangent of `x` ÷ `y` and uses their signs to determine the quadrant of the result. | Radians |
+| ceil | Returns `x` as an integer, rounded up, with double precision (~16 decimal points). |
+| clamp | Returns `x` if it is in the range of `min` and `max`, `min` if `x` is smaller than `min`, and `max` if `x` is greater than `max`. |
+| cos | Returns the cosine of `x`. | Radians |
+| cosh | Returns the hyperbolic cosine of `x`. | Radians |
+| deg | Returns `x` in degrees. | Radians |
+| exp | Returns `x` to the power of e (Euler's constant). |
+| floor | Returns `x` as an integer, rounded down, with double precision (~16 decimal points). |
+| fmod | Returns `x` % `y`. |
+| frexp | Returns the mantissa and exponent of `x` (`x = m*2^e`), as a pair. |
+| ldexp | Returns `x*2^y` where `y` is an integer. This is the inverse of `math.frexp`. |
+| log | Returns the logarithm of `x` using `y` as the base (or e if not provided). |
+| max | Returns the biggest value of the given arguments. |
+| min | Returns the smallest value of the given arguments. |
+| modf | Returns the integral and fractional parts of `x`, as a pair. |
+| noise | Returns a perlin noise value from `x`, often between -1 and 1. If `y` and `z` are not provided, they default to 0. |
+| pow | Returns `x` ^ `y`. |
+| rad | Returns `x` in radians. | Degrees |
+| random | Interfaces ANSI C's pseudo-random `rand` function. When called without arguments, it returns a double in the range 0, 1. When called with just `x`, it returns an integer in the range 1, `x`. When called with both `x` and `y`, it returns an integer in the range `x`, `y`. |
+| randomseed | Specifies `x` as the seed for `math.random`. |
+| round | Rounds `x`. When `x` is equidistant to two integers, it will round away from 0. |
+| sign | Returns -1 when `x` is less than 0, 0 if `x` is 0, or 1 if `x` is greater than 0. |
+| sin | Returns the sine of `x`. | Radians |
+| sinh | Returns the hyperbolic sine of `x`. | Radians |
+| sqrt | Returns the square root of `x`. |
+| tan | Returns the tangent of `x`. | Radians |
+| tanh | Returns the hyperbolic tangent of `x`. | Radians |
+
+| Constant | Description |
+|---|---|
+| huge | Positive infinity. |
+| pi | Pi, to the precision of a double. |
 
 ### os
 
