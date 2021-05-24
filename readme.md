@@ -11,4 +11,4 @@ Please don't do this to save accidentally uploaded files or folders.
 
 The repository and its contents are licensed under [CC by NC-ND 4](https://github.com/EthanMcBloxxer/.public/blob/main/license.md) unless otherwise stated.
 
-![files badge](https://img.shields.io/github/directory-file-count/EthanMcBloxxer/.public?style=flat-square) ![folders badge](https://img.shields.io/github/directory-file-count/EthanMcBloxxer/.public?label=folders&style=flat-square&type=dir) ![size badge](https://img.shields.io/github/repo-size/EthanMcBloxxer/.public?label=size&style=flat-square)
+![files badge](https://img.shields.io/github/directory-file-count/EthanMcBloxxer/.public?style=flat-square) ![folders badge](https://img.shields.io/github/directory-file-count/EthanMcBloxxer/.public?label=folders&style=flat-square&type=dir) ![size badge](https://img.shields.io/github/repo-size/EthanMcBloxxer/ethanmcbloxxer.github.io?label=size&style=flat-square)
