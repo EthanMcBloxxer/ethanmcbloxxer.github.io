@@ -1,0 +1,158 @@
+baseurl: /old/
+
+title: EthanMcBloxxer
+author: Ethan Anonymous
+
+navbar-links:
+  About: "/about"
+  Projects: "https://github.com/EthanMcBloxxer/"
+  Files: "/.public"
+  Miscellaneous:
+    - My Accounts: "/accounts"
+    - Custom Redirects: "/url"
+    - Is My Computer On: "/is-my-computer-on"
+    - Broken Page: "/a91c338f48502d90b79022e8fb4236ac2cadf653.html"
+    - Browser Info: "/browser-info"
+    - Geolocator: "/geolocator"
+    - Christmas Counter: "/christmas"
+    - Daily DM (Archive): "/dm"
+
+avatar: "/assets/img/avatar-icon.png"
+round-avatar: false
+
+# Top left navbar image (in place of website name)
+#title-img: /path/to/image
+
+social-network-links:
+  email: "ethanmcbloxxer@pm.me"
+  youtube: channel/UCzLnGcurZJ3heHBbseFBRKg
+# facebook:
+  discord: "EthanMcBloxxer#2089"
+  github: EthanMcBloxxer
+  teknik: EthanMcBloxxer
+  twitter: EthanMcBloxxer
+  reddit: EthanMcBloxxer
+# linkedin:
+# xing:
+  stackoverflow: "11653162/ethanmcbloxxer"
+# snapchat:
+# instagram:
+  spotify: EthanMcBloxxer
+# telephone: +18888888888
+  steam: EthanMcBloxxer
+  twitch: EthanMcBloxxer
+# yelp:
+# telegram:
+# calendly:
+# mastodon: instance.url/@username
+# ORCID:
+# google-scholar:
+# patreon: EthanMcBloxxer
+
+rss-description: EthanMcBloxxer's Website
+#url-pretty: "ethanmcbloxxer.github.io"
+
+excerpt_length: 50
+feed_show_excerpt: true
+feed_show_tags: true
+
+keywords: "ethanmcbloxxer"
+
+# --- Colours / background image --- #
+
+navbar-col: "#D9D9D9"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+page-col: "#F0F0F0"
+text-col: "#404040"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+footer-col: "#EAEAEA"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+#navbar-img: "/assets/img/bgimage.png"
+#footer-img: "/assets/img/bgimage.png"
+#page-img: "/assets/img/bgimage.png"
+#mobile-theme-col: "#0085A1"
+
+#site-css:
+#  - "/assets/css/custom-styles.css"
+
+#site-js:
+#  - "/assets/js/custom-script.js"
+
+# --- Web Analytics Section --- #
+#gtag: "G-8G1CDGN2Y4"
+#google_analytics: ""
+#gtm: "GTM-KW4N2GL"
+
+#matomo:
+#  site_id: "9"
+#  uri: "demo.wiki.pro"
+#  opt-out: true
+
+# --- Comments --- #
+
+#disqus: ""
+#fb_comment_id: ""
+#utterances:
+#  repository: EthanMcBloxxer/ethanmcbloxxer.github.io
+#  issue-term: title   # Mapping between blog posts and GitHub issues
+#  theme: preferred-color-scheme # Utterances theme
+#  label: blog comments # Label that will be assigned to GitHub Issues created by Utterances
+#staticman:
+#  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  branch     : master # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
+#  endpoint   : # (optional) URL of your own deployment, with a trailing slash eg. https://<your-api>/v3/entry/github/ (will fallback to a public GitLab instance)
+#  reCaptcha:
+#    siteKey  : # Use your own site key, you need to apply for one on Google
+#    secret   : # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
+
+# --- Misc --- #
+
+date_format: "%B %-d, %Y"
+
+#fb_app_id: ""
+
+timezone: "America/Toronto"
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+paginate: 6
+paginate_path: "/page/:num/"
+
+kramdown:
+  input: GFM
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+      readtime: true # make all blog posts have readtime
+      permalink: /blog/:title/ # all blogposts are in the /blog/title path
+  -
+    scope:
+      path: "" # any file that's not a post will be a "page" layout by default
+    values:
+      layout: "page"
+
+# Exclude these files from production site
+exclude:
+  - .gitignore
+  - .gitattributes
+  - README.md
+
+collections:
+    - dms
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-tidy
+  - jekyll-redirect-from
+  - jekyll/twemoji

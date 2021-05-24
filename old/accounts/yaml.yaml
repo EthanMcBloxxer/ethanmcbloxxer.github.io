@@ -1,9 +1,265 @@
----
-layout: none
----
-{% for item in site.data.accounts %}{{ item.encoded }}: {
-    unformatted: "{{ item.service }}",
-    website: "{{ item.website }}",
-    username: "{{ item.username }}"
+aboutme: {
+unformatted: "About.me",
+website: "https://about.me/",
+username: "EthanMcBloxxer"
 }
-{% endfor %}
+amplitude: {
+unformatted: "Amplitude",
+website: "https://amplitude.com/",
+username: "ethanmcbloxxer@protonmail.com"
+}
+animeplanet: {
+unformatted: "AnimePlanet",
+website: "https://anime-planet.com/",
+username: "EthanMcBloxxer"
+}
+apple: {
+unformatted: "Apple",
+website: "https://apple.com/",
+username: "ethanmcbloxxer@protonmail.com"
+}
+archive: {
+unformatted: "Archive.org",
+website: "https://archive.org/",
+username: "EthanMcBloxxer"
+}
+aternos: {
+unformatted: "Aternos",
+website: "https://aternos.org/",
+username: "EthanMcBloxxer"
+}
+badlion: {
+unformatted: "Badlion",
+website: "https://badlion.net/",
+username: "EthanMcBloxxer"
+}
+battle: {
+unformatted: "Blizzard (Battle)",
+website: "https://battle.net/",
+username: "EthanMcBloxy#1463"
+}
+buymeacoffee: {
+unformatted: "BuyMeACoffee",
+website: "https://buymeacoffee.com/",
+username: "EthanMcBloxxer"
+}
+cloudflare: {
+unformatted: "Cloudflare",
+website: "https://cloudflare.com/",
+username: "ethanmcbloxxer@protonmail.com"
+}
+discord: {
+unformatted: "Discord",
+website: "https://discord.com/",
+username: "EthanMcBloxxer#2089"
+}
+disroot: {
+unformatted: "Disroot",
+website: "https://disroot.org/",
+username: "ethanmcbloxxer"
+}
+duolingo: {
+unformatted: "Duolingo",
+website: "https://duolingo.com/",
+username: "EthanMcBloxxer"
+}
+easyexploits: {
+unformatted: "EasyExploits",
+website: "https://easyexploits.com/",
+username: "EthanMcBloxxer"
+}
+epicgames: {
+unformatted: "Epic Games",
+website: "https://epicgames.com/",
+username: "EthanMcBloxxer"
+}
+evernote: {
+unformatted: "Evernote",
+website: "https://evernote.com/",
+username: "EthanMcBloxxer"
+}
+fandom: {
+unformatted: "Fandom",
+website: "https://fandom.com/",
+username: "EthanMcBloxxer"
+}
+github: {
+unformatted: "GitHub",
+website: "https://github.com/",
+username: "EthanMcBloxxer"
+}
+gog: {
+unformatted: "GOG",
+website: "https://gog.com/",
+username: "EthanMcBloxxer"
+}
+google: {
+unformatted: "Google",
+website: "https://google.com/",
+username: "ethanmcbloxxer@protonmail.com"
+}
+grammarly: {
+unformatted: "Grammarly",
+website: "https://grammarly.com/",
+username: "ethanmcbloxxer@protonmail.com"
+}
+gravatar: {
+unformatted: "Gravatar",
+website: "https://gravatar.com/",
+username: "EthanMcBloxxer"
+}
+guilded: {
+unformatted: "Guilded",
+website: "https://guilded.gg/",
+username: "EthanMcBloxxer"
+}
+hackernews: {
+unformatted: "Hacker News",
+website: "https://news.ycombinator.com/",
+username: "EthanMcBloxxer"
+}
+heroku: {
+unformatted: "Heroku",
+website: "https://heroku.com/",
+username: "ethanmcbloxxer@protonmail.com"
+}
+hypixel: {
+unformatted: "Hypixel",
+website: "https://hypixel.net/",
+username: "EthanMcBloxxer"
+}
+keybase: {
+unformatted: "Keybase",
+website: "https://keybase.io/",
+username: "ethanmcbloxxer"
+}
+kit: {
+unformatted: "Kit.co",
+website: "https://kit.co/",
+username: "EthanMcBloxxer"
+}
+lbry: {
+unformatted: "LBRY",
+website: "https://lbry.com/",
+username: "EthanMcBloxxer"
+}
+mastodon: {
+unformatted: "Mastodon",
+website: "https://mastodon.online/",
+username: "@ethanmcbloxxer@mastodon.online"
+}
+matrix: {
+unformatted: "Matrix",
+website: "https://matrix.to/",
+username: "@ethanmcbloxxer:matrix.org"
+}
+mega: {
+unformatted: "Mega",
+website: "https://mega.nz/",
+username: "ethanmcbloxxer@protonmail.com"
+}
+microsoft: {
+unformatted: "Microsoft",
+website: "https://microsoft.com/",
+username: "ethanmcbloxxer@protonmail.com"
+}
+minecraft: {
+unformatted: "Minecraft",
+website: "https://minecraft.net/",
+username: "EthanMcBloxxer"
+}
+mozilla: {
+unformatted: "Mozilla",
+website: "https://mozilla.org/",
+username: "ethanmcbloxxer@protonmail.com"
+}
+rbxcity: {
+unformatted: "RBXCity",
+website: "https://rbxcity.com/",
+username: "EthanMcBloxxer"
+}
+reddit: {
+unformatted: "Reddit",
+website: "https://reddit.com/",
+username: "EthanMcBloxxer"
+}
+roblox: {
+unformatted: "Roblox",
+website: "https://roblox.com/",
+username: "EthanMcBloxxer"
+}
+rubygems: {
+unformatted: "RubyGems",
+website: "https://rubygems.org/",
+username: "EthanMcBloxxer"
+}
+skindex: {
+unformatted: "Skindex",
+website: "https://minecraftskins.com/",
+username: "EthanMcBloxxer"
+}
+skyrealms: {
+unformatted: "SkyRealms",
+website: "https://skyrealms.games/",
+username: "EthanMcBloxxer"
+}
+spotify: {
+unformatted: "Spotify",
+website: "https://spotify.com/",
+username: "EthanMcBloxxer"
+}
+stackoverflow: {
+unformatted: "StackOverflow",
+website: "https://stackoverflow.com/",
+username: "11653162"
+}
+steam: {
+unformatted: "Steam",
+website: "https://steampowered.com/",
+username: "EthanMcBloxxer"
+}
+teknik: {
+unformatted: "Teknik",
+website: "https://teknik.io/",
+username: "EthanMcBloxxer"
+}
+tosdr: {
+unformatted: "ToS;DR",
+website: "https://tosdr.org/",
+username: "EthanMcBloxxer"
+}
+twitch: {
+unformatted: "Twitch",
+website: "https://twitch.tv/",
+username: "EthanMcBloxxer"
+}
+twitter: {
+unformatted: "Twitter",
+website: "https://twitter.com/",
+username: "EthanMcBloxxer"
+}
+ubisoft: {
+unformatted: "Ubisoft",
+website: "https://ubisoft.com/",
+username: "EthanMcBloxxer"
+}
+ubuntu: {
+unformatted: "Ubuntu",
+website: "https://ubuntu.com/",
+username: "EthanMcBloxxer"
+}
+unity: {
+unformatted: "Unity",
+website: "https://unity.com/",
+username: "EthanMcBloxxer"
+}
+wearedevs: {
+unformatted: "WeAreDevs",
+website: "https://wearedevs.net/",
+username: "EthanMcBloxxer"
+}
+wikipedia: {
+unformatted: "Wikipedia",
+website: "https://wikipedia.org/",
+username: "EthanMcBloxxer"
+}

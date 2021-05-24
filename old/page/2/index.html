@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>EthanMcBloxxer</title>
+    <meta name="author" content="Ethan Anonymous">
+    <meta name="description" content="EthanMcBloxxer's website. You can find my projects, pastebin, and (micro)blog posts here, as well as a few other random pages like a User-Agent detector.">
+    <meta name="keywords" content="ethanmcbloxxer">
+    <link rel="alternate" type="application/rss+xml" title="EthanMcBloxxer" href="/old/feed.xml">
+    <link rel="stylesheet" href="/old/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/old/assets/fa/css/all.css">
+    <link rel="stylesheet" href="/old/assets/css/beautifuljekyll.css">
+    <script>
+      if (!window.doNotTrack == "1" || !window.navigator.doNotTrack == "1" || !window.navigator.msDoNotTrack == "1") {
+        if (!navigator.globalPrivacyControl) {
+      
+          // Both DNT and GPC are off, load Analytics
+      
+          (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+          ;r.type="text/javascript"
+          ;r.integrity="sha384-girahbTbYZ9tT03PWWj0mEVgyxtZoyDF9KVZdL+R53PP5wCY0PiVUKq0jeRlMx9M"
+          ;r.crossOrigin="anonymous";r.async=true
+          ;r.src="https://cdn.amplitude.com/libs/amplitude-7.2.1-min.gz.js"
+          ;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+          console.log("[Analytics] Error: could not load SDK")}}
+          ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+          ;function s(e,t){e.prototype[t]=function(){
+          this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+          var o=function(){this._q=[];return this}
+          ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+          ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+          ;return this}
+          ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+          ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+          ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId", "enableTracking", "setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+          ;function v(e){function t(t){e[t]=function(){
+          e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+          for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+          e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+          ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+          ;e.amplitude=n})(window,document);
+      
+          amplitude.getInstance().init("4148a0961d085ef4aa4646d0c86297d1", null, {
+              trackingOptions: {
+                city: false,
+                dma: false,
+                ip_address: false
+              },
+              cookieExpiration: 90,
+              secureCookie: true,
+              disableCookies: true,
+              includeReferrer: true
+            }
+          );
+      
+          amplitude.getInstance().logEvent("Analytics Loaded", {url: document.location.href});
+        }
+        else
+        {
+          if (typeof amplitude !== "undefined") {
+            // Have an "else" fallback for if Analytics somehow load
+            amplitude.getInstance().setOptOut(true);
+          }
+        }
+      }
+      else
+      {
+        if (typeof amplitude !== "undefined") {
+          // Have an "else" fallback for if Analytics somehow load
+          amplitude.getInstance().setOptOut(true);
+        }
+      }
+    </script>
+    <meta property="og:site_name" content="EthanMcBloxxer">
+    <meta property="og:title" content="EthanMcBloxxer">
+    <meta property="og:description" content="Content Creator">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <link rel="icon" type="image/png" href="/assets/img/glyph.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://ethanmcbloxxer.github.io/assets/img/apple/180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://ethanmcbloxxer.github.io/assets/img/apple/57x57.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ethanmcbloxxer.github.io/assets/img/apple/180x180.png">
+    <meta property="og:image" content="/old/assets/img/avatar-icon.png">
+    <link rel="mask-icon" href="/assets/img/apple/mask-icon.svg" color="#000000">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/old/page/2/">
+    <link rel="canonical" href="/old/page/2/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@EthanMcBloxxer">
+    <meta name="twitter:creator" content="@EthanMcBloxxer">
+    <meta property="twitter:title" content="EthanMcBloxxer">
+    <meta property="twitter:description" content="Content Creator">
+    <meta name="twitter:image" content="/old/assets/img/avatar-icon.png">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="/old">EthanMcBloxxer</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main-navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/old/about">About</a>
+          </li>
+          <li class="nav-item"></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/EthanMcBloxxer/">Projects</a>
+          </li>
+          <li class="nav-item"></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/old/.public">Files</a>
+          </li>
+          <li class="nav-item"></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Miscellaneous</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/old/accounts">My Accounts</a>
+              <a class="dropdown-item" href="/old/url">Custom Redirects</a>
+              <a class="dropdown-item" href="/old/is-my-computer-on">Is My Computer On</a>
+              <a class="dropdown-item" href="/old/a91c338f48502d90b79022e8fb4236ac2cadf653.html">Broken Page</a>
+              <a class="dropdown-item" href="/old/browser-info">Browser Info</a>
+              <a class="dropdown-item" href="/old/geolocator">Geolocator</a>
+              <a class="dropdown-item" href="/old/christmas">Christmas Counter</a>
+              <a class="dropdown-item" href="/old/dm">Daily DM (Archive)</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="change-skin" title="Toggle Night Mode">
+        <style>
+          @font-face {
+            font-family: 'Dark Mode Toggle (Emoji)';
+            font-style: normal;
+            font-weight: 100;
+            src: local(''),
+              url('/assets/font/dark-toggle.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+              url('/assets/font/dark-toggle.woff') format('woff'),   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+              url('/assets/font/dark-toggle.ttf') format('truetype');/* Safari, Android, iOS */
+          }
+        </style>
+        <span style="font-family: 'Dark Mode Toggle (Emoji)';" class="skin-btn dark-mode">🌙</span>
+        <span style="font-family: 'Dark Mode Toggle (Emoji)';" class="skin-btn light-mode">☀️</span>
+      </div>
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a href="/old">
+            <img alt="Navigation bar avatar" class="avatar-img" src="/old/assets/img/avatar-icon.png" />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- TODO this file has become a mess, refactor it -->
+    <header class="header-section ">
+      <div class="intro-header no-img">
+        <div class="container-md">
+          <div class="row">
+            <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+              <div class="page-heading">
+                <h1>EthanMcBloxxer</h1>
+                <hr class="small">
+                <span class="page-subheading">Content Creator</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class=" container-md " role="main">
+      <div class="row">
+        <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+          <!-- Internet Explorer Warning Message -->
+          <script>
+            if (window.document.documentMode) {document.body.innerHTML = '<p class="box-error"><strong>Warning</strong>: We have detected that you are using Internet Explorer which is not supported by EthanMcBloxxer due to the lack of interpolation support (IE doesn\'t scale images well). Please switch to another web browser, such as Microsoft Edge by pressing CTRL+SHIFT+E. You can still navigate to specific pages, like my pastebin at /pastebin/.</p>'}
+          </script>
+          <p id="a91c338f48502d90b79022e8fb4236ac2cadf653-css-box" class="box-note" style="display: none;">
+            <strong>Had enough?</strong>
+            <a href="javascript:document.location.href = '/'" onclick="document.cookie = 'a91c338f48502d90b79022e8fb4236ac2cadf653=false; path=/'">remove css</a>
+          </p>
+          <script type="text/javascript">
+            function getCookie(cname) {
+              var name = cname + "=";
+              var decodedCookie = decodeURIComponent(document.cookie);
+              var ca = decodedCookie.split(';');
+              for(var i = 0; i <ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                  c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                  return c.substring(name.length, c.length);
+                }
+              }
+              return "";
+            }
+            
+            if (getCookie("a91c338f48502d90b79022e8fb4236ac2cadf653") == "true" || new URLSearchParams(window.location.search).get("a91c338f48502d90b79022e8fb4236ac2cadf653") == "true") {
+              document.getElementById("a91c338f48502d90b79022e8fb4236ac2cadf653-css-box").style.display = "inherit";
+            }
+          </script>
+          <!-- Search -->
+          <input type="text" id="search-input" placeholder="Search">
+          <p style="margin: 0.5rem 0"/>
+          <ul id="results-container"></ul>
+          <style type="text/css">
+            #search-input {
+              width: 25%;
+              background-color: #ffffff00;
+              border: none;
+              text-align: center;
+              border-bottom: 1px solid #00000030;
+              margin: auto;
+              display: block;
+              transition: width 1s ease;
+            }
+            .page-dark-mode #search-input {
+              color: inherit;
+              border-bottom: 1px solid #ffffff15;
+            }
+            
+            #search-input:focus {
+              outline: none; /* remove opera focus outline */
+              width: 75%;
+            }
+            
+            
+            #results-container {
+              list-style: none;
+              padding-left: unset;
+            }
+            
+            
+            #duck-query {
+              padding: 0.2rem 0.5rem;
+              border: 1px solid #20232550;
+              border-radius: 0.5rem;
+              margin: 0 auto;
+              display: table;
+              text-align: center;
+            }
+            #duck-query a {
+              color: inherit
+            }
+            #duck-query a:hover {
+              text-decoration: unset;
+            }
+          </style>
+          <script src="/old//assets/js/search.js" type="text/javascript"></script>
+          <script type="text/javascript">
+            var searchjson = '[ \
+               \
+                { \
+                  "title"    : "Don&#39;t link to &quot;Here&quot;", \
+                  "category" : "", \
+                  "url"      : "/old//blog/dont-link-to-here/", \
+                  "date"     : "March 27, 2021" \
+                }, \
+               \
+                { \
+                  "title"    : "The Great Discord War", \
+                  "category" : "discord", \
+                  "url"      : "/old//blog/the-great-discord-war/", \
+                  "date"     : "March 10, 2021" \
+                }, \
+               \
+                { \
+                  "title"    : "ProtonMail: Privacy-Centered Email", \
+                  "category" : "email", \
+                  "url"      : "/old//blog/protonmail-privacy-centered-email/", \
+                  "date"     : "February 21, 2021" \
+                }, \
+               \
+                { \
+                  "title"    : "Device Naming Guidelines", \
+                  "category" : "computers", \
+                  "url"      : "/old//blog/device-naming-guide/", \
+                  "date"     : "February 17, 2021" \
+                }, \
+               \
+                { \
+                  "title"    : "Git Terminology", \
+                  "category" : "git", \
+                  "url"      : "/old//blog/git-terminology/", \
+                  "date"     : "February  7, 2021" \
+                }, \
+               \
+                { \
+                  "title"    : "EthanMcBloxxer&#39;s Subtitle Etiquette", \
+                  "category" : "utility", \
+                  "url"      : "/old//blog/ethanmcbloxxers-subtitle-etiqutte/", \
+                  "date"     : "February  6, 2021" \
+                }, \
+               \
+                { \
+                  "title"    : "10 Awesome Browser Extensions", \
+                  "category" : "web", \
+                  "url"      : "/old//blog/10-awesome-browser-extensions/", \
+                  "date"     : "January 28, 2021" \
+                }, \
+               \
+                { \
+                  "title"    : "Run Linux GUI Applications on Windows 10", \
+                  "category" : "windowslinux", \
+                  "url"      : "/old//blog/run-linux-apps-on-windows/", \
+                  "date"     : "January 25, 2021" \
+                }, \
+               \
+                { \
+                  "title"    : "The Quest for the Perfect Language", \
+                  "category" : "language", \
+                  "url"      : "/old//blog/the-quest-for-the-perfect-language/", \
+                  "date"     : "January 17, 2021" \
+                }, \
+               \
+                { \
+                  "title"    : "Wikitweaks", \
+                  "category" : "webcss", \
+                  "url"      : "/old//blog/wikitweaks-usercss/", \
+                  "date"     : "December 23, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "Opera GX Review", \
+                  "category" : "appsweb", \
+                  "url"      : "/old//blog/opera-gx-review/", \
+                  "date"     : "December 21, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "How Rocket League MMR Works", \
+                  "category" : "gamingexcerpts", \
+                  "url"      : "/old//blog/how-mmr-works/", \
+                  "date"     : "November 30, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "Ultimate Rocket League Training Kit", \
+                  "category" : "gaming", \
+                  "url"      : "/old//blog/ultimate-rocket-league-training-kit/", \
+                  "date"     : "November 29, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "Easily stop cutting out on Discord", \
+                  "category" : "apps", \
+                  "url"      : "/old//blog/stop-cutting-out-on-discord/", \
+                  "date"     : "November  6, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "Rocket League Rank Chart", \
+                  "category" : "gaming", \
+                  "url"      : "/old//blog/rocket-leauge-rank-chart/", \
+                  "date"     : "November  6, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "Password Misconceptions", \
+                  "category" : "security", \
+                  "url"      : "/old//blog/password-misconceptions/", \
+                  "date"     : "November  5, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "10 Awesome Windows Add-Ons", \
+                  "category" : "windows", \
+                  "url"      : "/old//blog/10-awesome-windows-addons/", \
+                  "date"     : "November  1, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "Typing Accent Marks without a Bilingual Keyboard", \
+                  "category" : "typinglanguage", \
+                  "url"      : "/old//blog/type-accent-marks-without-bilingual-keyboard/", \
+                  "date"     : "October 31, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "The Developer&#39;s Handbook to Roblox", \
+                  "category" : "lua", \
+                  "url"      : "/old//blog/the-developers-handbook-to-roblox/", \
+                  "date"     : "October 30, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "Roblox Exploitation Guide", \
+                  "category" : "exploitsexcerpts", \
+                  "url"      : "/old//blog/roblox-exploitation-guide/", \
+                  "date"     : "October 30, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "Is Microsoft Edge bad?", \
+                  "category" : "appsweb", \
+                  "url"      : "/old//blog/is-microsoft-edge-bad/", \
+                  "date"     : "October 30, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "Tool Searcher GUI", \
+                  "category" : "exploits", \
+                  "url"      : "/old//blog/tool-searcher-gui/", \
+                  "date"     : "September  6, 2020" \
+                }, \
+               \
+                { \
+                  "title"    : "Time of Day Display (TODD)", \
+                  "category" : "exploits", \
+                  "url"      : "/old//blog/time-of-day-display/", \
+                  "date"     : "August 24, 2020" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Request bad!!1", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/400/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "authRECKW", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/401/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Pay?", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/402/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "you have been forbidden", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/403/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "PageNotFound (in honor of GeorgeNotFound)", \
+                  "category" : "page", \
+                  "url"      : "/old//404/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "you probably don&#39;t support text/html", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/406/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Proxy Auth Req", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/407/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "timed out", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/408/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "state conflict (between alamama and ohio)", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/409/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "disappear&#39;d", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/410/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "clr (screen??)", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/411/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "you got denied", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/412/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "upload request too big", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/413/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "uri too long", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/414/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "unsupported format", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/415/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "server error", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/500/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "de-implemented anymore", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/501/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "gateway bad", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/502/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "unavailable", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/503/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "someone&#39;s being slow here", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/504/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "your HTTP version isn&#39;t supported", \
+                  "category" : "page", \
+                  "url"      : "/old//errors/505/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "About Me", \
+                  "category" : "page", \
+                  "url"      : "/old//about/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Accounts", \
+                  "category" : "page", \
+                  "url"      : "/old//accounts/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//assets/css/beautifuljekyll.css", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Browser Information", \
+                  "category" : "page", \
+                  "url"      : "/old//browser-info/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Christmas Counter", \
+                  "category" : "page", \
+                  "url"      : "/old//christmas/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Credits", \
+                  "category" : "page", \
+                  "url"      : "/old//credits/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//accounts/csv.csv", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Daily DM", \
+                  "category" : "page", \
+                  "url"      : "/old//dm/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//old/dm/feed.min.xml", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//old/dm/feed.xml", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Donate", \
+                  "category" : "page", \
+                  "url"      : "/old//donate/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//email/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//feed.xml", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Geolocator", \
+                  "category" : "page", \
+                  "url"      : "/old//geolocator/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//is-my-computer-on/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//accounts/json.json", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//old/privacy-updates.xml", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Privacy", \
+                  "category" : "page", \
+                  "url"      : "/old//privacy/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "AltGen", \
+                  "category" : "page", \
+                  "url"      : "/old//roblox-altgen/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//roforums/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//assets/js/staticman.js", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Tag Index", \
+                  "category" : "page", \
+                  "url"      : "/old//tags/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "Terms", \
+                  "category" : "page", \
+                  "url"      : "/old//terms/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//accounts/xml.xml", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//accounts/yaml.yaml", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "YEAT?", \
+                  "category" : "page", \
+                  "url"      : "/old//yeet/", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//redirects.json", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+                { \
+                  "title"    : "", \
+                  "category" : "page", \
+                  "url"      : "/old//sitemap.xml", \
+                  "date"     : "" \
+                }, \
+               \
+               \
+               \
+               \
+               \
+               \
+               \
+               \
+            ]';
+            searchjson = JSON.parse(searchjson);
+            
+            var sjs = SimpleJekyllSearch({
+              searchInput: document.getElementById('search-input'),
+              resultsContainer: document.getElementById('results-container'),
+              json: searchjson
+            });
+          </script>
+          <script type="text/javascript">
+            window.addEventListener('DOMContentLoaded', (event) => {
+              document.querySelector('#search-input').addEventListener('input',function(e){
+                if (typeof(document.getElementById('duck-query')) != "undefined" && document.getElementById('duck-query') != null) {
+                  document.querySelector('#duck-query-url').href = "//duckduckgo.com/?q=" + document.getElementById('search-input').value + "&k1=-1'";
+                } else {
+                  document.querySelector('#results-container').insertAdjacentHTML("beforeend","<span id='duck-query'><a id='duck-query-url' href='//duckduckgo.com/?q=" + document.getElementById('search-input').value + "&k1=-1'>Duck Query</a></span>");
+                }
+              });
+            });
+          </script>
+          <!-- Posts -->
+          <div class="posts-list">
+            <article class="post-preview">
+              <a href="/old/blog/10-awesome-browser-extensions/" onclick="amplitude.getInstance().logEvent('Post View', { title: '10 Awesome Browser Extensions', date: '2021-01-28 00:00:00 -0400', tag: 'web' })">
+                <h2 class="post-title">10 Awesome Browser Extensions</h2>
+                <h3 class="post-subtitle">
+                  My 10 Favorite Web Browser Extensions
+                </h3>
+              </a>
+              <p class="post-meta">
+                Posted on January 28, 2021
+              </p>
+              <div class="post-entry">
+                This is my list of 10 browser extensions that work on Chrome and other chromium-based browsers, which includes Edge, Opera, and Brave. Some of them might even be supported on Firefox!
+                <a href="/old/blog/10-awesome-browser-extensions/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+              <div class="blog-tags">
+                <span>Tags:</span>
+                <a href="/old/tags#web">web</a>
+              </div>
+            </article>
+            <article class="post-preview">
+              <a href="/old/blog/run-linux-apps-on-windows/" onclick="amplitude.getInstance().logEvent('Post View', { title: 'Run Linux GUI Applications on Windows 10', date: '2021-01-25 00:00:00 -0400', tag: 'windows' })">
+                <h2 class="post-title">Run Linux GUI Applications on Windows 10</h2>
+                <h3 class="post-subtitle">
+                  Using WSL, Ubuntu, and VcXsrv to open Linux programs
+                </h3>
+              </a>
+              <p class="post-meta">
+                Posted on January 25, 2021
+              </p>
+              <div class="post-image post-image-small">
+                <a href="/old/blog/run-linux-apps-on-windows/" aria-label="Thumbnail">
+                  <img src="/old/assets/img/posts/thumb/gedit.png" alt="Post thumbnail">
+                </a>
+              </div>
+              <div class="post-image post-image-short">
+                <a href="/old/blog/run-linux-apps-on-windows/" aria-label="Thumbnail">
+                  <img src="/old/assets/img/posts/thumb/gedit.png" alt="Post thumbnail">
+                </a>
+              </div>
+              <div class="post-entry">
+                With Windows Subsystem for Linux, you can now run “Linux” on top of Windows. You can get certain distributions from the Microsoft Store, like Ubuntu, Debian, Kali, OpenSUSE (Server), and Fedora. You can also use PowerShell or curl to download them. Before anything, though, you need to make sure that...
+                <a href="/old/blog/run-linux-apps-on-windows/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+              <div class="blog-tags">
+                <span>Tags:</span>
+                <a href="/old/tags#windows">windows</a>
+                <a href="/old/tags#linux">linux</a>
+              </div>
+            </article>
+            <article class="post-preview">
+              <a href="/old/blog/the-quest-for-the-perfect-language/" onclick="amplitude.getInstance().logEvent('Post View', { title: 'The Quest for the Perfect Language', date: '2021-01-17 00:00:00 -0400', tag: 'language' })">
+                <h2 class="post-title">The Quest for the Perfect Language</h2>
+                <h3 class="post-subtitle">
+                  Looking at the top 10 languages and finding the best
+                </h3>
+              </a>
+              <p class="post-meta">
+                Posted on January 17, 2021
+              </p>
+              <div class="post-entry">
+                In this post, I’ll be looking at the top 10 by native speakers, and seeing which of them meets my set criteria for being a language better than English, or in a way, perfect.
+                <a href="/old/blog/the-quest-for-the-perfect-language/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+              <div class="blog-tags">
+                <span>Tags:</span>
+                <a href="/old/tags#language">language</a>
+              </div>
+            </article>
+            <article class="post-preview">
+              <a href="/old/blog/wikitweaks-usercss/" onclick="amplitude.getInstance().logEvent('Post View', { title: 'Wikitweaks', date: '2020-12-23 00:00:00 -0400', tag: 'web' })">
+                <h2 class="post-title">Wikitweaks</h2>
+                <h3 class="post-subtitle">
+                  A usercss for Wikipedia
+                </h3>
+              </a>
+              <p class="post-meta">
+                Posted on December 23, 2020
+              </p>
+              <div class="post-image post-image-small">
+                <a href="/old/blog/wikitweaks-usercss/" aria-label="Thumbnail">
+                  <img src="/old/assets/img/posts/thumb/wikipedia.svg" alt="Post thumbnail">
+                </a>
+              </div>
+              <div class="post-image post-image-short">
+                <a href="/old/blog/wikitweaks-usercss/" aria-label="Thumbnail">
+                  <img src="/old/assets/img/posts/thumb/wikipedia.svg" alt="Post thumbnail">
+                </a>
+              </div>
+              <div class="post-entry">
+                I’ve been looking around at userstyles.org and decided to make my own Wikipedia custom stylesheet. It’s not as cool as n0x’s Wikipedia Material Design (which I highly recommend for a more modern Wikipedia), but it’ll do the job if you hate serif fonts. The below code may update at any...
+                <a href="/old/blog/wikitweaks-usercss/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+              <div class="blog-tags">
+                <span>Tags:</span>
+                <a href="/old/tags#web">web</a>
+                <a href="/old/tags#css">css</a>
+              </div>
+            </article>
+            <article class="post-preview">
+              <a href="/old/blog/opera-gx-review/" onclick="amplitude.getInstance().logEvent('Post View', { title: 'Opera GX Review', date: '2020-12-21 00:00:00 -0400', tag: 'apps' })">
+                <h2 class="post-title">Opera GX Review</h2>
+                <h3 class="post-subtitle">
+                  Reviewing Version: 72.0.3815.xxx
+                </h3>
+              </a>
+              <p class="post-meta">
+                Posted on December 21, 2020
+              </p>
+              <div class="post-image post-image-small">
+                <a href="/old/blog/opera-gx-review/" aria-label="Thumbnail">
+                  <img src="/old/assets/img/posts/thumb/opera-gx.svg" alt="Post thumbnail">
+                </a>
+              </div>
+              <div class="post-image post-image-short">
+                <a href="/old/blog/opera-gx-review/" aria-label="Thumbnail">
+                  <img src="/old/assets/img/posts/thumb/opera-gx.svg" alt="Post thumbnail">
+                </a>
+              </div>
+              <div class="post-entry">
+                What is Opera GX?
+                Opera GX is a browser created for “gamers”. In reality, it’s just normal Opera with a few unnecessary features removed and necessary features added. It wasn’t built from scratch, but instead used normal Opera as a base.
+                <a href="/old/blog/opera-gx-review/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+              <div class="blog-tags">
+                <span>Tags:</span>
+                <a href="/old/tags#apps">apps</a>
+                <a href="/old/tags#web">web</a>
+              </div>
+            </article>
+            <article class="post-preview">
+              <a href="/old/blog/how-mmr-works/" onclick="amplitude.getInstance().logEvent('Post View', { title: 'How Rocket League MMR Works', date: '2020-11-30 00:00:00 -0400', tag: 'gaming' })">
+                <h2 class="post-title">How Rocket League MMR Works</h2>
+                <h3 class="post-subtitle">
+                  Written by u/ytzi13 on Reddit
+                </h3>
+              </a>
+              <p class="post-meta">
+                Posted on November 30, 2020
+              </p>
+              <div class="post-entry">
+                I haven’t seen an easy to follow post in a long time that explains how the MMR/rank system works, and I’ve seen a lot of questions about it around the sub lately. Here is what I understand and I hope that it clears things up for those of you who...
+                <a href="/old/blog/how-mmr-works/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+              <div class="blog-tags">
+                <span>Tags:</span>
+                <a href="/old/tags#gaming">gaming</a>
+                <a href="/old/tags#excerpts">excerpts</a>
+              </div>
+            </article>
+          </div>
+          <ul class="pagination main-pager">
+            <li class="page-item previous">
+              <a class="page-link" href="/old/"><i class="fas fa-arrow-left"></i></a>
+            </li>
+            <li class="page-item next">
+              <a class="page-link" href="/old/page/3/"><i class="fas fa-arrow-right"></i></a>
+            </li>
+          </ul>
+          <br>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-md beautiful-jekyll-footer">
+        <div class="row">
+          <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+            <ul class="list-inline text-center footer-links">
+              <li class="list-inline-item">
+                <a href="/old/feed.xml" title="RSS">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">RSS</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="mailto:ethanmcbloxxer@pm.me" title="Email me">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Email me</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://web.archive.org/web/*/https://ethanmcbloxxer.github.io/page/2/" title="Archive of this page">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Archive of this page</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.youtube.com/channel/UCzLnGcurZJ3heHBbseFBRKg" title="YouTube">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">YouTube</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="javascript:swal('Copied', 'If that didn\'t work, try copying EthanMcBloxxer#2089 directly.', 'success');" title="Copy my Discord" onClick="navigator.clipboard.writeText('EthanMcBloxxer#2089');">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-discord fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Discord</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/EthanMcBloxxer" title="GitHub">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fab fa-github fa-stack-2x"></i>
+                  </span>
+                  <span class="sr-only">GitHub</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a rel="me" href="https://mastodon.online/@ethanmcbloxxer" title="Mastodon">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Mastodon</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://twitter.com/EthanMcBloxxer" title="Twitter">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://reddit.com/u/EthanMcBloxxer" title="Reddit">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fab fa-reddit fa-stack-2x"></i>
+                  </span>
+                  <span class="sr-only">Reddit</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://stackoverflow.com/users/11653162/ethanmcbloxxer" title="StackOverflow">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">StackOverflow</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://open.spotify.com/user/EthanMcBloxxer" title="Spotify">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fab fa-spotify fa-stack-2x"></i>
+                  </span>
+                  <span class="sr-only">Spotify</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://steamcommunity.com/id/EthanMcBloxxer" title="Steam">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fab fa-steam fa-stack-2x"></i>
+                  </span>
+                  <span class="sr-only">Steam</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.twitch.tv/EthanMcBloxxer" title="Twitch">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitch fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Twitch</span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">
+              Ethan Anonymous
+              &nbsp;&bull;&nbsp;
+              2021
+              &nbsp;&bull;&nbsp;
+              <a href="javascript:swal('Tracking', 'You have successfully opted-out of analytics-based tracking.', 'info');" onclick="amplitude.getInstance().setOptOut(true);">do not track</a>
+            </p>
+            <p class="copyright text-muted">
+              <span class="text-muted">
+                <a href="/terms.html">Terms</a>
+              </span>
+              &nbsp;&bull;&nbsp;
+              <span class="text-muted">
+                <a href="/privacy.html">Privacy</a>
+              </span>
+              &nbsp;&bull;&nbsp;
+              <span class="text-muted">
+                <a href="/credits.html">Credits</a>
+              </span>
+              &nbsp;&bull;&nbsp;
+              <span class="text-muted">
+                <a href="/donate/">Donate</a>
+              </span>
+            </p>
+            <p/>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      if (typeof jQuery == 'undefined') {
+        document.write('<script src="/old/assets/js/jquery-3.5.1.js"></scr' + 'ipt>');
+      }
+    </script>
+    <script src="/old/assets/js/beautifuljekyll.js"></script>
+    <script src="/old/assets/js/popper/createPopper.js"></script>
+    <script src="/old/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/old/assets/js/swal.js"></script>
+  </body>
+</html>

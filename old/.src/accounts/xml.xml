@@ -1,0 +1,14 @@
+---
+layout: none
+---
+<response>
+	<entry>
+		{% for item in site.data.accounts %}
+		<{{ item.encoded }}>
+			<unformatted>{{ item.service }}</unformatted>
+			<website>{{ item.website }}</website>
+			<username>{{ item.username }}</username>
+		</{{ item.encoded }}>
+		{% endfor %}
+	</entry>
+</response>

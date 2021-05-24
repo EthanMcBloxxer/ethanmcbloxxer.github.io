@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>The Developer's Handbook to Roblox</title>
+    <meta name="author" content="Ethan Anonymous">
+    <meta name="description" content="EthanMcBloxxer's website. You can find my projects, pastebin, and (micro)blog posts here, as well as a few other random pages like a User-Agent detector.">
+    <meta name="keywords" content="ethanmcbloxxer">
+    <link rel="alternate" type="application/rss+xml" title="EthanMcBloxxer" href="/old/feed.xml">
+    <link rel="stylesheet" href="/old/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/old/assets/fa/css/all.css">
+    <link rel="stylesheet" href="/old/assets/css/beautifuljekyll.css">
+    <script>
+      if (!window.doNotTrack == "1" || !window.navigator.doNotTrack == "1" || !window.navigator.msDoNotTrack == "1") {
+        if (!navigator.globalPrivacyControl) {
+      
+          // Both DNT and GPC are off, load Analytics
+      
+          (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+          ;r.type="text/javascript"
+          ;r.integrity="sha384-girahbTbYZ9tT03PWWj0mEVgyxtZoyDF9KVZdL+R53PP5wCY0PiVUKq0jeRlMx9M"
+          ;r.crossOrigin="anonymous";r.async=true
+          ;r.src="https://cdn.amplitude.com/libs/amplitude-7.2.1-min.gz.js"
+          ;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+          console.log("[Analytics] Error: could not load SDK")}}
+          ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+          ;function s(e,t){e.prototype[t]=function(){
+          this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+          var o=function(){this._q=[];return this}
+          ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+          ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+          ;return this}
+          ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+          ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+          ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId", "enableTracking", "setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+          ;function v(e){function t(t){e[t]=function(){
+          e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+          for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+          e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+          ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+          ;e.amplitude=n})(window,document);
+      
+          amplitude.getInstance().init("4148a0961d085ef4aa4646d0c86297d1", null, {
+              trackingOptions: {
+                city: false,
+                dma: false,
+                ip_address: false
+              },
+              cookieExpiration: 90,
+              secureCookie: true,
+              disableCookies: true,
+              includeReferrer: true
+            }
+          );
+      
+          amplitude.getInstance().logEvent("Analytics Loaded", {url: document.location.href});
+        }
+        else
+        {
+          if (typeof amplitude !== "undefined") {
+            // Have an "else" fallback for if Analytics somehow load
+            amplitude.getInstance().setOptOut(true);
+          }
+        }
+      }
+      else
+      {
+        if (typeof amplitude !== "undefined") {
+          // Have an "else" fallback for if Analytics somehow load
+          amplitude.getInstance().setOptOut(true);
+        }
+      }
+    </script>
+    <meta property="og:site_name" content="EthanMcBloxxer">
+    <meta property="og:title" content="The Developer's Handbook to Roblox">
+    <meta property="og:description" content="Ins and Outs to Roblox Development">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <link rel="icon" type="image/png" href="/assets/img/glyph.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://ethanmcbloxxer.github.io/assets/img/apple/180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://ethanmcbloxxer.github.io/assets/img/apple/57x57.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ethanmcbloxxer.github.io/assets/img/apple/180x180.png">
+    <meta property="og:image" content="/old/assets/img/posts/thumb/roblox-studio.png">
+    <link rel="mask-icon" href="/assets/img/apple/mask-icon.svg" color="#000000">
+    <meta property="og:type" content="article">
+    <meta property="og:article:author" content="Ethan Anonymous">
+    <meta property="og:article:published_time" content="2020-10-30T00:00:00-04:00">
+    <meta property="og:url" content="/old/blog/the-developers-handbook-to-roblox/">
+    <link rel="canonical" href="/old/blog/the-developers-handbook-to-roblox/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@EthanMcBloxxer">
+    <meta name="twitter:creator" content="@EthanMcBloxxer">
+    <meta property="twitter:title" content="The Developer's Handbook to Roblox">
+    <meta property="twitter:description" content="Ins and Outs to Roblox Development">
+    <meta name="twitter:image" content="/old/assets/img/posts/thumb/roblox-studio.png">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="/old">EthanMcBloxxer</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main-navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/old/about">About</a>
+          </li>
+          <li class="nav-item"></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/EthanMcBloxxer/">Projects</a>
+          </li>
+          <li class="nav-item"></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/old/.public">Files</a>
+          </li>
+          <li class="nav-item"></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Miscellaneous</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/old/accounts">My Accounts</a>
+              <a class="dropdown-item" href="/old/url">Custom Redirects</a>
+              <a class="dropdown-item" href="/old/is-my-computer-on">Is My Computer On</a>
+              <a class="dropdown-item" href="/old/a91c338f48502d90b79022e8fb4236ac2cadf653.html">Broken Page</a>
+              <a class="dropdown-item" href="/old/browser-info">Browser Info</a>
+              <a class="dropdown-item" href="/old/geolocator">Geolocator</a>
+              <a class="dropdown-item" href="/old/christmas">Christmas Counter</a>
+              <a class="dropdown-item" href="/old/dm">Daily DM (Archive)</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="change-skin" title="Toggle Night Mode">
+        <style>
+          @font-face {
+            font-family: 'Dark Mode Toggle (Emoji)';
+            font-style: normal;
+            font-weight: 100;
+            src: local(''),
+              url('/assets/font/dark-toggle.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+              url('/assets/font/dark-toggle.woff') format('woff'),   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+              url('/assets/font/dark-toggle.ttf') format('truetype');/* Safari, Android, iOS */
+          }
+        </style>
+        <span style="font-family: 'Dark Mode Toggle (Emoji)';" class="skin-btn dark-mode">🌙</span>
+        <span style="font-family: 'Dark Mode Toggle (Emoji)';" class="skin-btn light-mode">☀️</span>
+      </div>
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a href="/old">
+            <img alt="Navigation bar avatar" class="avatar-img" src="/old/assets/img/avatar-icon.png" />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- TODO this file has become a mess, refactor it -->
+    <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+      
+      data-img-src-1="/old/assets/img/posts/cover/roblox-studio.png"
+    
+    
+    
+  ></div>
+    <header class="header-section has-img">
+      <div class="big-img intro-header">
+        <div class="container-md">
+          <div class="row">
+            <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+              <div class="post-heading">
+                <h1>The Developer's Handbook to Roblox</h1>
+                <h2 class="post-subheading">Ins and Outs to Roblox Development</h2>
+                <span class="post-meta">Posted on October 30, 2020</span>
+                <span class="post-meta">
+                  <span class="d-none d-md-inline middot">&middot;</span>
+                  Last updated December 4, 2020
+                </span>
+                <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+                <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 17 minute read</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class='img-desc'></span>
+      </div>
+      <div class="intro-header no-img">
+        <div class="container-md">
+          <div class="row">
+            <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+              <div class="post-heading">
+                <h1>The Developer's Handbook to Roblox</h1>
+                <h2 class="post-subheading">Ins and Outs to Roblox Development</h2>
+                <span class="post-meta">Posted on October 30, 2020</span>
+                <span class="post-meta">
+                  <span class="d-none d-md-inline middot">&middot;</span>
+                  Last updated December 4, 2020
+                </span>
+                <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+                <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 17 minute read</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class=" container-md ">
+      <div class="row">
+        <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+          <article role="main" class="blog-post">
+            <p>Hey there! So you want to know how to use Roblox Studio.<br />
+              I’m going to tell you everything there is to know about it, scripting, modeling, GUI designing, terrain editing, remoting, and more.<br />
+              Remember that I’m just a internet random, and the <a href="https://developer.roblox.com/en-us/quick-start">official developer website</a> may be a better fit for you.</p>
+            <h2 id="into_setup">Setting up Roblox Studio</h2>
+            <p>Before we can do anything, we need to set up Studio. If you already know how to do this, then you can skip ahead. Otherwise, click Start Creating. Once installed, it will prompt you for your username and password, and your 2FA code if you have 2FA enabled.</p>
+            <div align="center"><a href="https://setup.rbxcdn.com/RobloxStudioLauncherBeta.exe"><img src="/assets/img/embed/start-creating.png" alt="Start Creating" width="450" height="85" /></a></div>
+            <p />
+            <h2 id="intro_using">Using Roblox Studio</h2>
+            <p>Once you are inside of Studio, you can create a game from the “New” tab.<br />
+              <img src="/assets/img/embed/new-+.png" alt="New Tab" class="mx-auto d-block" /></p>
+            <h1 id="start">Creating your Game</h1>
+            <p>Then, you should select either Baseplate or Flat Terrain. I don’t recommend that you start out with any other template because they don’t really make a game.<br />
+              I normally start with Flat Terrain.</p>
+            <h2 id="start_baseplate">Starting with a Baseplate</h2>
+            <p>Most people start out with baseplate games.<br />
+              This is because not many know how to manipulate terrain the best, because models cannot contain terrain, or because they like using parts over terrain.<br />
+              If you would like to save terrain, then you can get <a href="https://web.roblox.com/library/148042198/Terrain-Save-and-Load">this plugin</a> for studio which allows you to save your terrain.</p>
+            <h2 id="start_terrain">Starting with Terrain</h2>
+            <p>Others start with flat terrain because its the easiest way to start manipulating terrain instantly. If you want to start with this, you can use the Terrian Editor. Sadly, this is introduced as an incorporated plugin like Animation Editor, but its in a different toolbar.</p>
+            <h2 id="start_2d">Starting 2D</h2>
+            <p>You may also want to start without anything and make a GUI-Based game. You can do this.<br />
+              Just open up a new baseplate game and copy the code below, then put it into the command bar at the bottom of Studio.</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="cm">--[[ Studio Command Bar 2D Game Script by @EthanMcBloxxer#2089, DM if you have questions ]]</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">game</span><span class="p">.</span><span class="n">Workspace</span><span class="p">.</span><span class="n">Baseplate</span> <span class="k">then</span> <span class="nb">error</span><span class="p">(</span><span class="s2">"Baseplate not found, please create a new baseplate game before running this script."</span><span class="p">)</span> <span class="k">else</span> <span class="n">game</span><span class="p">.</span><span class="n">Workspace</span><span class="p">.</span><span class="n">Baseplate</span><span class="p">:</span><span class="n">Destroy</span><span class="p">()</span> <span class="n">game</span><span class="p">.</span><span class="n">StarterPlayer</span><span class="p">.</span><span class="n">CharacterUseJumpPower</span><span class="o">=</span><span class="kc">true</span> <span class="n">game</span><span class="p">.</span><span class="n">StarterPlayer</span><span class="p">.</span><span class="n">CharacterJumpPower</span><span class="o">=</span><span class="mi">0</span> <span class="n">game</span><span class="p">.</span><span class="n">StarterPlayer</span><span class="p">.</span><span class="n">LoadCharacterAppearance</span><span class="o">=</span><span class="kc">false</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"Script"</span><span class="p">,</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">"ServerScriptService"</span><span class="p">))</span> <span class="n">game</span><span class="p">.</span><span class="n">ServerScriptService</span><span class="p">.</span><span class="n">Script</span><span class="p">.</span><span class="n">Name</span><span class="o">=</span><span class="s2">"PreventPlayerSpawn"</span> <span class="n">game</span><span class="p">.</span><span class="n">ServerScriptService</span><span class="p">.</span><span class="n">PreventPlayerSpawn</span><span class="p">.</span><span class="n">Source</span><span class="o">=</span><span class="s1">'game:GetService("\x50\x6C\x61\x79\x65\x72\x73").PlayerAdded:Connect(function(_)_.CharacterAdded:Connect(function(a)for _,_ in pairs(a:GetDescendants())do if _:IsA("\x50\x61\x72\x74")or _:IsA("\x4D\x65\x73\x68\x50\x61\x72\x74")then _.Anchored=true _.Transparency=1 elseif _:IsA("\x44\x65\x63\x61\x6C")or _:IsA("\x41\x63\x63\x65\x73\x73\x6F\x72\x79")or _:IsA("\x53\x68\x69\x72\x74")or _:IsA("\x53\x68\x69\x72\x74\x47\x72\x61\x70\x68\x69\x63")or _:IsA("\x50\x61\x6E\x74\x73")or _.Name=="\x41\x6E\x69\x6D\x61\x74\x65"then _:Destroy()elseif _:IsA("\x48\x75\x6D\x61\x6E\x6F\x69\x64")then _.RigType=Enum.HumanoidRigType.R6 elseif _.Parent==a.Humanoid then if _:IsA("\x4E\x75\x6D\x62\x65\x72\x56\x61\x6C\x75\x65")then _:Destroy()end end end end)end)'</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"ScreenGui"</span><span class="p">,</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">"StarterGui"</span><span class="p">))</span> <span class="n">game</span><span class="p">.</span><span class="n">StarterGui</span><span class="p">.</span><span class="n">ScreenGui</span><span class="p">.</span><span class="n">Name</span><span class="o">=</span><span class="s2">"HUD"</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"Frame"</span><span class="p">,</span> <span class="n">game</span><span class="p">.</span><span class="n">StarterGui</span><span class="p">.</span><span class="n">HUD</span><span class="p">)</span> <span class="n">game</span><span class="p">.</span><span class="n">StarterGui</span><span class="p">.</span><span class="n">HUD</span><span class="p">.</span><span class="n">Frame</span><span class="p">.</span><span class="n">Name</span><span class="o">=</span><span class="s2">"Holder"</span> <span class="n">game</span><span class="p">.</span><span class="n">StarterGui</span><span class="p">.</span><span class="n">HUD</span><span class="p">.</span><span class="n">Holder</span><span class="p">.</span><span class="n">BackgroundColor3</span><span class="o">=</span><span class="n">Color3</span><span class="p">.</span><span class="n">fromRGB</span><span class="p">(</span><span class="mi">165</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">165</span><span class="p">)</span> <span class="n">game</span><span class="p">.</span><span class="n">StarterGui</span><span class="p">.</span><span class="n">HUD</span><span class="p">.</span><span class="n">Holder</span><span class="p">.</span><span class="n">BorderSizePixel</span><span class="o">=</span><span class="mi">0</span> <span class="n">game</span><span class="p">.</span><span class="n">StarterGui</span><span class="p">.</span><span class="n">HUD</span><span class="p">.</span><span class="n">Holder</span><span class="p">.</span><span class="n">Position</span><span class="o">=</span><span class="n">UDim2</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="n">game</span><span class="p">.</span><span class="n">StarterGui</span><span class="p">.</span><span class="n">HUD</span><span class="p">.</span><span class="n">Holder</span><span class="p">.</span><span class="n">Size</span><span class="o">=</span><span class="n">UDim2</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">end</span>
+</code></pre>
+              </div>
+            </div>
+            <p />
+            <h2 id="start_publishing">Publishing your Game</h2>
+            <p>This will allow you to completely use any Roblox feature that couldn’t be used outside of a published game, like game settings, datastores, and more.</p>
+            <p>You can accomplish this by pressing Alt + P.<br />
+              It will then prompt you for a few different things, such as the name, description, creator (Me or groups), Genre, and the playable devices.<br />
+              I warn you that if you choose to make it available to Console users then you will have to disable chat in your game.<br />
+              To do this, go into StarterPlayer in your Explorer and open it. Then, under StarterPlayerScripts, hover over it and click the plus.<br />
+              Then type LocalScript and press enter. Remove all the code that is already in there, and paste:</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="n">game</span><span class="p">.</span><span class="n">StarterGui</span><span class="p">:</span><span class="n">SetCoreGuiEnabled</span><span class="p">(</span><span class="n">Enum</span><span class="p">.</span><span class="n">CoreGuiType</span><span class="p">.</span><span class="n">Chat</span><span class="p">,</span> <span class="kc">false</span><span class="p">).</span>
+</code></pre>
+              </div>
+            </div>
+            <p>From here, you can learn to script, learn to model, learn to create GUI, or learn to sculpt terrain.<br />
+              We’re going to learn how instances work next, if you don’t have a preference. Note heavily that most of the things I will teach you are entirely different.<br />
+              You can specialize in one or more things, but it is easier to do only one. If you do choose to learn more, great! That’s more ability and more hiring points.</p>
+            <h1 id="scripting">Scripting</h1>
+            <p>Scripting is a very important and necessary part of your game. Luckily, it’s not assembly. It- instead- is Lua. Lua is not quite a well known language, but it is definitely powerful. Roblox also uses the client-server model, a common framework for multiplayer games. Whenever you play a Roblox game, your personal computer, phone, tablet, or game console becomes a client. Every other unique player in the game is also a client.</p>
+            <p>All clients (players) in the game are connected to a powerful Roblox computer known as a server. The server is like the game manager — it makes sure that every player is seeing and experiencing the game world the same as every other player.</p>
+            <h2 id="clients-vs-servers-scripting_clients-servers"><a href="https://developer.roblox.com/en-us/articles/Roblox-Client-Server-Model">Clients vs Servers {#scripting_clients-servers}</a></h2>
+            <p>When writing scripts for a game, it’s important that both clients and servers handle specific tasks as follows:</p>
+            <h3 id="scripting_clients-servers-clients">Clients</h3>
+            <p>The client should detect player input and contain things that should be shown to that player specifically. Some things should be sent to the server but shown on the client for instant feedback, but other things like GUIs should be managed by client code.</p>
+            <p>Said client code runs inside of <code class="language-plaintext highlighter-rouge">LocalScript</code>s. However, <code class="language-plaintext highlighter-rouge">LocalScript</code>s will only run if they are a descendant of the following:</p>
+            <ul>
+              <li>A player’s Character model</li>
+              <li>A player’s PlayerGui</li>
+              <li>A player’s Backpack</li>
+              <li>A player’s PlayerScripts folder</li>
+              <li>A Tool (only when equipped by a player)</li>
+              <li>The ReplicatedFirst folder</li>
+            </ul>
+            <h3 id="scripting_clients-servers-servers">Servers</h3>
+            <p>The game’s server should be used for game logic, player data, scores, instance creation, etc. We do this because if the script code changes the game world (creates or removes parts, for example), the server makes sure that all clients see the same change.</p>
+            <p>Server code runs inside of normal <code class="language-plaintext highlighter-rouge">Script</code>s. <code class="language-plaintext highlighter-rouge">Script</code>s only run if they’re a descendant of</p>
+            <ul>
+              <li>Workspace (not recommended)</li>
+              <li>ServerScriptService</li>
+              <li>A player’s Backpack</li>
+            </ul>
+            <h3 id="scripting_clients-servers-remotes">Remote Functions / Events</h3>
+            <p>Often you’ll also need to send a request for the server to do something from the client, like add a part to the map. You can do this with remote events or functions, which send a request from the client to the server, vice versa, or a client to the server to all clients, or the server to clients. Basically any communication from clients and the server will use remote functions or events. Remote events are one-way communication, while remote functions read data back to the initial sender. You can read more in our <a href="">dedicated chapter</a>.</p>
+            <h2 id="scripting_instances">Instances</h2>
+            <p>If instances didn’t exist, games wouldn’t exist. (technically, they would, but there would only be the game itself and services.)<br />
+              Instances are what you see when you are playing a game. That baseplate? Instance. Terrain? Instance. Scripts? Instances.<br />
+              Everything that you can create in Roblox from both the <code class="language-plaintext highlighter-rouge">Instance.new</code> function and from the explorer is an instance.<br />
+              There’s a long boring list of them <a href="https://robloxapi.github.io/ref/class/Instance.html">here</a>, under “Inherited by”.</p>
+            <h2 id="scripting_create-script">Creating a Script</h2>
+            <p>To create a server-sided script, never create one in Workspace. Always use ServerScriptService. This is because exploiters have a function in many paid exploits called “<code class="language-plaintext highlighter-rouge">saveinstance()</code>” which is a function to download all accessible things to a Roblox Place file. This means any scripts in the workspace can be copied, taken, and abused. This is especially true when you are using Remote Functions or Events, where the client sends data to the server, and the server does something with that data. If you show exploiters how the server handles their data, then they can abuse them. Now, create a script under ServerScriptService. You will see that there is already some code:
+              <code class="language-plaintext highlighter-rouge">print("Hello, World!")</code>
+              in the script. You can clear this if you’d like.</p>
+            <h2 id="scripting_file-system">The “File” System</h2>
+            <p>Unlike normal Lua, Roblox Lua does not have any actual files. Instead, instances use the place of files. If you want to change something about them, then you start with <code class="language-plaintext highlighter-rouge">game</code>, <code class="language-plaintext highlighter-rouge">workspace</code>, or <code class="language-plaintext highlighter-rouge">script</code>. Game is basically the entire computer, Workspace is your main drive, and Script gets the current script’s path. If you want to retreat your current directory, then you can use <code class="language-plaintext highlighter-rouge">Instance.Parent</code> in place of ... All of the other direct services that you see in explorer such as <code class="language-plaintext highlighter-rouge">StarterGui</code>, <code class="language-plaintext highlighter-rouge">Players</code>, etc. are more disk drives, each with varying replication permissions. Let’s take <code class="language-plaintext highlighter-rouge">workspace</code> for example. <code class="language-plaintext highlighter-rouge">workspace</code> is instantly replicated to the client when they join the game. Any changes they make aren’t copied to other clients or to the server. Only to that client. This is due to a Roblox feature called Filtering Enabled (FE). Then, take <code class="language-plaintext highlighter-rouge">ServerScriptService</code>. Only the server has access to the contents of it. Permissions of this sort are also replicated from different types of scripts, <code class="language-plaintext highlighter-rouge">Script</code>s and <code class="language-plaintext highlighter-rouge">LocalScript</code>s. <code class="language-plaintext highlighter-rouge">LocalScript</code>s run on the client while <code class="language-plaintext highlighter-rouge">Script</code>s run on the server. Clients can’t make a <code class="language-plaintext highlighter-rouge">Script</code> run on the server, however. To actually reference instance paths, you use periods (.) instead of backslashes (). For example, <code class="language-plaintext highlighter-rouge">game.Workspace.Part</code>. Remember that workspace and <code class="language-plaintext highlighter-rouge">game.Workspace</code> are the same, but it is good practice to use <code class="language-plaintext highlighter-rouge">game.Workspace</code> instead of workspace. Remember that instance properties like <code class="language-plaintext highlighter-rouge">Name</code> are also referenced with dots, like <code class="language-plaintext highlighter-rouge">game.Workspace.Name</code>. If you create an instance with a space in it or want to use a string to access a path then you can use <code class="language-plaintext highlighter-rouge">game.Workspace["My Part"].Name</code>. This is because you are referencing a item in a dictionary or hierarchy with the brackets. You’re finding the item that has the <code class="language-plaintext highlighter-rouge">Name</code> value of <code class="language-plaintext highlighter-rouge">"My Part"</code>. Always prefer instances without spaces, though.</p>
+            <h2 id="scripting_constructors">Constructors</h2>
+            <p>If you’ve ever coded before, you’ll know there are things like if statements, boolean, variable declaration, etc. These in Lua are constructors. They are pretty self-explanatory. Here they are:</p>
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">local</code></li>
+              <li><code class="language-plaintext highlighter-rouge">function</code> / <code class="language-plaintext highlighter-rouge">end</code></li>
+              <li><code class="language-plaintext highlighter-rouge">if</code> / <code class="language-plaintext highlighter-rouge">then</code> / <code class="language-plaintext highlighter-rouge">else</code> / <code class="language-plaintext highlighter-rouge">elseif</code> / <code class="language-plaintext highlighter-rouge">end</code></li>
+              <li><code class="language-plaintext highlighter-rouge">nil</code></li>
+              <li><code class="language-plaintext highlighter-rouge">break</code></li>
+              <li><code class="language-plaintext highlighter-rouge">return</code></li>
+              <li><code class="language-plaintext highlighter-rouge">true</code> / <code class="language-plaintext highlighter-rouge">false</code></li>
+              <li><code class="language-plaintext highlighter-rouge">and</code> / <code class="language-plaintext highlighter-rouge">not</code> / <code class="language-plaintext highlighter-rouge">or</code></li>
+            </ul>
+            <p>There are a few more that relate to loops, but we’ll get into that later. Remember that “<code class="language-plaintext highlighter-rouge">not</code>” inverts the specified boolean in an if statement, such as:
+              if not <code class="language-plaintext highlighter-rouge">“string”</code> then. This means that if <code class="language-plaintext highlighter-rouge">“string”</code> is <code class="language-plaintext highlighter-rouge">false</code> then do things.
+              “<code class="language-plaintext highlighter-rouge">nil</code>” is the same thing as <code class="language-plaintext highlighter-rouge">null</code> (from other languages). It does not mean or store any value, and it is not equivalent to <code class="language-plaintext highlighter-rouge">false</code>, <code class="language-plaintext highlighter-rouge">0</code>, or <code class="language-plaintext highlighter-rouge">""</code>, but is equivalant to <code class="language-plaintext highlighter-rouge">nil</code>.</p>
+            <h3 id="scripting_comments">Comments</h3>
+            <p>This is a quick mini-subchapter to inform you that the comments in Lua are created as follows:</p>
+            <p>Normal Comment:</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="c1">-- &lt;- Two Hyphens (then comment text like this!)</span>
+</code></pre>
+              </div>
+            </div>
+            <p>Block Comment:</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="cm">--[[
+  This is a block comment. Anything inside the [[ and ]​] will be a comment.
+  Start the brackets with two hyphens.
+  Then, you can write whatever you want!
+]]</span>
+</code></pre>
+              </div>
+            </div>
+            <p>Hidden Comment:</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>                                                                                                        <span class="cm">--[[
+  This is the same as a block comment,
+  but the closing and opening brackets
+  are tabbed away so you can't see them.
+                                                                                                          ]]</span>
+</code></pre>
+              </div>
+            </div>
+            <p />
+            <h2 id="scripting_variables">Variables &amp; DataTypes</h2>
+            <p>There are 3 different ways to define a variable in LuaU.<br />
+              You can use the following:</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="kd">local</span> <span class="p">[</span><span class="n">N</span><span class="p">]</span> <span class="p">(</span><span class="o">=</span> <span class="p">[</span><span class="n">V</span><span class="p">])</span>
+<span class="p">[</span><span class="n">N</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">V</span><span class="p">]</span>
+<span class="n">_G</span><span class="p">.[</span><span class="n">N</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">V</span><span class="p">]</span>
+</code></pre>
+              </div>
+            </div>
+            <p>[N] is Name, and [V] is value.<br />
+              Put simply,
+              <code class="language-plaintext highlighter-rouge">local</code> defines a value that is in the enclosing function, if statement, etc. This can be a function, loop, or if statement. Outside of that function, the value cannot be used. You can declare a local without giving it a value.</p>
+            <p>[N] = [V] is simply creating a variable without declaration. This can be used throughout the entire script. Example: cheese = “cheese”.</p>
+            <p>_G is a “global” array. What this means is that instead of inside the function or script, the entire game is able to access that variable. When I say the entire game, I mean the entire game. Exploiters can change your _G values. I recommend you use ModuleScripts instead of _G to store values, but we’ll get into that later. Example: _G.name = “EthanMcBloxxer”. There is said to be a performance limit to this, which is 200.</p>
+            <p>The basic datatypes (things you can store) are as follows:<br />
+              nil · boolean · number · string · function · userdata · table<br />
+              There are more, however most are unnecessary and you will not use them. The important other ones are positions like Vector2 (2d coordinates), Vector3 (3d coordinates), CFrames (coordinate frame), Color3 (colors), and UDim2 (gui position/size).<br />
+              You can create such things by getting from an instance or using a <code class="language-plaintext highlighter-rouge">.new</code> function, which are listed below:</p>
+            <table>
+              <thead>
+                <tr>
+                  <th style="text-align: left">Function</th>
+                  <th style="text-align: left">Creation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left">Instance.new(arg1, arg2)</td>
+                  <td style="text-align: left">New instance of class arg1 and parented to arg2</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">Vector3.new(x, y, z)</td>
+                  <td style="text-align: left">Constructs a new Vector3 using the x, y, and z componets</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">Vector2.new(x, y)</td>
+                  <td style="text-align: left">Creates a new Vector2 using ordinates x &amp; y</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">CFrame.new(x, y, z)</td>
+                  <td style="text-align: left">Complex function using more than x, y, and z, but simplified for this lesson</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">UDim2.new(xS, xO, yS, yO)</td>
+                  <td style="text-align: left">Makes a new UDim2 using xScale, xOffset, yScale, and yOffset</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">Color3.fromRGB(r, g, b)</td>
+                  <td style="text-align: left">Constructs a Color3 value from RGB values r, g, and b</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">Color3.fromHSV(h, s, v)</td>
+                  <td style="text-align: left">Constructs a Color3 value from HSV values h, s, and v</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">BrickColor.new(index,name,closeRGB,closeColor3)</td>
+                  <td style="text-align: left">Creates a BrickColor from its numerical index, name, close RGB value, or close Color3 value</td>
+                </tr>
+              </tbody>
+            </table>
+            <p />
+            <h2 id="scripting_loops">Loops</h2>
+            <p>Sometimes, you need to do something until something. If this is the case you can use a <code class="language-plaintext highlighter-rouge">repeat</code> &gt; <code class="language-plaintext highlighter-rouge">until</code> loop. This isn’t optimal, however. If you are going to use a loop for this reason, you should normally use a <code class="language-plaintext highlighter-rouge">while</code> &gt; <code class="language-plaintext highlighter-rouge">end</code> loop. The reason we do this is because when you are using a <code class="language-plaintext highlighter-rouge">repeat</code> &gt; <code class="language-plaintext highlighter-rouge">until</code> loop, the code inside of it runs once, then checks if the until specified has been met. If so, the loop breaks. A <code class="language-plaintext highlighter-rouge">while</code> &gt; <code class="language-plaintext highlighter-rouge">end</code> loop, however, will check if the condition is met, THEN run the code. If you ever need to run code infinitely, then you can do two things:</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="k">while</span> <span class="kc">true</span> <span class="k">do</span>
+    <span class="n">wait</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1">-- code</span>
+<span class="k">end</span>
+<span class="c1">-- or</span>
+<span class="k">while</span> <span class="n">wait</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">do</span>
+    <span class="c1">-- code</span>
+<span class="k">end</span>
+</code></pre>
+              </div>
+            </div>
+            <p>The second one is better practice. Why? Because while true do loops unfortunately cause a horde of lag, even without any code. Because of this, you should use while wait(1) do instead. This is completely based on what you are trying to do though. If you need an infinite loop no matter what, you can set 1 to any value from math.huge (HUGE_VAL) (basically infinity) to 0.001. Anything higher or lower will be rounded. This goes for all wait() statements.
+              There’s also a <code class="language-plaintext highlighter-rouge">for</code> &gt; <code class="language-plaintext highlighter-rouge">end</code> loop, whos syntax looks something like this:</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span> <span class="k">do</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+              </div>
+            </div>
+            <p>What this is doing is assigning a variable to the amount of times the loop ran, then specifying the times that the loop ran. Then, the last number specifies how many times <code class="language-plaintext highlighter-rouge">i</code> goes up when the loop is ran. So, <code class="language-plaintext highlighter-rouge">i = 1</code> means <code class="language-plaintext highlighter-rouge">i</code> is equal to the number of times the loop ran, then <code class="language-plaintext highlighter-rouge">5</code> means the loop will run 5 times, then <code class="language-plaintext highlighter-rouge">1</code> means <code class="language-plaintext highlighter-rouge">i</code> goes up by 1 every time the code inside the loop is run. When the loop is ran, the code inside, or <code class="language-plaintext highlighter-rouge">print(i)</code> will run. This outputs <code class="language-plaintext highlighter-rouge">i</code>, or the number of times the loop has run according to the 3rd variable. This can also be used to loop through tables, with the following syntax:</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="k">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">table</span><span class="p">)</span> <span class="k">do</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Table Index: "</span><span class="o">..</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Table Value: "</span><span class="o">..</span><span class="n">v</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+              </div>
+            </div>
+            <p>In this <code class="language-plaintext highlighter-rouge">for</code> loop, it takes every index and value (or i and v) in the table <code class="language-plaintext highlighter-rouge">table</code>, run the code in the loop. <code class="language-plaintext highlighter-rouge">i</code> is now equal to the table index, and <code class="language-plaintext highlighter-rouge">v</code> is now equal to the value that the index contains. If, instead, you are looping through a dictionary, you can use <code class="language-plaintext highlighter-rouge">for k, v in pairs() do</code> loop. <code class="language-plaintext highlighter-rouge">k</code> = Key, <code class="language-plaintext highlighter-rouge">v</code> = Value.</p>
+            <h2 id="scripting_tables">Tables</h2>
+            <p>A table is a Lua data type that can store multiple values including numbers, booleans, strings, functions, and more. Tables are constructed with curly braces ({}) as shown here:</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="c1">-- Construct an empty table assigned to variable "t"</span>
+<span class="kd">local</span> <span class="n">t</span> <span class="o">=</span> <span class="p">{}</span>
+</code></pre>
+              </div>
+            </div>
+            <p>Tables can store any type of variable, even more tables! You can reference a value in a table by doing <code class="language-plaintext highlighter-rouge">table[i]</code>. <code class="language-plaintext highlighter-rouge">i</code> is the index of the table, or the number in which the value you want is stored. Using this you can read or write to the table. There are also functions that return tables, so you can use a <code class="language-plaintext highlighter-rouge">for i, v in pairs</code> loop for functions such as <code class="language-plaintext highlighter-rouge">:GetChildren()</code>, <code class="language-plaintext highlighter-rouge">:GetDescendants()</code>, etc. Then, you can loop for each child or descendant of the instance.</p>
+            <h3 id="scripting_tables-arrays">Arrays</h3>
+            <p>Arrays are a type of table. They are the most common, where the values are stored sequentially, separated by commas. An array value can be any non-nil type (boolean, number, string, function, userdata, or even another table). Example:</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="kd">local</span> <span class="n">testArray</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"A string"</span><span class="p">,</span> <span class="mi">3</span><span class="p">.</span><span class="mi">14159</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">}</span>
+<span class="c1">-- To insert more values here, you can do 2 things:</span>
+<span class="n">testArray</span><span class="p">[</span><span class="o">#</span><span class="n">testArray</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Another new string"</span>
+<span class="c1">-- This is setting the number of things in testArray + 1 to "Another new string".</span>
+
+<span class="c1">-- alternatively you can use a function instead of variable-setting</span>
+
+<span class="nb">table.insert</span><span class="p">(</span><span class="n">testArray</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"NEW ITEM #2"</span><span class="p">)</span>
+<span class="c1">-- Which is using a table function to insert like so: (Table, Index, Value)</span>
+<span class="c1">-- To remove from a table, you use:</span>
+<span class="nb">table.remove</span><span class="p">(</span><span class="n">testArray</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1">-- This would remove 3.14159.</span>
+</code></pre>
+              </div>
+            </div>
+            <p />
+            <h3 id="scripting_tables-dictionaries">Dictionaries</h3>
+            <p>Dictionaries are similar to arrays, but they instead store key-value pairs. For example,</p>
+            <table>
+              <thead>
+                <tr>
+                  <th style="text-align: left">Key</th>
+                  <th style="text-align: left">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left">FruitName</td>
+                  <td style="text-align: left">Lemon</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">FruitColor</td>
+                  <td style="text-align: left">Yellow</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">Sour</td>
+                  <td style="text-align: left"><code class="language-plaintext highlighter-rouge">true</code></td>
+                </tr>
+              </tbody>
+            </table>
+            <p>You can create them similarly to an array, but instead of just values you use [N] = [V] instead.</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="kd">local</span> <span class="n">testDictionary</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">FruitName</span> <span class="o">=</span> <span class="s2">"Lemon"</span><span class="p">,</span>
+    <span class="n">FruitColor</span> <span class="o">=</span> <span class="s2">"Yellow"</span><span class="p">,</span>
+    <span class="n">Sour</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre>
+              </div>
+            </div>
+            <p>Then, you read from them somewhat like arrays, but instead of the index number you do the value.
+              <code class="language-plaintext highlighter-rouge">testDictionary["FruitName"]</code>
+              If you are <strong>not</strong> storing strings, such as “Lemon”, then you should not use quotes for the index reference. (Sour instead of “Sour”)</p>
+            <h3 id="scripting_tables-tableop">Table Operations</h3>
+            <p>There are a few operations and functions that belong to <code class="language-plaintext highlighter-rouge">table</code> that are very useful when manipulating tables, like <code class="language-plaintext highlighter-rouge">table.sort</code>, which sorts the table elements of arg1 in a given order. Here’s a table of them:</p>
+            <table>
+              <thead>
+                <tr>
+                  <th style="text-align: left">Function</th>
+                  <th style="text-align: left">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left">concat</td>
+                  <td style="text-align: left">arg1 must be an array! Returns the string arg1[arg3]..arg2..arg1[arg3+1] all the way through the table until arg2..arg1[arg4]. arg2 is a seperation for table elements, and arg3 is where to start the operation</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">foreachi</td>
+                  <td style="text-align: left">arg1 must be an array! Passes function arg2 to the elements of table arg1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">foreach</td>
+                  <td style="text-align: left">arg1 must be a dictionary! Passes function arg2 to the elements of table arg1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">sort</td>
+                  <td style="text-align: left">arg1 must be an array! Sorts elements of arg1 in a given order for every table element</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">insert</td>
+                  <td style="text-align: left">arg1 must be an array! Appends arg2 to the end of arg1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">remove</td>
+                  <td style="text-align: left">arg1 must be an array! Removes from arg1 at arg2 and returning the removed value</td>
+                </tr>
+              </tbody>
+            </table>
+            <p />
+            <h2 id="scripting_booleanfuncs">Boolean Functions</h2>
+            <p>When I say “Boolean” I mean things like <code class="language-plaintext highlighter-rouge">true</code> and <code class="language-plaintext highlighter-rouge">false</code>. This is how if statements work. For example:</p>
+            <div class="language-lua highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="kd">local</span> <span class="n">helloworld</span> <span class="o">=</span> <span class="s2">"Hello, World!"</span>
+<span class="k">if</span> <span class="n">helloworld</span> <span class="o">==</span> <span class="s2">"Hello, World!"</span> <span class="k">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hi!"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+              </div>
+            </div>
+            <p>This checks if the local variable <code class="language-plaintext highlighter-rouge">helloworld</code> is equal to <code class="language-plaintext highlighter-rouge">“Hello, World!”</code>. If that returns true then the code inside of it will be run.</p>
+            <h2 id="scripting_stringop">String Operations</h2>
+            <p>In Lua, you may need to store strings and manipulate them as well. There are a few useful functions that all begin with <code class="language-plaintext highlighter-rouge">string</code>. These include <code class="language-plaintext highlighter-rouge">string.sub</code>, <code class="language-plaintext highlighter-rouge">string.lower</code>, <code class="language-plaintext highlighter-rouge">string.upper</code>, <code class="language-plaintext highlighter-rouge">string.reverse</code>, <code class="language-plaintext highlighter-rouge">string.split</code>, and <code class="language-plaintext highlighter-rouge">string.find</code>. There are many more that you can read up on <a href="https://developer.roblox.com/en-us/api-reference/lua-docs/string">here</a>, but you won’t find yourself using them much. Here’s a table to better understand the useful ones:</p>
+            <table>
+              <thead>
+                <tr>
+                  <th style="text-align: left">Function</th>
+                  <th style="text-align: left">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left">sub</td>
+                  <td style="text-align: left">arg1 is the string you are operating on, arg2 is where you start actually slicing the string, and arg3 is where you stop. So, if I did <code class="language-plaintext highlighter-rouge">string.sub("hello", 1, 2)</code> then I would get <code class="language-plaintext highlighter-rouge">"he"</code> because it begins on letter 1 and ends on letter 2.</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">lower</td>
+                  <td style="text-align: left">arg1 with all uppercase characters changed to lowercase</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">upper</td>
+                  <td style="text-align: left">arg1 with all lowercase characters changed to uppercase</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">reverse</td>
+                  <td style="text-align: left">arg1 reversed, “hello” changes to “olleh”</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">split</td>
+                  <td style="text-align: left">splits a string based on arg2 (the speration character). Honors whitespace. Example: <code class="language-plaintext highlighter-rouge">string.split("foo, bar")</code> would yield <code class="language-plaintext highlighter-rouge">["foo", " bar"]</code>. Yes, it does convert it into a table. Works with Unicode and Invalid UTF-8.</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">find</td>
+                  <td style="text-align: left">looks for the first match of the second argument. If it finds one, then it returns it, otherwise it returns <code class="language-plaintext highlighter-rouge">nil</code>. Argument 3 specifies where to start searching (default 1), and can be negative. The fourth argument (bool) turns on/off the pattern matching facilities.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p />
+            <h2 id="scripting_mathop">Math Operations</h2>
+            <p>You probably, in any game, need to use math somewhere, whether it be coin multipliers, absolute values, angles, division remainders, or some other crazy pi-involving game, math is useful. So, Lua obviously has a ton of math functions. There are a <a href="https://developer.roblox.com/en-us/api-reference/lua-docs/math">lot</a>, but here are the more useful ones: <code class="language-plaintext highlighter-rouge">math.abs</code>, <code class="language-plaintext highlighter-rouge">math.ceil</code>, <code class="language-plaintext highlighter-rouge">math.floor</code>, <code class="language-plaintext highlighter-rouge">math.deg</code>, <code class="language-plaintext highlighter-rouge">math.fmod</code>, <code class="language-plaintext highlighter-rouge">math.max</code>, <code class="language-plaintext highlighter-rouge">math.min</code>, <code class="language-plaintext highlighter-rouge">math.pi</code>, <code class="language-plaintext highlighter-rouge">math.rad</code>, <code class="language-plaintext highlighter-rouge">math.random</code>, <code class="language-plaintext highlighter-rouge">math.sqrt</code>, and <code class="language-plaintext highlighter-rouge">math.huge</code>. Still a ton, right? Well, here’s a table to better break it down.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th style="text-align: left">Function</th>
+                  <th style="text-align: left">Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left">abs</td>
+                  <td style="text-align: left">Absolute Value of arg1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">ceil</td>
+                  <td style="text-align: left">Return the smallest integer larger/equal to arg1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">floor</td>
+                  <td style="text-align: left">Return the largest integer smaller/equal to arg1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">deg</td>
+                  <td style="text-align: left">Returns the angle arg1 (radians)</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">fmod</td>
+                  <td style="text-align: left">Remainder of division of arg1 by arg2 (that rounds the quotient)</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">max</td>
+                  <td style="text-align: left">The maximum value</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">min</td>
+                  <td style="text-align: left">The minimum value</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">pi</td>
+                  <td style="text-align: left">Returns true pi</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">rad</td>
+                  <td style="text-align: left">Angle arg1 (degrees + radians)</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">random</td>
+                  <td style="text-align: left">Random value, arg1 being minimum and arg2 being maximum</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">sqrt</td>
+                  <td style="text-align: left">Square root of arg1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left">huge</td>
+                  <td style="text-align: left"><code class="language-plaintext highlighter-rouge">HUGE_VAL</code>, larger than or equal to any other numerical value</td>
+                </tr>
+              </tbody>
+            </table>
+            <p />
+            <div align="center"><button type="button" onclick="window.location.href='#';" style="background-color: #4CAF50;  border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">Return to Top</button></div>
+            <p />
+            <h1 id="more-coming-soon">MORE COMING SOON!</h1>
+          </article>
+          <div class="blog-tags">
+            <span>Tags:</span>
+            <a href="/old/tags#lua">lua</a>
+          </div>
+          <!-- Check if any share-links are active -->
+          <style>
+            .share-button {
+              padding: 15px;
+              font-size: 25px;
+              width: 60px;
+              text-align: center;
+              text-decoration: none;
+              margin: 5px;
+              border-radius: 3px
+            }
+            .share-button:hover {
+              opacity: 0.7;
+            }
+          </style>
+          <script>
+            function copy_url() {navigator.clipboard.writeText('%2Fold%2Fblog%2Fthe-developers-handbook-to-roblox%2F'); swal("Copied!", "If it didn't work, then manually copy %2Fold%2Fblog%2Fthe-developers-handbook-to-roblox%2F or try again.", "success");}
+          </script>
+          <ul class="pagination blog-pager">
+            <li class="page-item previous">
+              <a class="page-link" href="/old/blog/roblox-exploitation-guide/" data-toggle="tooltip" data-placement="top" title="Roblox Exploitation Guide">&larr; Previous Post</a>
+            </li>
+            <li class="page-item next">
+              <a class="page-link" href="/old/blog/type-accent-marks-without-bilingual-keyboard/" data-toggle="tooltip" data-placement="top" title="Typing Accent Marks without a Bilingual Keyboard">Next Post &rarr;</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/js/anchor.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function(event) {
+        anchors.options.placement = 'left';
+        anchors.options.visible = 'hover';
+        anchors.options.icon = '#';
+        anchors.options.ariaLabel = '';
+        anchors.options.titleText = 'Heading Permalink';
+        anchors.add('h1, h2, h3, h4, h5, h6');
+      });
+    </script>
+    <footer>
+      <div class="container-md beautiful-jekyll-footer">
+        <div class="row">
+          <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+            <ul class="list-inline text-center footer-links">
+              <li class="list-inline-item">
+                <a href="/old/feed.xml" title="RSS">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">RSS</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="mailto:ethanmcbloxxer@pm.me" title="Email me">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Email me</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://web.archive.org/web/*/https://ethanmcbloxxer.github.io/blog/the-developers-handbook-to-roblox/" title="Archive of this page">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Archive of this page</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.youtube.com/channel/UCzLnGcurZJ3heHBbseFBRKg" title="YouTube">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">YouTube</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="javascript:swal('Copied', 'If that didn\'t work, try copying EthanMcBloxxer#2089 directly.', 'success');" title="Copy my Discord" onClick="navigator.clipboard.writeText('EthanMcBloxxer#2089');">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-discord fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Discord</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/EthanMcBloxxer" title="GitHub">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fab fa-github fa-stack-2x"></i>
+                  </span>
+                  <span class="sr-only">GitHub</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a rel="me" href="https://mastodon.online/@ethanmcbloxxer" title="Mastodon">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Mastodon</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://twitter.com/EthanMcBloxxer" title="Twitter">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://reddit.com/u/EthanMcBloxxer" title="Reddit">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fab fa-reddit fa-stack-2x"></i>
+                  </span>
+                  <span class="sr-only">Reddit</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://stackoverflow.com/users/11653162/ethanmcbloxxer" title="StackOverflow">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">StackOverflow</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://open.spotify.com/user/EthanMcBloxxer" title="Spotify">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fab fa-spotify fa-stack-2x"></i>
+                  </span>
+                  <span class="sr-only">Spotify</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://steamcommunity.com/id/EthanMcBloxxer" title="Steam">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fab fa-steam fa-stack-2x"></i>
+                  </span>
+                  <span class="sr-only">Steam</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.twitch.tv/EthanMcBloxxer" title="Twitch">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitch fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Twitch</span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">
+              Ethan Anonymous
+              &nbsp;&bull;&nbsp;
+              2021
+              &nbsp;&bull;&nbsp;
+              <a href="javascript:swal('Tracking', 'You have successfully opted-out of analytics-based tracking.', 'info');" onclick="amplitude.getInstance().setOptOut(true);">do not track</a>
+            </p>
+            <p class="copyright text-muted">
+              <span class="text-muted">
+                <a href="/terms.html">Terms</a>
+              </span>
+              &nbsp;&bull;&nbsp;
+              <span class="text-muted">
+                <a href="/privacy.html">Privacy</a>
+              </span>
+              &nbsp;&bull;&nbsp;
+              <span class="text-muted">
+                <a href="/credits.html">Credits</a>
+              </span>
+              &nbsp;&bull;&nbsp;
+              <span class="text-muted">
+                <a href="/donate/">Donate</a>
+              </span>
+            </p>
+            <p/>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      if (typeof jQuery == 'undefined') {
+        document.write('<script src="/old/assets/js/jquery-3.5.1.js"></scr' + 'ipt>');
+      }
+    </script>
+    <script src="/old/assets/js/beautifuljekyll.js"></script>
+    <script src="/old/assets/js/popper/createPopper.js"></script>
+    <script src="/old/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/old/assets/js/swal.js"></script>
+  </body>
+</html>

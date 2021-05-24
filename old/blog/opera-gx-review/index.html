@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Opera GX Review</title>
+    <meta name="author" content="Ethan Anonymous">
+    <meta name="description" content="EthanMcBloxxer's website. You can find my projects, pastebin, and (micro)blog posts here, as well as a few other random pages like a User-Agent detector.">
+    <meta name="keywords" content="ethanmcbloxxer">
+    <link rel="alternate" type="application/rss+xml" title="EthanMcBloxxer" href="/old/feed.xml">
+    <link rel="stylesheet" href="/old/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/old/assets/fa/css/all.css">
+    <link rel="stylesheet" href="/old/assets/css/beautifuljekyll.css">
+    <script>
+      if (!window.doNotTrack == "1" || !window.navigator.doNotTrack == "1" || !window.navigator.msDoNotTrack == "1") {
+        if (!navigator.globalPrivacyControl) {
+      
+          // Both DNT and GPC are off, load Analytics
+      
+          (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+          ;r.type="text/javascript"
+          ;r.integrity="sha384-girahbTbYZ9tT03PWWj0mEVgyxtZoyDF9KVZdL+R53PP5wCY0PiVUKq0jeRlMx9M"
+          ;r.crossOrigin="anonymous";r.async=true
+          ;r.src="https://cdn.amplitude.com/libs/amplitude-7.2.1-min.gz.js"
+          ;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+          console.log("[Analytics] Error: could not load SDK")}}
+          ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+          ;function s(e,t){e.prototype[t]=function(){
+          this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+          var o=function(){this._q=[];return this}
+          ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+          ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+          ;return this}
+          ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+          ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+          ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId", "enableTracking", "setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+          ;function v(e){function t(t){e[t]=function(){
+          e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+          for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+          e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+          ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+          ;e.amplitude=n})(window,document);
+      
+          amplitude.getInstance().init("4148a0961d085ef4aa4646d0c86297d1", null, {
+              trackingOptions: {
+                city: false,
+                dma: false,
+                ip_address: false
+              },
+              cookieExpiration: 90,
+              secureCookie: true,
+              disableCookies: true,
+              includeReferrer: true
+            }
+          );
+      
+          amplitude.getInstance().logEvent("Analytics Loaded", {url: document.location.href});
+        }
+        else
+        {
+          if (typeof amplitude !== "undefined") {
+            // Have an "else" fallback for if Analytics somehow load
+            amplitude.getInstance().setOptOut(true);
+          }
+        }
+      }
+      else
+      {
+        if (typeof amplitude !== "undefined") {
+          // Have an "else" fallback for if Analytics somehow load
+          amplitude.getInstance().setOptOut(true);
+        }
+      }
+    </script>
+    <meta property="og:site_name" content="EthanMcBloxxer">
+    <meta property="og:title" content="Opera GX Review">
+    <meta property="og:description" content="Reviewing Version: 72.0.3815.xxx">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <link rel="icon" type="image/png" href="/assets/img/glyph.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://ethanmcbloxxer.github.io/assets/img/apple/180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://ethanmcbloxxer.github.io/assets/img/apple/57x57.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ethanmcbloxxer.github.io/assets/img/apple/180x180.png">
+    <meta property="og:image" content="/old/assets/img/posts/thumb/opera-gx.svg">
+    <link rel="mask-icon" href="/assets/img/apple/mask-icon.svg" color="#000000">
+    <meta property="og:type" content="article">
+    <meta property="og:article:author" content="Ethan Anonymous">
+    <meta property="og:article:published_time" content="2020-12-21T00:00:00-04:00">
+    <meta property="og:url" content="/old/blog/opera-gx-review/">
+    <link rel="canonical" href="/old/blog/opera-gx-review/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@EthanMcBloxxer">
+    <meta name="twitter:creator" content="@EthanMcBloxxer">
+    <meta property="twitter:title" content="Opera GX Review">
+    <meta property="twitter:description" content="Reviewing Version: 72.0.3815.xxx">
+    <meta name="twitter:image" content="/old/assets/img/posts/thumb/opera-gx.svg">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="/old">EthanMcBloxxer</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main-navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/old/about">About</a>
+          </li>
+          <li class="nav-item"></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/EthanMcBloxxer/">Projects</a>
+          </li>
+          <li class="nav-item"></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/old/.public">Files</a>
+          </li>
+          <li class="nav-item"></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Miscellaneous</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/old/accounts">My Accounts</a>
+              <a class="dropdown-item" href="/old/url">Custom Redirects</a>
+              <a class="dropdown-item" href="/old/is-my-computer-on">Is My Computer On</a>
+              <a class="dropdown-item" href="/old/a91c338f48502d90b79022e8fb4236ac2cadf653.html">Broken Page</a>
+              <a class="dropdown-item" href="/old/browser-info">Browser Info</a>
+              <a class="dropdown-item" href="/old/geolocator">Geolocator</a>
+              <a class="dropdown-item" href="/old/christmas">Christmas Counter</a>
+              <a class="dropdown-item" href="/old/dm">Daily DM (Archive)</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="change-skin" title="Toggle Night Mode">
+        <style>
+          @font-face {
+            font-family: 'Dark Mode Toggle (Emoji)';
+            font-style: normal;
+            font-weight: 100;
+            src: local(''),
+              url('/assets/font/dark-toggle.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+              url('/assets/font/dark-toggle.woff') format('woff'),   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+              url('/assets/font/dark-toggle.ttf') format('truetype');/* Safari, Android, iOS */
+          }
+        </style>
+        <span style="font-family: 'Dark Mode Toggle (Emoji)';" class="skin-btn dark-mode">🌙</span>
+        <span style="font-family: 'Dark Mode Toggle (Emoji)';" class="skin-btn light-mode">☀️</span>
+      </div>
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a href="/old">
+            <img alt="Navigation bar avatar" class="avatar-img" src="/old/assets/img/avatar-icon.png" />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- TODO this file has become a mess, refactor it -->
+    <header class="header-section ">
+      <div class="intro-header no-img">
+        <div class="container-md">
+          <div class="row">
+            <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+              <div class="post-heading">
+                <h1>Opera GX Review</h1>
+                <h2 class="post-subheading">Reviewing Version: 72.0.3815.xxx</h2>
+                <span class="post-meta">Posted on December 21, 2020</span>
+                <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+                <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 8 minute read</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class=" container-md ">
+      <div class="row">
+        <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+          <article role="main" class="blog-post">
+            <h4 id="what-is-opera-gx">What is Opera GX?</h4>
+            <p>Opera GX is a browser created for “gamers”. In reality, it’s just normal Opera with a few unnecessary features removed and necessary features added. It wasn’t built from scratch, but instead used normal Opera as a base.</p>
+            <h2 id="appearance">Appearance</h2>
+            <p>GX, at first glance, doesn’t resemble Opera too much, but if you take a closer look, you’ll see that most of the actual componets are very similar. However, GX has tried to make customizable accent colors, which would be used to match RGB-syncronized colors to the browser. It currently works with Razer Chroma, which isn’t too much of a surprise considering the browser is still in beta. You can still customize what color is used if you aren’t using Razer Chroma, however it won’t be dynamic, and you’ll need to choose just one color. Even though I have an RGB keyboard and mouse, I still just make the color jet-white as anything else isn’t as readable compared to the black background.</p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/jeF47q.jpeg" alt="GX Default Red View" class="mx-auto d-block" /> <br />
+              <img src="https://ethanmcbloxxer.is-ne.at/OYhztg.png" alt="GX Theme Color Settings" class="mx-auto d-block" /></p>
+            <div align="center"><i>Credit: Opera &amp; EthanMcBloxxer</i></div>
+            <p></p>
+            <p>Aside from that, there are also aesthetics which include browser sounds and music. The browser sounds occur when typing, opening &amp; closing tabs, clicking, toggling limiters (we’ll get to that), and switching tabs (with Ctrl+Tab). All of these can be turned off or made quieter.</p>
+            <p>The music, sadly, isn’t an integration, meaning that there are only a few select songs, which are actually just ambience. Don’t lose hope in this feature, however, because the compositions are actually really well made and loop well too. It also automatically temporarily mutes itself when any tab is playing a sound, be it a YouTube video or just a cheesy click sound from a 2008 website. It even comes with a dynamic audio visualizer (equalizer), and each track comes fully packed with 10-channel sound. Either way, my favorite ambience track is “Restoration”. No hate, but the default one isn’t as good.</p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/zT6ZsL.png" alt="GX Music Settings" class="mx-auto d-block" /></p>
+            <div align="center"><i>Credit: Opera &amp; EthanMcBloxxer</i></div>
+            <h2 id="builtin-features">Built-in Features</h2>
+            <p>There are a few built-in features in Opera GX which would normally be one of your first addon downloads as a browser. These include:</p>
+            <ul>
+              <li>Adblock (Ghostery)</li>
+              <li>Tracker-block (Ghostery)</li>
+              <li>Dark-pages (Dark Reader)</li>
+              <li>PiP (Picture-in-Picture)</li>
+              <li>Crypto Wallet (???)</li>
+              <li>Password autofill (LastPass / MYKI)</li>
+              <li>Tab containers (Tab container extension)</li>
+              <li>Search popup (???)</li>
+            </ul>
+            <p>and the VPN, but we’ve already covered that. Personally, I think the only good feature here is PiP, as it has a custom interface better than the current universal PiP extension. The other three features aren’t as good as their extension competitors. For example, Dark Reader has 4 different modes of dark page generation, Filter, Filter+, Static, and Dynamic. Dynamic is the best but takes the longest. Static is the worst and generates a sheet almost instantly. GX’s dark pages feature is in the middle. It doesn’t take long to load, but it isn’t as good as Dark Reader Dynamic and can sometimes fail to generate a dark page. The adblock and tracker block, however, are just too minimal. You can’t see who is tracking you, compared to Ghostery, and it seems to have a less-comprehensive library of trackers and a lower understanding of an ad. Sometimes there are special ad providing services, other than default simple ad images. Ghostery can handle more in general. Now, I <strong>highly don’t recommend</strong> using the browser’s autofill and instead using a password manager, and I don’t use cryptocurrency so I can’t say anything for the Crypto Wallet. And, finally, the tab containers, which we’ll get to <a href="#workspaces">later</a>.</p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/moJrFF.png" alt="PIP Extension" class="mx-auto d-block" /></p>
+            <div align="center"><i>Credit: Opera &amp; EthanMcBloxxer</i></div>
+            <p>So personally, you should just disable them and get the recommended extensions.</p>
+            <h4 id="vpn">VPN</h4>
+            <p>We all love VPNs because of various reasons, and free VPNs are even better. Opera GX has a free VPN, so I decided to put this feature earlier in the article.</p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/ipOu2M.png" alt="GX VPN Popup" class="mx-auto d-block" /></p>
+            <div align="center"><i>Credit: Opera &amp; EthanMcBloxxer</i></div>
+            <p>The GX VPN is as to be expected of a free VPN, with unlimited data transfer but only 3 vauge locations to connect to:</p>
+            <ul>
+              <li>North/South America</li>
+              <li>Europe</li>
+              <li>Asia</li>
+            </ul>
+            <p>which leaves little reason for one to use a VPN who needs to connect to certain locations to watch those gosh darn Netflix shows. Anyways, for hiding your identity, it does the job.</p>
+            <h4 id="search-popup">Search popup</h4>
+            <p>When you hover over a currency, time zone, unit, or normal word, a popup shows above it allowing you to search or copy the text with ease. Try it! They’ll look like this:</p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/K66XPj.png" alt="Normal" /></p>
+            <div align="center"><i>Normal</i></div>
+            <p><br />
+            </p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/phRLGk.png" alt="Unit" /></p>
+            <div align="center"><i>Unit</i></div>
+            <p><br />
+            </p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/BalC2t.png" alt="Time" /></p>
+            <div align="center"><i>Time</i></div>
+            <p><br />
+            </p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/qb9Uuw.png" alt="Currency" /></p>
+            <div align="center"><i>Currency</i></div>
+            <h4 id="file-popup">File popup</h4>
+            <p>If a website opens a file upload dialog, Opera will intercept the request for Explorer and instead make a popup which shows copied files and recently downloaded files. There’s also a button to just open Explorer if none of the popup recommendations serve your intent.</p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/2dHjAT.png" alt="Preview of File Popup" class="mx-auto d-block" /></p>
+            <div align="center"><i>Credit: Opera</i></div>
+            <h2 id="sidebar">Sidebar</h2>
+            <p>The main difference between Opera and other modern browsers is the sidebar. It has built-in container tabs, system page shortcuts, messanger integration (not sms), and in GX, it has a seperate category for tools. These include GX Corner, GX Control, and GX Cleaner.</p>
+            <p><a href="https://gx-corner.opera.com/">GX Corner</a> is basically a center for buying games. It has things like a release calendar, deals, free games, trailers, and news. Personally, I don’t like this feature, but there is a way to hack it away into the sidebar, then off. I’ll tell you that now (with images):</p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/vEdns8.png" alt="Toggle &quot;GX Corner&quot; in sidebar&quot;" /></p>
+            <div align="center"><i>Credit: Opera &amp; EthanMcBloxxer</i></div>
+            <p>Then click the three dots on the bottom of GX’s sidebar. Then, toggle off GX Corner like so:</p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/Eaokg6.png" alt="Toggle &quot;GX Corner&quot; in sidebar setup" /></p>
+            <div align="center"><i>Credit: Opera &amp; EthanMcBloxxer</i></div>
+            <p>GX Control is the main selling point for the browser. It allows you to set limiters on how much of your computing resources can be taken by GX. It comes with a network, RAM, and CPU limiter. The network limiter, in my experience, is a bad idea if you have ethernet (a wired connection). It essentially just loads pages slower for barely any gain, unless you’re using WiFi, which you make using this limiter more plausible. The RAM limiter has the ability to go strict, which means your browser <strong>will not</strong> exceed the limit you’ve set. The lowest limit for RAM is 1GB, which should be good for a baseline, as even just a single powerful website could use all of it up. If your page turns jet white (FFFFFF), then I recommend setting strict off first before choosing a larger limit. The CPU limiter, on the other hand, cannot go strict, so your browser could possibly take up more than the limit. This isn’t very common, but when it does it normally only goes to the next level at maximum. Basically, if you set your limit to baseline (25% of CPU), the max it will take is approxamately the second setting limit (50% of CPU).</p>
+            <p>GX Cleaner cleans everything. Cache, cookies, browsing history, tabs, downloads, and even unused sidebar icons (not ever recommended). There are three predefined modes which can be edited (impermanately and reversibly) to the user’s content.</p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/yoLL6S.png" alt="GX Cleaner on Min" class="mx-auto d-block" /></p>
+            <div align="center"><i>Credit: Opera &amp; EthanMcBloxxer</i></div>
+            <h4 id="flow">Flow</h4>
+            <p>Up until recently, flow wasn’t useable in Opera GX (at least for me). They’ve added this feature back, and you can pair your phone with Opera GX and either <a href="https://apps.apple.com/app/id1411869974">Opera Touch (universal)</a>, <a href="https://play.google.com/store/apps/details?id=com.opera.browser">Opera for Android</a>, or <a href="https://play.google.com/store/apps/details?id=com.opera.mini.native">Opera Mini (android)</a>.</p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/ERZSBt.png" alt="GX Flow" class="mx-auto d-block" /></p>
+            <div align="center"><i>Credit: Opera &amp; EthanMcBloxxer</i></div>
+            <p>You can toggle this on through the sidebar, under “Special Features”.</p>
+            <h4 id="workspaces">Workspaces</h4>
+            <p>Another main feature distinguishing Opera is their custom-made tab container features, or as called by the interface, “Workspaces”. Their icons and names can be changed, but not as easily. Moving all the tabs to their required workspaces is a difficult task, but can be rewarding once finished. Overall, this is easier than an extension to do the same.</p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/yF27nD.png" alt="GX Workspaces" class="mx-auto d-block" /></p>
+            <div align="center"><i>Credit: Opera &amp; EthanMcBloxxer</i></div>
+            <h4 id="messangers">Messangers</h4>
+            <p>Opera GX has all of the messangers in Opera, but with the added feature of Discord. In total, they have</p>
+            <ul>
+              <li>Discord</li>
+              <li>Twitter</li>
+              <li>Facebook Messenger</li>
+              <li>WhatsApp</li>
+              <li>Telegram</li>
+              <li>Instagram</li>
+              <li>VK</li>
+            </ul>
+            <p>and possibly more to come.</p>
+            <p><img src="https://ethanmcbloxxer.is-ne.at/COsrVU.png" alt="Discord" class="mx-auto d-block" /></p>
+            <div align="center"><i>Discord (blurred)</i></div>
+            <p>I do believe that the Discord in GX is a bit degraded compared to the desktop app, but that’s because of the limitations of web applications. It doesn’t have streamer mode or keybinds, and the microphone quality may go down by a bit. Using any other messaging system is seamless, though. It is a bit sad that they don’t have SMS, however.</p>
+            <h4 id="twitch">Twitch</h4>
+            <p>The Twitch integration isn’t much, it just acts as a speed dial, in the sidebar, for Twitch.
+              <img src="https://ethanmcbloxxer.is-ne.at/lRXhpX.png" alt="GX Twitch" class="mx-auto d-block" />
+              It could be better.</p>
+            <h2 id="extensions">Extensions</h2>
+            <p>Like modern web browsers, Opera and Opera GX possess the ability to host custom extensions which enhance the working power of the browser to whatever the extension’s purpose is. In the Opera world, there are two different addon stores that you can use. These are the native Opera extension store, and the Google Web store. The latter is accessible because Opera is built off the Chromium source, which means some functions carry over. In fact, most functions carry over, so there are a ton of extensions you can download from the Google Web store. You can download them with an <a href="https://addons.opera.com/en-gb/extensions/details/install-chrome-extensions/">Opera-made extension</a>. There are also sidebar extensions which, instead of adding it to the topbar, add it to the sidebar. There aren’t many of these, however.</p>
+            <h4 id="news-feeds">News Feeds</h4>
+            <p>Again, like normal modern browsers, Opera comes with a “News feed” feature which is basically just an RSS / Atom publication notifier. You can even <a href="https://ethanmcbloxxer.github.io/feed.xml">subscribe to me</a>! You can put the icons on the sidebar or on the topbar as a normal extension-like icon, or just go to <a href="opera://news">opera://news</a>.</p>
+            <h2 id="speed-dial">The Speed Dial</h2>
+            <p>Opera and Opera GX both have a set new tab page, a speed dial, which has custom tiles, suggested tiles, a news feed *not the rss news feed, and a weather widget in the top corner. You can change the background, too. I, personally, don’t like how they restrict the new tab to just this, as Tabliss is a bit better. You can at least make the background animated.</p>
+          </article>
+          <div class="blog-tags">
+            <span>Tags:</span>
+            <a href="/old/tags#apps">apps</a>
+            <a href="/old/tags#web">web</a>
+          </div>
+          <!-- Check if any share-links are active -->
+          <style>
+            .share-button {
+              padding: 15px;
+              font-size: 25px;
+              width: 60px;
+              text-align: center;
+              text-decoration: none;
+              margin: 5px;
+              border-radius: 3px
+            }
+            .share-button:hover {
+              opacity: 0.7;
+            }
+          </style>
+          <script>
+            function copy_url() {navigator.clipboard.writeText('%2Fold%2Fblog%2Fopera-gx-review%2F'); swal("Copied!", "If it didn't work, then manually copy %2Fold%2Fblog%2Fopera-gx-review%2F or try again.", "success");}
+          </script>
+          <ul class="pagination blog-pager">
+            <li class="page-item previous">
+              <a class="page-link" href="/old/blog/how-mmr-works/" data-toggle="tooltip" data-placement="top" title="How Rocket League MMR Works">&larr; Previous Post</a>
+            </li>
+            <li class="page-item next">
+              <a class="page-link" href="/old/blog/wikitweaks-usercss/" data-toggle="tooltip" data-placement="top" title="Wikitweaks">Next Post &rarr;</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/js/anchor.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function(event) {
+        anchors.options.placement = 'left';
+        anchors.options.visible = 'hover';
+        anchors.options.icon = '#';
+        anchors.options.ariaLabel = '';
+        anchors.options.titleText = 'Heading Permalink';
+        anchors.add('h1, h2, h3, h4, h5, h6');
+      });
+    </script>
+    <footer>
+      <div class="container-md beautiful-jekyll-footer">
+        <div class="row">
+          <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+            <ul class="list-inline text-center footer-links">
+              <li class="list-inline-item">
+                <a href="/old/feed.xml" title="RSS">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">RSS</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="mailto:ethanmcbloxxer@pm.me" title="Email me">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Email me</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://web.archive.org/web/*/https://ethanmcbloxxer.github.io/blog/opera-gx-review/" title="Archive of this page">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Archive of this page</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.youtube.com/channel/UCzLnGcurZJ3heHBbseFBRKg" title="YouTube">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">YouTube</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="javascript:swal('Copied', 'If that didn\'t work, try copying EthanMcBloxxer#2089 directly.', 'success');" title="Copy my Discord" onClick="navigator.clipboard.writeText('EthanMcBloxxer#2089');">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-discord fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Discord</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/EthanMcBloxxer" title="GitHub">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fab fa-github fa-stack-2x"></i>
+                  </span>
+                  <span class="sr-only">GitHub</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a rel="me" href="https://mastodon.online/@ethanmcbloxxer" title="Mastodon">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Mastodon</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://twitter.com/EthanMcBloxxer" title="Twitter">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://reddit.com/u/EthanMcBloxxer" title="Reddit">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fab fa-reddit fa-stack-2x"></i>
+                  </span>
+                  <span class="sr-only">Reddit</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://stackoverflow.com/users/11653162/ethanmcbloxxer" title="StackOverflow">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">StackOverflow</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://open.spotify.com/user/EthanMcBloxxer" title="Spotify">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fab fa-spotify fa-stack-2x"></i>
+                  </span>
+                  <span class="sr-only">Spotify</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://steamcommunity.com/id/EthanMcBloxxer" title="Steam">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fab fa-steam fa-stack-2x"></i>
+                  </span>
+                  <span class="sr-only">Steam</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.twitch.tv/EthanMcBloxxer" title="Twitch">
+                  <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitch fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="sr-only">Twitch</span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">
+              Ethan Anonymous
+              &nbsp;&bull;&nbsp;
+              2021
+              &nbsp;&bull;&nbsp;
+              <a href="javascript:swal('Tracking', 'You have successfully opted-out of analytics-based tracking.', 'info');" onclick="amplitude.getInstance().setOptOut(true);">do not track</a>
+            </p>
+            <p class="copyright text-muted">
+              <span class="text-muted">
+                <a href="/terms.html">Terms</a>
+              </span>
+              &nbsp;&bull;&nbsp;
+              <span class="text-muted">
+                <a href="/privacy.html">Privacy</a>
+              </span>
+              &nbsp;&bull;&nbsp;
+              <span class="text-muted">
+                <a href="/credits.html">Credits</a>
+              </span>
+              &nbsp;&bull;&nbsp;
+              <span class="text-muted">
+                <a href="/donate/">Donate</a>
+              </span>
+            </p>
+            <p/>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      if (typeof jQuery == 'undefined') {
+        document.write('<script src="/old/assets/js/jquery-3.5.1.js"></scr' + 'ipt>');
+      }
+    </script>
+    <script src="/old/assets/js/beautifuljekyll.js"></script>
+    <script src="/old/assets/js/popper/createPopper.js"></script>
+    <script src="/old/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/old/assets/js/swal.js"></script>
+  </body>
+</html>

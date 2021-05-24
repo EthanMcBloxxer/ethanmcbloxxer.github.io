@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <!-- Source: gist.github.com/EthanMcBloxxer/376557585b1ef46d2d9cad599525eac7 -->
+  <head>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <pre id="content"></pre>
+    <script type="text/javascript">
+      var i = 0;
+      var txt = "YOU... HACKED... ME...\n死ぬ. 死ぬ, 死ぬ, 死ぬ, 死ぬ. 死ぬ!";
+      
+      function write() {
+      	if (i < txt.length) {
+      		document.getElementById("content").innerHTML += txt.charAt(i);
+      		i++;
+      		setTimeout(write, 100);
+      	}
+      }
+      
+      if (window.navigator.onLine == true || window.navigator.onLine == "online" || document.body.onLine == true || document.body.onLine == "online" || navigator.onLine == true || navigator.onLine == "online") {
+      	txt = "YES. YOUR COMPUTER IS ON. AS TO BE EXPECTED.";
+      	write();
+      } else if (window.navigator.onLine == false || window.navigator.onLine == "offline" || document.body.onLine == false || document.body.onLine == "offline" || navigator.onLine == true || navigator.onLine == "offline") {
+      	txt = "NO? YOUR COMPUTER ISN'T ON. HOW DOES THIS PHYSI...\nNO. I SHOULD CALM DOWN. THIS IS JUST A BUG.\nHEY USER. YEAH, YOU. WHAT KIND OF BROWSER ARE YOU USING?\nWE CAN DETERMINE THE SOURCE OF THIS BUG. ARE YOU USING INTERNET EXPLORER? I'LL QUICKLY CHECK...";
+      	if (window.document.documentMode) {
+      		txt += "\nOK. PHEW. YOU ARE USING INTERNET EXPLORER. I WAS WORRIED THERE. INTERNET EXPLORER IS COMPLETE GARBAGE. PLEASE SWITCH TO FIREFOX. BUT STILL - IF YOU'RE USING A VERSION OF INTERNET EXPLORER LOWER THAN 8, WE MAY HAVE A PROBLEM.";
+      	} else {
+      		txt += "\nOH NO. YOU'RE NOT USING INTERNET EXPLORER... THIS IS BAD. VERY BAD. PLEASE, PLEASE GO TELL ETHANMCBLOXXER TO FIX MY CODE.\nI'M BEGGING YOU!!! YOU CAN EVEN HAVE HIS EMAIL ADDRESS! IT'S ethanmcbloxxer+ismycomputeron@protonmail.com. JUST PLEASE FIX ME!!";
+      	}
+      	write();
+      } else {
+      	txt = "WE CAN'T TELL WHETHER YOUR COMPUTER IS ON OR NOT. IF YOU'RE USING IE7 OR BELOW THEN YOU MIGHT NOT HAVE THE LATEST AND GREATEST COMPUTER-ON DETECTION MECHANISMS. WE'LL ASSUME YOU ARE ON FOR THE TIME BEING, THOUGH.";
+      	write();
+      }
+    </script>
+  </body>
+</html>

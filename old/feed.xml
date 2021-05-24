@@ -1,34 +1,236 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    {% if site.title %}
-    <title>{{ site.title | xml_escape }}</title>
-    {% endif %}
-    {% if site.rss-description %}
-    <description>{{ site.rss-description | xml_escape }}</description>
-    <language>en-us</language>
-    {% endif %}
-    <link>{{ '' | absolute_url }}</link>
-    <atom:link href="{{ 'feed.xml' | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% assign excerpt_length = site.excerpt_length | default: 50 %}
-    {% for post in site.posts limit:20 %}
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>EthanMcBloxxer</title>
+      <description>EthanMcBloxxer's Website</description>
+      <language>en-us</language>
+      <link>/old</link>
+    <atom:link href="/old/feed.xml" rel="self" type="application/rss+xml" />
       <item>
-        <title>{{ post.title | xml_escape }}</title>
+        <title>Don't link to &quot;Here&quot;</title>
         <description>
-          {% if post.subtitle %}{{ post.subtitle | xml_escape }} - {% endif %}
-          {{ post.content | strip_html | xml_escape | truncatewords: excerpt_length }}
+          You shouldn't use &quot;here&quot; for links - 
+          TL;DR: Stop saying you can download something here or that you should click here to see something since it doesn’t make sense in most occasions, like mobile devices, screen readers, and grammar cohesion. When you’re creating almost anything on the internet, you can probably link to another resource. We see...
         </description>
-        {% for tag in post.tags %}
-          <category>{{ tag }}</category>
-        {% endfor %}
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
-      </item>
-    {% endfor %}
-    <webMaster>ethanmcbloxxeryt@gmail.com</webMaster>
-  </channel>
+        <pubDate>Sat, 27 Mar 2021 00:00:00 -0400</pubDate>
+        <link>/old/blog/dont-link-to-here/</link>
+      <guid isPermaLink="true">/old/blog/dont-link-to-here/</guid>
+    </item>
+    <item>
+      <title>The Great Discord War</title>
+      <description>
+        Accidentally recreating human history on Discord - 
+        It all started from humble beginnings, in a simple, limited messaging group on chat platform Discord. We all talked this way for a long time, until we, 10 people, all unanimously decided that we should create a server to bring about many upgrades such as multiple (text and voice) channels,...
+      </description>
+      <category>discord</category>
+      <pubDate>Wed, 10 Mar 2021 00:00:00 -0400</pubDate>
+      <link>/old/blog/the-great-discord-war/</link>
+    <guid isPermaLink="true">/old/blog/the-great-discord-war/</guid>
+  </item>
+  <item>
+    <title>ProtonMail: Privacy-Centered Email</title>
+    <description>
+      A easy-to-switch Gmail alternative for privacy - 
+      It’s recently come to my attention via multiple methods, such as the DuckDuckGo help pages when I was looking in to the search bar on the home page. On the DuckDuckGo help pages, multiple email providers are offered, but ProtonMail is the only one with a viable free plan. To...
+    </description>
+    <category>email</category>
+    <pubDate>Sun, 21 Feb 2021 00:00:00 -0400</pubDate>
+    <link>/old/blog/protonmail-privacy-centered-email/</link>
+  <guid isPermaLink="true">/old/blog/protonmail-privacy-centered-email/</guid>
+</item>
+<item>
+  <title>Device Naming Guidelines</title>
+  <description>
+    The guidelines in which I name my devices - 
+    Quick Syntax OS(ver).TP-Name Example WIN10.PC-EthanMB OS Computers Windows WIN WSV (Server) MacOS MAC Linux LNX Ubuntu LUV (Linux Ubuntu Vanilla) LUS (Linux Ubuntu Studio) Debian DEB Phones Android AND AD[C] ([codename first letter]) iOS iOS TVos KODI KDI ver If necessary, also provide the version of the OS in hyphenated...
+  </description>
+  <category>computers</category>
+  <pubDate>Wed, 17 Feb 2021 00:00:00 -0400</pubDate>
+  <link>/old/blog/device-naming-guide/</link>
+<guid isPermaLink="true">/old/blog/device-naming-guide/</guid>
+</item>
+<item>
+  <title>Git Terminology</title>
+  <description>
+    Understanding what all this git stuff means - 
+    I’m still a bit novice to Git, even after more than a year of kind of using it often. I’ll be explaining most terms that are useful in the best way I can. Commit A commit is a change to a repository. You can change multiple files with one commit...
+  </description>
+  <category>git</category>
+  <pubDate>Sun, 07 Feb 2021 00:00:00 -0400</pubDate>
+  <link>/old/blog/git-terminology/</link>
+<guid isPermaLink="true">/old/blog/git-terminology/</guid>
+</item>
+<item>
+  <title>EthanMcBloxxer's Subtitle Etiquette</title>
+  <description>
+    A simple and minimal syntax for writing subtitles - 
+    Basic reference: Keep periods on the inside of open/close tags (like this.) Never use UPPERCASE for tag insides, use only lowercase for sounds (sound), [descriptive subtitles], {editorial note} Use hyphens for continued speech or a screened character “Quotes mean someone’s talking, but we don’t know who…” thoughts shouting (if possible...
+  </description>
+  <category>utility</category>
+  <pubDate>Sat, 06 Feb 2021 00:00:00 -0400</pubDate>
+  <link>/old/blog/ethanmcbloxxers-subtitle-etiqutte/</link>
+<guid isPermaLink="true">/old/blog/ethanmcbloxxers-subtitle-etiqutte/</guid>
+</item>
+<item>
+  <title>10 Awesome Browser Extensions</title>
+  <description>
+    My 10 Favorite Web Browser Extensions - 
+    This is my list of 10 browser extensions that work on Chrome and other chromium-based browsers, which includes Edge, Opera, and Brave. Some of them might even be supported on Firefox! Disclaimer: This article is meant to inform and not persuade. I recommend looking into each of these extensions further...
+  </description>
+  <category>web</category>
+  <pubDate>Thu, 28 Jan 2021 00:00:00 -0400</pubDate>
+  <link>/old/blog/10-awesome-browser-extensions/</link>
+<guid isPermaLink="true">/old/blog/10-awesome-browser-extensions/</guid>
+</item>
+<item>
+  <title>Run Linux GUI Applications on Windows 10</title>
+  <description>
+    Using WSL, Ubuntu, and VcXsrv to open Linux programs - 
+    With Windows Subsystem for Linux, you can now run “Linux” on top of Windows. You can get certain distributions from the Microsoft Store, like Ubuntu, Debian, Kali, OpenSUSE (Server), and Fedora. You can also use PowerShell or curl to download them. Before anything, though, you need to make sure that...
+  </description>
+  <category>windows</category>
+  <category>linux</category>
+  <pubDate>Mon, 25 Jan 2021 00:00:00 -0400</pubDate>
+  <link>/old/blog/run-linux-apps-on-windows/</link>
+<guid isPermaLink="true">/old/blog/run-linux-apps-on-windows/</guid>
+</item>
+<item>
+  <title>The Quest for the Perfect Language</title>
+  <description>
+    Looking at the top 10 languages and finding the best - 
+    In this post, I’ll be looking at the top 10 by native speakers, and seeing which of them meets my set criteria for being a language better than English, or in a way, perfect. Criteria: No weird grammar rules No unnecessary prononciation characters (like the schwa) No gendered nouns other...
+  </description>
+  <category>language</category>
+  <pubDate>Sun, 17 Jan 2021 00:00:00 -0400</pubDate>
+  <link>/old/blog/the-quest-for-the-perfect-language/</link>
+<guid isPermaLink="true">/old/blog/the-quest-for-the-perfect-language/</guid>
+</item>
+<item>
+  <title>Wikitweaks</title>
+  <description>
+    A usercss for Wikipedia - 
+    I’ve been looking around at userstyles.org and decided to make my own Wikipedia custom stylesheet. It’s not as cool as n0x’s Wikipedia Material Design (which I highly recommend for a more modern Wikipedia), but it’ll do the job if you hate serif fonts. The below code may update at any...
+  </description>
+  <category>web</category>
+  <category>css</category>
+  <pubDate>Wed, 23 Dec 2020 00:00:00 -0400</pubDate>
+  <link>/old/blog/wikitweaks-usercss/</link>
+<guid isPermaLink="true">/old/blog/wikitweaks-usercss/</guid>
+</item>
+<item>
+  <title>Opera GX Review</title>
+  <description>
+    Reviewing Version: 72.0.3815.xxx - 
+    What is Opera GX? Opera GX is a browser created for “gamers”. In reality, it’s just normal Opera with a few unnecessary features removed and necessary features added. It wasn’t built from scratch, but instead used normal Opera as a base. Appearance GX, at first glance, doesn’t resemble Opera too...
+  </description>
+  <category>apps</category>
+  <category>web</category>
+  <pubDate>Mon, 21 Dec 2020 00:00:00 -0400</pubDate>
+  <link>/old/blog/opera-gx-review/</link>
+<guid isPermaLink="true">/old/blog/opera-gx-review/</guid>
+</item>
+<item>
+  <title>How Rocket League MMR Works</title>
+  <description>
+    Written by u/ytzi13 on Reddit - 
+    I haven’t seen an easy to follow post in a long time that explains how the MMR/rank system works, and I’ve seen a lot of questions about it around the sub lately. Here is what I understand and I hope that it clears things up for those of you who...
+  </description>
+  <category>gaming</category>
+  <category>excerpts</category>
+  <pubDate>Mon, 30 Nov 2020 00:00:00 -0400</pubDate>
+  <link>/old/blog/how-mmr-works/</link>
+<guid isPermaLink="true">/old/blog/how-mmr-works/</guid>
+</item>
+<item>
+  <title>Ultimate Rocket League Training Kit</title>
+  <description>
+    An archive of useful training sequences - 
+    Hello there, fellow rocketeer! I’ve been hard at work creating a wide variety of training packs for you to enhance your skills from just the humble bronze 1 all the way to champion. There are a lot, so make sure to save the post if you are interested. Also, take...
+  </description>
+  <category>gaming</category>
+  <pubDate>Sun, 29 Nov 2020 00:00:00 -0400</pubDate>
+  <link>/old/blog/ultimate-rocket-league-training-kit/</link>
+<guid isPermaLink="true">/old/blog/ultimate-rocket-league-training-kit/</guid>
+</item>
+<item>
+  <title>Easily stop cutting out on Discord</title>
+  <description>
+    No longer will you stop being heard in the middle of sentences! - 
+    So you’ve experienced cutting out. Either your friends tell you that you are, or you hear your friends cutting out. Today, I’ll tell you the secret to stop cutting out on Discord. To begin, you want to click on User Settings in the bottom corner of your Discord app. You’ll...
+  </description>
+  <category>apps</category>
+  <pubDate>Fri, 06 Nov 2020 00:00:00 -0400</pubDate>
+  <link>/old/blog/stop-cutting-out-on-discord/</link>
+<guid isPermaLink="true">/old/blog/stop-cutting-out-on-discord/</guid>
+</item>
+<item>
+  <title>Rocket League Rank Chart</title>
+  <description>
+    Simple chart to help you understand the competitive ranks in Rocket League - 
+    You’re a Rocket League veteran or a newer player to the game, and you want to understand how the ranks in competitive mode work. Well, for each different competitive mode you play, you get a different rank. You must play 10 matches in order to get your rank in the...
+  </description>
+  <category>gaming</category>
+  <pubDate>Fri, 06 Nov 2020 00:00:00 -0400</pubDate>
+  <link>/old/blog/rocket-leauge-rank-chart/</link>
+<guid isPermaLink="true">/old/blog/rocket-leauge-rank-chart/</guid>
+</item>
+<item>
+  <title>Password Misconceptions</title>
+  <description>
+    There are a few misconceptions about passwords and security. - 
+    Passwords are one of the best things of security. They’re a string of text that can be remembered or written down, but there are still misconceptions and misinformation about them. mW674p3#NAeUG3UE would make a good password This, to many people, doesn’t sound like a misconception, it sounds like a fact....
+  </description>
+  <category>security</category>
+  <pubDate>Thu, 05 Nov 2020 00:00:00 -0400</pubDate>
+  <link>/old/blog/password-misconceptions/</link>
+<guid isPermaLink="true">/old/blog/password-misconceptions/</guid>
+</item>
+<item>
+  <title>10 Awesome Windows Add-Ons</title>
+  <description>
+    Push Windows to its limits, or enhance it slightly. - 
+    Have you ever wished Windows had slight alterations? Well, here are 10 different applications that wished the same thing! Table of Contents f.lux EarTrumpet 7zip AutoHotkey EdgeDeflector BlackNotepad Files (Preview) Windows Terminal Modern Flyouts Browser for Game Bar f.lux f.lux (or flux) is a great app that alters the amount...
+  </description>
+  <category>windows</category>
+  <pubDate>Sun, 01 Nov 2020 00:00:00 -0400</pubDate>
+  <link>/old/blog/10-awesome-windows-addons/</link>
+<guid isPermaLink="true">/old/blog/10-awesome-windows-addons/</guid>
+</item>
+<item>
+  <title>Typing Accent Marks without a Bilingual Keyboard</title>
+  <description>
+    Use the ENG-INTL keyboard modifier to type accent marks - 
+    Have you ever wanted to type accent marks for multilingual typing? Today, I’ll teach you about an integrated Windows feature to do just that by simply typing the accent (‘ “ ` ~ ^) and then the proceeding character. You can also type other symbols with CTRL+ALT+$key, and those are...
+  </description>
+  <category>typing</category>
+  <category>language</category>
+  <pubDate>Sat, 31 Oct 2020 00:00:00 -0400</pubDate>
+  <link>/old/blog/type-accent-marks-without-bilingual-keyboard/</link>
+<guid isPermaLink="true">/old/blog/type-accent-marks-without-bilingual-keyboard/</guid>
+</item>
+<item>
+  <title>The Developer's Handbook to Roblox</title>
+  <description>
+    Ins and Outs to Roblox Development - 
+    Hey there! So you want to know how to use Roblox Studio. I’m going to tell you everything there is to know about it, scripting, modeling, GUI designing, terrain editing, remoting, and more. Remember that I’m just a internet random, and the official developer website may be a better fit...
+  </description>
+  <category>lua</category>
+  <pubDate>Fri, 30 Oct 2020 00:00:00 -0400</pubDate>
+  <link>/old/blog/the-developers-handbook-to-roblox/</link>
+<guid isPermaLink="true">/old/blog/the-developers-handbook-to-roblox/</guid>
+</item>
+<item>
+  <title>Roblox Exploitation Guide</title>
+  <description>
+    Written by H3x0R/OpenGamerTips - 
+    This is a general guide on how to exploit in Roblox created by H3x0r or OpenGamerTips. Keep in mind that some things here are oversimplified for the average skid. If you are looking to troubleshoot then scroll to the bottom. Risks You are breaking Roblox’s Terms of Service if you...
+  </description>
+  <category>exploits</category>
+  <category>excerpts</category>
+  <pubDate>Fri, 30 Oct 2020 00:00:00 -0400</pubDate>
+  <link>/old/blog/roblox-exploitation-guide/</link>
+<guid isPermaLink="true">/old/blog/roblox-exploitation-guide/</guid>
+</item>
+<webMaster>ethanmcbloxxeryt@gmail.com</webMaster>
+</channel>
 </rss>

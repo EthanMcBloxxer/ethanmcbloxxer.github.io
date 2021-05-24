@@ -1,0 +1,40 @@
+{
+  "short_name": "EthanMcBloxxer",
+  "name": "EthanMcBloxxer",
+  "description": "EthanMcBloxxer's Personal Website and Blog",
+  "icons": [
+    {
+      "src": "/assets/img/google/192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/img/google/512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#f0f0f0",
+  "display": "browser",
+  "scope": "/",
+  "theme_color": "#e1f32c",
+  "shortcuts": [
+    {
+      "name": "Homepage",
+      "short_name": "Home",
+      "description": "EthanMcBloxxer.github.io's Homepage",
+      "url": "/"
+    },
+    {
+      "name": "The Daily DM",
+      "short_name": "Daily DM",
+      "url": "/dm/"
+    },
+    {
+      "name": "EthanMcBloxxer's Pastebin",
+      "short_name": "Pastebin",
+      "url": "/pastebin/"
+    }
+  ]
+}

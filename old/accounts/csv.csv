@@ -1,7 +1,54 @@
----
-layout: none
----
 Service,Website,Username
-
-{% for item in site.data.accounts %}{{ item.service }},{{ item.website }},{{ item.username }}
-{% endfor %}
+About.me,https://about.me/,EthanMcBloxxer
+Amplitude,https://amplitude.com/,ethanmcbloxxer@protonmail.com
+AnimePlanet,https://anime-planet.com/,EthanMcBloxxer
+Apple,https://apple.com/,ethanmcbloxxer@protonmail.com
+Archive.org,https://archive.org/,EthanMcBloxxer
+Aternos,https://aternos.org/,EthanMcBloxxer
+Badlion,https://badlion.net/,EthanMcBloxxer
+Blizzard (Battle),https://battle.net/,EthanMcBloxy#1463
+BuyMeACoffee,https://buymeacoffee.com/,EthanMcBloxxer
+Cloudflare,https://cloudflare.com/,ethanmcbloxxer@protonmail.com
+Discord,https://discord.com/,EthanMcBloxxer#2089
+Disroot,https://disroot.org/,ethanmcbloxxer
+Duolingo,https://duolingo.com/,EthanMcBloxxer
+EasyExploits,https://easyexploits.com/,EthanMcBloxxer
+Epic Games,https://epicgames.com/,EthanMcBloxxer
+Evernote,https://evernote.com/,EthanMcBloxxer
+Fandom,https://fandom.com/,EthanMcBloxxer
+GitHub,https://github.com/,EthanMcBloxxer
+GOG,https://gog.com/,EthanMcBloxxer
+Google,https://google.com/,ethanmcbloxxer@protonmail.com
+Grammarly,https://grammarly.com/,ethanmcbloxxer@protonmail.com
+Gravatar,https://gravatar.com/,EthanMcBloxxer
+Guilded,https://guilded.gg/,EthanMcBloxxer
+Hacker News,https://news.ycombinator.com/,EthanMcBloxxer
+Heroku,https://heroku.com/,ethanmcbloxxer@protonmail.com
+Hypixel,https://hypixel.net/,EthanMcBloxxer
+Keybase,https://keybase.io/,ethanmcbloxxer
+Kit.co,https://kit.co/,EthanMcBloxxer
+LBRY,https://lbry.com/,EthanMcBloxxer
+Mastodon,https://mastodon.online/,@ethanmcbloxxer@mastodon.online
+Matrix,https://matrix.to/,@ethanmcbloxxer:matrix.org
+Mega,https://mega.nz/,ethanmcbloxxer@protonmail.com
+Microsoft,https://microsoft.com/,ethanmcbloxxer@protonmail.com
+Minecraft,https://minecraft.net/,EthanMcBloxxer
+Mozilla,https://mozilla.org/,ethanmcbloxxer@protonmail.com
+RBXCity,https://rbxcity.com/,EthanMcBloxxer
+Reddit,https://reddit.com/,EthanMcBloxxer
+Roblox,https://roblox.com/,EthanMcBloxxer
+RubyGems,https://rubygems.org/,EthanMcBloxxer
+Skindex,https://minecraftskins.com/,EthanMcBloxxer
+SkyRealms,https://skyrealms.games/,EthanMcBloxxer
+Spotify,https://spotify.com/,EthanMcBloxxer
+StackOverflow,https://stackoverflow.com/,11653162
+Steam,https://steampowered.com/,EthanMcBloxxer
+Teknik,https://teknik.io/,EthanMcBloxxer
+ToS;DR,https://tosdr.org/,EthanMcBloxxer
+Twitch,https://twitch.tv/,EthanMcBloxxer
+Twitter,https://twitter.com/,EthanMcBloxxer
+Ubisoft,https://ubisoft.com/,EthanMcBloxxer
+Ubuntu,https://ubuntu.com/,EthanMcBloxxer
+Unity,https://unity.com/,EthanMcBloxxer
+WeAreDevs,https://wearedevs.net/,EthanMcBloxxer
+Wikipedia,https://wikipedia.org/,EthanMcBloxxer
