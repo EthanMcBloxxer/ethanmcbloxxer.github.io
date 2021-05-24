@@ -106,6 +106,9 @@
 			@media screen and (max-width: 650px) {footer {
 				display: none;
 			}}
+			#socials {
+				font-size: smaller;
+			}
 			
 			a {
 				color: inherit;
@@ -134,7 +137,7 @@
 			</div>
 		</main>
 		<footer>
-			<p>
+			<p id="navigation">
 				<a href="/about">About</a>
 				&bull;
 				<a href="/published">Blog</a>
@@ -147,7 +150,7 @@
 				&bull;
 				<a href="/ed25519.asc">PGP</a>
 			</p>
-			<p>
+			<p id="socials">
 				<a href="mailto:ethanmcbloxxer@protonmail.com">Email</a>
 				&bull;
 				<a href="javascript:alert('EthanMcBloxxer#2089 (should be copied already)');" onclick="navigator.clipboard.writeText('EthanMcBloxxer#2089');">Discord <noscript>(EthanMcBloxxer#2089)</noscript></a>
@@ -250,7 +253,7 @@
 			document.getElementById("motd").innerHTML = motds[Math.floor(Math.random() * motds.length)];
 			
 			function giveCookies(cookies) {
-				for (i = 1; i <= cookies; i++) {
+				for (i = 0; true; i++) {
 					console.log("🍪")
 				}
 			}
