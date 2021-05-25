@@ -32,13 +32,13 @@ local variable = "data"
 variable = "data"
 ```
 
-`local` is a keyword that represents a locally-scoped variable. Think of `let` in JavaScript. It only exists in the current function (which includes functions, ifs, loops, etc) or, in the absense of one, across the entire script.
+`local` is a keyword that represents a locally-scoped variable. Think of `let` in JavaScript. It only exists in the current block (ifs, loops, etc) or, in the absence of one, across the entire script.
 
 When there is no keyword, it creates a globally-scoped variable (`var` in JavaScript). You can use this new variable throughout the entire running script.
 
-Locally scoped variables are always preferred. Conversely to JavaScript (which is just an example language to compare to), locally-scoped variables offer a hefty (30%+) performance boost over globally scoped ones.
+Locally scoped variables are always preferred. Conversely to JavaScript (which is just an example language to compare to), locally-scoped variables offer a hefty (30%+) performance boost over globally scoped ones. This is because they are only integrated within the containing block environment.
 
-If you need to, you can initiate a variable without a value:
+If you need to, you can initiate a variable without a value. This is most often used when you need a variable to be accessible in a previous block (referred to as a forward declaration or upvalue).
 
 ```lua
 local variable
@@ -69,9 +69,7 @@ print(b) --> 1
 
 Lua automatically handles [whether or not the variable is a reference](https://stackoverflow.com/a/11218501).
 
-## Datatypes
-
-Luau also contains many different types of data to use. As previously mentioned, there are only two ways to make a variable. This means that strings aren't prefixed with `string`, numbers not `int`, `float`, or `double`, etc.
+Inside of these variables, many different types of data are able to be used. As previously mentioned, there are only two ways to make a variable. This means that strings aren't prefixed with `string`, numbers not `int`, `float`, or `double`, etc.
 
 The primitive and most used values are as follows:
 
@@ -192,7 +190,7 @@ local args = {"My name is ", false, " but you can call me Al."}
 print("My name is ", false, " but you can call me Al.")
 ```
 
-Remember that type checking is possible.
+Remember that type checking is possible, along with recursive functions (functions which call themselves again).
 
 ### `table`
 
@@ -837,7 +835,7 @@ print(tonumber("roblox")) --> nil
 
 ### \_G / shared
 
-These are global variables which serve the exact same purpose, but are different tables. They're shared across every script with the same execution level, meaning that you can assign `_G.text` to `"hello"` or `shared.text` to `"hello"` and later reference that in another script. Think of them like the automatic global ModuleScript.
+These are global variables which serve the exact same purpose, but are different tables. They're shared across every script with the same execution level, meaning that you can assign `_G.text` to `"hello"` or `shared.text` to `"hello"` and later reference that in another script. Think of them like the automatic global ModuleScript, but prefer real ModuleScripts.
 
 ### assert
 
@@ -1380,4 +1378,14 @@ end
 
 #### codepoint
 
+Returns the codepoints in the provided string, starting at `i` and ending at `j`. If it found an invalid codepoint, it will instead return `nil` and the codepoint's string position.
+
+#### len
+
+Incredibly similar to `string.len` but with UTF8 support, and, if an invalid codepoint was found, return `nil` and the codepoint's string position.
+
+#### offset
+
 ### bit32
+
+## OOP
