@@ -1386,6 +1386,167 @@ Incredibly similar to `string.len` but with UTF8 support, and, if an invalid cod
 
 #### offset
 
-### bit32
+Returns the byte position in the provided string where the provided codepoint starts, beginning at `i`. `nil` is returned when no matches were found.
 
-## OOP
+#### graphemes
+
+Returns an iterator function so that
+
+```lua
+for first, last in utf8.graphemes(str) do 
+	local grapheme = string.sub(str, first, last)
+	
+end
+```
+
+will loop through the grapheme clusters of the provided string. Useful when using Unicode on [surrogate characters / pairs](https://stackoverflow.com/questions/51001150/what-are-surrogate-characters-in-utf-8), such as [🍎](https://medium.com/flutter-community/working-with-unicode-and-grapheme-clusters-in-dart-b054faab5705).
+
+#### nfcnormalize
+
+Converts the inputted string to [Normal Form C](http://unicode.org/reports/tr15/tr15-23.html), which tries to convert decomposed characters into composed ones.
+
+#### nfdnormalize
+
+Converts the inputted string to [Normal Form D](http://unicode.org/reports/tr15/tr15-23.html), which tries to break up composed characters into decomposed ones.
+
+#### charpattern
+
+A constant containing the pattern `"[%z\x01-\x7F\xC2-\xF4][\x80-\xBF]*"`, which matches exactly zero or more UTF-8 byte sequence (assuming that the subject is a valid UTF-8 string).
+
+## Objects
+
+An object can contain data (fields) and code (procedures). This approach allows you to easily create something with similar behavior to something else, like in the real world.
+
+For a basic example, an apple has a custom field specifying its mass, a read-only one specifying its weight, and a procedure called "IngestionBreakDown". It inherits properties from the base object, like the behavior of its atoms and molecules. Maybe it also inherits a procedure like "Grow" from the Fruit class, and has a custom property named "GrowTime" which impacts how "Grow" works.
+
+Utilizing ModuleScripts, metatables, and metamethods, we can make an object, like an instance, with custom behavior. To do this, we'll use the `__index` metamethod, which fires when the table is indexed **and there is no value in that index**.
+
+So, to create an object which inherits from a class, we can use [the following boilerplate](https://gist.github.com/EthanMcBloxxer/7ad771384f383b0dc18e4c12a7158d3e):
+
+```lua
+local Class = {}
+Class.__index = Class
+
+function Class.new()
+	return setmetatable({}, Object)
+end
+
+return Class
+```
+
+Here, when this ModuleScript is `require()`ed, it returns a custom function called `new`, which then returns a new object that always points to a new `Class` table which was made with `setmetatable` and a blank table.
+
+If we were to specify a property of `Class`, that would be accesible in the new object, since it exists in `Class`, but not in the new one. Since all indexes point to `Class`, as there are no keys in the created table, it will find if the key exists in `Class` instead. This means that you can specify custom properties inside of the `new` function to be used in the object.
+
+```lua
+local Class = {}
+Class.__index = Class
+
+function Class.new(Driver)
+	local Object = setmetatable({}, Object)
+	
+	Object.Driver = Driver
+	
+	return Object
+end
+
+return Class
+```
+
+Which will allow a normal script to access the Driver key from the new object. Then, functions inside of the class or object can access those keys and manipulate them to whatever is needed.
+
+### Methods
+
+You'll see these in non-Luau classes, like instances. They are functions which use the `:` syntax instead of `.`s and belong to a specific object. When a function is specified as a method with `:` syntax inside of an object, it will automatically make the variable `self` set to itself, the `Object`.
+
+Because of this, you can set functions to use the `self` variable which will be passed when calling it as a method.
+
+```lua
+local Class = {
+	_InternalValue = 1,
+}
+
+function Class.GetInternalValue(self)
+	return self._InternalValue
+end
+```
+
+Will produce the following results when `require()`ed:
+
+```lua
+local Class = require(Class)
+
+-- Function
+Class.GetInternalValue() --> error
+Class.GetInternalValue(Class) --> 1
+
+-- Method
+Class:GetInternalValue() --> 1
+```
+
+Inside of the ModuleScript, you can also use `:` syntax in the function itself to omit the `self` variable as a parameter:
+
+```lua
+local Class = {
+	_InternalValue = 1,
+}
+
+function Class:GetInternalValue()
+	return self._InternalValue
+end
+```
+
+### Clock Example
+
+Using everything we've learned, we can make a custom class which allows us to use a basic clock with custom methods.
+
+```lua
+local Clock = {}
+Clock.__index = Clock
+
+function Clock.new()
+	local Object = setmetatable({}, Clock)
+	
+	Object._text = os.date("%I:%M %p", os.time())
+	
+	Object._event = Instance.new("BindableEvent", script)
+	Object.Updated = Object._event.Event
+	
+	Object._coroutine = coroutine.create(function()
+		while true do
+			Object:Update()
+			Object._event:Fire(Object._text)
+			wait(1)
+		end
+	end)
+	return Object
+end
+
+function Clock:Start()
+	coroutine.resume(self._coroutine)
+	return self
+end
+
+function Clock:GetTime()
+	return self._text
+end
+
+function Clock:Update()
+	self._text = os.date("%I:%M %p", os.time())
+	return self
+end
+
+return Clock
+```
+
+Which allows some functionality in a script:
+
+```lua
+require(Clock).new():Start().Updated:Connect(function(NewTime) -- The :Start() method returns the Object (`return self`) so we can instantly reference properties
+	print(NewTime) --[[> 12:00 PM
+	                     12:00 PM
+	                     ... <]]--
+end)
+```
+
+Since the clock updates every second, the time may not change, and it may get less accurate due to `wait()`.
