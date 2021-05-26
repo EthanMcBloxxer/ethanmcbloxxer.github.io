@@ -694,7 +694,7 @@ local bool = require(ModuleScript) --> "Ran ModuleScript"
 print(tostring(bool)) --> "true"
 ```
 
-When using ModuleScripts with OOP, variable naming conventions change a bit, specifically prefixing private (not to be tampered) values with an underscore (\_). Methods which return said private value would be used instead.
+ModuleScripts are also a way to use custom classes and objects. Read more about that in the #Objects section.
 
 ## Instances
 
@@ -746,6 +746,8 @@ There is another global similar to this which references the current script's pa
 
 You can set your own coding formatting guidelines, but we will always prefer not using relative paths (like `script.Parent`) and instead absolute paths (like `game:GetService("ServerScriptService")`). If relative paths are absolutely required, you can use them.
 
+Some services exist but are not visible in Explorer, as there is no reason to add any content under them inside of Studio. These can still be referenced with `:GetService`. Most of the hidden ones have -Service at the end of them.
+
 ### Workspace
 
 Workspace is a service of the DataModel which contains all of the visible parts and terrain of a Roblox game.
@@ -759,11 +761,61 @@ We'll be using `game.Workspace`.
 
 A service which contains the data for each player in the game. It contains only [`Player`](https://developer.roblox.com/en-us/api-reference/class/Player) instances. Since workspace is the only service that contains visible parts, a seperate model is added to workspace that can be referenced with the `Character` property of Player, which contains all of the parts, textures, and meshes of a player.
 
-It also has a method to get all the players in a game: `game:GetService("Players"):GetPlayers()`, which can be used to iterate through all players in a game:
+#### Player
+
+An instance categorized under this service since it is the only location it can exist.
+
+##### Character
+
+A property pointing to the player's character, which is inside of the Workspace.
+
+##### DisplayName
+
+The player's display name.
+
+##### Name
+
+The instance name, which is the player's current username.
+
+##### UserId
+
+The player's user id, which should be used programmatically since the user can change their user and display names.
+
+##### CharacterAdded
+
+An event that fires when a player's character is added or respawns.
+
+##### CharacterRemoving
+
+An event that fires when a player's character is removed or dies.
+
+#### PlayerAdded
+
+A highly useful event used to perform actions on a new player, which can be used to load data or change their appearance.
+
+```lua
+game:GetService("Players").PlayerAdded:Connect(function(Player)
+	print(Player.UserId) --> 234945843 --(if user 234945843 had joined the game)
+end)
+```
+
+#### PlayerRemoving
+
+Similar to PlayerAdded, but when a player leaves the game. This is the best time to save data.
+
+```lua
+game:GetService("Players").PlayerRemoving:Connect(function(Player)
+	print(Player.UserId) --> 234945843 --(if user 234945843 had left the game)
+end)
+```
+
+#### GetPlayers
+
+Can be used to iterate through all players in a game.
 
 ```lua
 for _, Player in ipairs(game:GetService("Players"):GetPlayers()) do
-	print(Player.Name) --> EthanMcBloxxer --(if EthanMcBloxxer was the only player in the game)
+	print(Player.Name) --> "EthanMcBloxxer" --(if EthanMcBloxxer was the only player in the game)
 end
 ```
 
@@ -800,6 +852,98 @@ Allows modification of the player when created, like WalkSpeed and JumpPower.
 #### StarterPlayerScripts / StarterCharacterScripts
 
 An ideal location for LocalScripts. When referring to the player, use `game.Players.LocalPlayer`. StarterCharacterScripts should be used when the player's character is needed for the LocalScript to execute.
+
+### DataStoreService
+
+A storage solution for games, meant to store persistent data for players, like their money, inventory, etc.
+
+They are stored per game, meaning a game (or creator through the command bar) can access any key inside of a data store.
+
+DataStoreService is only accessible and usable through `Script`s (the server). Doing any function in a `LocalScript` will call an error.
+
+All read or write functions which are part of either this service or a DataStore instance are *highly* recommended to be wrapped in a `pcall`. DataStores can error for a number of reasons without warning, as they are essentially network calls.
+
+#### GetDataStore
+
+Returns the provided DataStore which has the same name as the provided string.
+
+```lua
+local CashData = game:GetService("DataStoreService"):GetDataStore("Cash")
+```
+
+If you need to store generic data without a given name, you can use the `GetGlobalDataStore` function to get the default DataStore. This is not recommended for player data.
+
+When storing player data, you should use their UserID (as a string) for the data key.
+
+##### GetAsync
+
+Gets the data stored in the DataStore with the provided key name, given that the key exists.
+
+```lua
+local Success, Experience = pcall(function()
+	return game:GetService("DataStoreService"):GetDataStore("Experience"):GetAsync("1234")
+end)
+
+if Success then
+	print("Player ID 1234 has", Experience, "exp.")
+end
+```
+
+##### SetAsync
+
+Sets the given key to the given value in the DataStore it is called on.
+
+When knowing the previous value is important, use `UpdateAsync` instead. This will result in fewer calls opposed to storing `GetAsync`'s return (which can be cached) and doing logic before calling `SetAsync`, which could then fail.
+
+```lua
+local Success, Message = pcall(function()
+	return game:GetService("DataStoreService"):GetDataStore("Experience"):SetAsync("1234", 500)
+end)
+
+if not Success then
+	-- Error Handling (maybe retry later?)
+end
+```
+
+##### UpdateAsync
+
+First gets the provided key, and passes the old value to the other function, which returns what the provided key should be set to.
+
+```lua
+local Success, Message = pcall(function()
+	game:GetService("DataStoreService"):GetDataStore("Experience"):UpdateAsync("1234", function(Old)
+		if Old == 69 then
+			return "69 (nice)"
+		end
+	end)
+end)
+
+if not Success then
+	-- Error Handling (maybe retry later?)
+end
+```
+
+##### IncrementAsync
+
+Similar to UpdateAsync, but instead increments the provided key (which has to be a number) by the given increment.
+
+```lua
+local Success, Experience = pcall(function()
+	return game:GetService("DataStoreService"):GetDataStore("Experience"):IncrementAsync("1234", 100)
+end)
+
+if not Success then
+	-- Error Handling (maybe retry later?)
+end
+```
+
+##### RemoveAsync
+
+To be used almost exclusively in Studio's command bar by a developer, mostly because Roblox needs a key deleted (because of GDPR, CCPA, etc.), you can delete a key like so:
+
+```lua
+game:GetService("DataStoreService"):GetDataStore("Experience"):RemoveAsync("1234")
+```
 
 ## Builtins
 
@@ -845,14 +989,14 @@ Can be used in conjunction with `pcall`.
 
 ### select
 
-When the first argument passed is a number, `select` will convert the arguments to a table, get the index from that argument, and convert the values back (it won't actually do that, this is just for conceptualization). If the number is negative, it will take the values from the end and back.
+When the first argument passed is a number, `select` will convert the arguments to a table, get the index from that argument, and convert the values back. (It won't actually do that, but it behaves the same way.) If the number is negative, it will take the values from the end and back.
 
 ```lua
 print(select(2, "A", "B", "C")) --> B C
 print(select(-1, "A", "B", "C")) --> C
 ```
 
-When the first argument is a string and `"#"`, it will return the total amount of arguments passed to it:
+When the first argument is a string and `"#"`, it will return the total amount of arguments passed to it.
 
 ```lua
 print(select("#", "A", "B", "C")) --> 3
@@ -870,7 +1014,7 @@ It also returns how much time it did actually wait, so you can make use of the d
 print(wait(5)) --> 5.00318529843 --(also waits this time before outputting)
 ```
 
-When using Luau, it is *highly* recommended to use the `:Wait()` method on Events to yield the thread until the event is triggered. There is also [an alternative](https://devforum.roblox.com/t/avoiding-wait-and-why/244015) which uses BindableEvents, even if they are costly.
+When using Luau, it is *highly* recommended to use the `:Wait()` method on Events to yield the thread until the event is triggered. There is also [another alternative](https://devforum.roblox.com/t/avoiding-wait-and-why/244015) which uses BindableEvents, even if they are costly.
 
 ### delay
 
@@ -1454,6 +1598,8 @@ return Class
 ```
 
 Which will allow a normal script to access the Driver key from the new object. Then, functions inside of the class or object can access those keys and manipulate them to whatever is needed.
+
+Variable naming conventions also change a bit when using objects, specifically prefixing private (not to be tampered) values with an underscore (`_`). Methods which return said private value would be used instead.
 
 ### Methods
 
