@@ -206,7 +206,7 @@ Arrays are tables when you simply need to store an array of values, like the cur
 local myTable = {
 	workspace.NPC1,
 	workspace.NPC2,
-	workspace.NPC3,
+	workspace.NPC3, -- the comma can be omitted on the final value
 }
 ```
 
