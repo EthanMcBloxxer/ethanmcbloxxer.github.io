@@ -1587,7 +1587,7 @@ local Class = {}
 Class.__index = Class
 
 function Class.new(Driver)
-	local Object = setmetatable({}, Object)
+	local Object = setmetatable({}, Class)
 	
 	Object.Driver = Driver
 	
