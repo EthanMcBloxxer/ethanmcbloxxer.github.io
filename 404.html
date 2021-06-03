@@ -74,24 +74,24 @@
 		</main>
 		<script>
 			if (document.location.pathname == "/.public" || document.location.pathname == "/.public/") {
-				document.location = document.location.origin + "/files"
-			}
+				document.location = document.location.origin + "/files";
+			};
 			else if (document.location.pathname.includes(".public")) {
 				document.location.href = document.location.href.replace("/.public/", "/");
-			}
+			};
 			
 			var old = document.location.origin + "//old/" + document.location.pathname;
 			let xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
 					document.getElementById("tip").innerHTML = "<a href='" + old + "'>did you mean <samp>/old/" + document.location.pathname + "</samp>?</a>";
-				}
+				};
 			};
 			
 			xhttp.open("GET", old, true);
 			xhttp.send();
 			
-			old += "/"
+			old += "/";
 			xhttp.open("GET", old, true);
 			xhttp.send();
 		</script>
