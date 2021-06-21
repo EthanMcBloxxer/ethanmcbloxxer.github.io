@@ -30,7 +30,7 @@ SimpleJekyllSearch({
 	json: JSON.parse('[ \
 		{% for post in site.posts %} \
 		{ \
-			"title"    : "{% if post.title != "" %}{{ post.title | escape | markdownify }}{% else %}{{ post.excerpt | strip_html | escape | strip }}{%endif%}", \
+			"title"    : "{% if post.title != "" %}{{- post.title | escape | markdownify -}}{% else %}{{- post.excerpt | strip_html | escape | strip -}}{% endif %}", \
 			"category" : "", \
 			"url"      : "{{ site.baseurl }}{{ post.url }}", \
 			"date"     : "", \
