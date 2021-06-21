@@ -1,260 +1,32 @@
-<!doctype html>
-<!-- Copyright © 2021 "EthanMcBloxxer", under CC by NC-ND 3. -->
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
-		<meta property="og:site_name" content="EthanMcBloxxer">
-		<meta property="og:type" content="website">
-		
-		<title>EthanMcBloxxer</title>
-		<meta name="title" content="EthanMcBloxxer">
-		<meta property="og:title" content="Homepage">
-		
-		<meta name="description" content="A homepage for EthanMcBloxxer, with information, a blog, and some random CC by NC-ND 4-licensed files.">
-		<meta property="og:description" content="A homepage for EthanMcBloxxer, with information, a blog, and some random CC by NC-ND 4-licensed files.">
-		
-		<meta name="author" content="EthanMcBloxxer">
-		
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://ethanmcbloxxer.github.io/">
-		
-		<meta property="og:image" content="/e5ac-88e4-a019-943c.png">
-		
-		<meta name="theme-color" content="#363e49">
-		<meta name="color-scheme" content="normal">
-		
-		<meta property="twitter:card" content="summary_large_image">
-		<meta property="twitter:url" content="https://ethanmcbloxxer.github.io/">
-		<meta property="twitter:title" content="EthanMcBloxxer">
-		<meta property="twitter:description" content="A homepage for EthanMcBloxxer, with information, a blog, and some random CC by NC-ND 4-licensed files.">
-		<meta property="twitter:image" content="/e5ac-88e4-a019-943c.png">
-		
-		<meta name="keywords" content="ethanmcbloxxer">
-		
-		<meta property="og:url" content="https://ethanmcbloxxer.github.io/">
-		<link rel="canonical" href="https://ethanmcbloxxer.github.io/">
-		
-		<link rel="directory" href="/files">
-		
-		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
-		<style id="landing">
-			html {
-				position: relative;
-				min-height: 100%;
-			}
-			body {
-				color: white;
-				margin-bottom: 2rem;
-				font-size: 1.5rem;
-				font-family: 'Lato', 'Open Sans', 'Calibri', 'Ubuntu', 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif, monospace;
-				-webkit-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-				background-color: hsl(213, 16%, 24%);
-				background-image: url("/background.webp");
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-			}
-			main.center { 
-				height: 100%;
-			}
-			main.center > div {
-				margin: 0;
-				text-align: center;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				-ms-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
-			}
-			abbr, abbr[title] {
-				text-decoration: none !important;
-			}
-			#title {
-				font-size: 4rem;
-				font-style: italic;
-				color: hsl(65, 89%, 56%);
-				margin: 0;
-				word-break: break-word;
-				transition: all 0.25s ease;
-			}
-			#title:hover {
-				text-shadow: 0 0 2.5px white;
-			}
-			@media screen and (max-width: 500px) {#title {
-				font-size: 3rem;
-			}}
-			@media screen and (max-width: 300px) {#title {
-				font-size: 2rem;
-			}}
-			@media screen and (max-width: 200px) {#title {
-				font-size: 1.25rem;
-			}}
-			
-			footer {
-				font-size: 1rem;
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				text-align: center;
-				height: 5rem;
-				width: 100%;
-			}
-			@media screen and (max-width: 650px) {footer {
-				display: none;
-			}}
-			#socials {
-				font-size: smaller;
-			}
-			
-			a {
-				color: inherit;
-				text-decoration: none;
-			}
-			
-			::-webkit-scrollbar {background-color: #363e49;}
-			::-webkit-scrollbar-thumb {background-color: #363e49;}
-			::-webkit-scrollbar-thumb:hover {background-color: #49525f;}
-			::-webkit-scrollbar-thumb:active {background-color: #4c5767;}
-			::-webkit-scrollbar-corner {background-color: #363e49;}
-			* {scrollbar-color: #363e49 #363e49;}
-		</style>
-		<link rel="preload" href="/background.webp" as="image">
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-	</head>
+---
+layout: default
+class: center
+title: EthanMcBloxxer
+description: A homepage for EthanMcBloxxer, with information, a blog, and some random CC by NC-ND 4-licensed files.
+authors:
+  - EthanMcBloxxer
+---
+
+<main>
+	<div>
+		<h1 id="title" style="font-style: italic;"><a href="/about">Ethan<wbr>Mc<wbr>Bloxxer</a></h1>
+		<p id="motd" onclick="document.getElementById('motd').innerHTML = motds[Math.floor(Math.random() * motds.length)];">C++ &bull; C# &bull; <abbr title="HTML, CSS, SASS, JavaScript, jQuery, and more">Web</abbr> &bull; <abbr title="Roblox's Lua">LuaU</abbr></p>
+	</div>
+</main>
+<footer>
+	{% for group in site.footer %}<p>
+		{% for link in group %}<a href="{{ link[1] | relative_url }}">{{ link[0] }}</a>{% unless forloop.last %} &bull; {% endunless %}{% endfor %}
+	</p>
+	{% endfor %}
+</footer>
+<script id="analytics" src="/track.js" defer></script>
+<script async>
+	const motds = [{% for motd in site.motds %}"{{ motd }}",{% endfor %}];
+	document.getElementById("motd").innerHTML = motds[Math.floor(Math.random() * motds.length)];
 	
-	<body>
-		<main class="center">
-			<div>
-				<h1 id="title"><a href="/about">Ethan<wbr>Mc<wbr>Bloxxer</a></h1>
-				<p id="motd" onclick="document.getElementById('motd').innerHTML = motds[Math.floor(Math.random() * motds.length)];">C++ &bull; C# &bull; <abbr title="HTML, CSS, SASS, JavaScript, jQuery, and more">Web</abbr> &bull; <abbr title="Roblox's Lua">LuaU</abbr></p>
-			</div>
-		</main>
-		<footer>
-			<p id="navigation">
-				<a href="/about">About</a>
-				&bull;
-				<a href="/published">Blog</a>
-				&bull;
-				<a href="/files">Files</a>
-				&bull;
-				<a href="/accounts.json">Accounts</a>
-				&bull;
-				<a href="/crypto.csv">Cryptocurrencies</a>
-				&bull;
-				<a href="/ed25519.asc">PGP</a>
-			</p>
-			<p id="socials">
-				<a href="mailto:ethanmcbloxxer@protonmail.com">Email</a>
-				&bull;
-				<a href="javascript:alert('EthanMcBloxxer#2089 (should be copied already)');" onclick="navigator.clipboard.writeText('EthanMcBloxxer#2089');">Discord <noscript>(EthanMcBloxxer#2089)</noscript></a>
-				&bull;
-				<a href="https://www.youtube.com/channel/UCzLnGcurZJ3heHBbseFBRKg">YouTube</a>
-				&bull;
-				<a href="https://www.twitch.tv/EthanMcBloxxer">Twitch</a>
-				&bull;
-				<a href="https://github.com/EthanMcBloxxer">GitHub</a>
-				&bull;
-				<a href="https://mastodon.online/@ethanmcbloxxer" rel="me">Fediverse</a>
-				&bull;
-				<a href="https://twitter.com/EthanMcBloxxer">Twitter</a>
-				&bull;
-				<a href="https://reddit.com/u/EthanMcBloxxer">Reddit</a>
-				&bull;
-				<a href="https://stackoverflow.com/users/11653162/ethanmcbloxxer">StackOverflow</a>
-			</p>
-		</footer>
-		<script id="analytics" src="/track.js" defer></script>
-		<script async>
-			const motds = [
-				"C++ &bull; C# &bull; <abbr title='HTML, CSS, SASS, JavaScript, jQuery, and more'>Web</abbr> &bull; <abbr title='Roblox&apos;s Lua'>LuaU</abbr>",
-				"<code>ethanmb@VM:/mnt/c/site#</code>",
-				"josh fight",
-				"Now in Technicolor!",
-				"日本ハロー！",
-				"99.9% object-orientated",
-				"'yello'.upcase",
-				"the home of epic face",
-				"f5",
-				"Exclamation point‽",
-				"<a href='https://www.fitnessgrampacertest.com'>The FitnessGram Pacer test</a> is a multistage aerobic capacity test that progressively gets more difficult as it continues.",
-				"Memes are memes",
-				"dopamine levels stable.",
-				"IF '$MY-NAME' IS 0 THEN SAY 'I AM BROKEN' END",
-				"PROCEDURE DIVISION.",
-				"using namespace std;",
-				'<span style="color:#00A">C</span><span style="color:#0A0">o</span><span style="color:#0AA">l</span><span style="color:#A00">o</span><span style="color:#A0A">r</span><span style="color:#FA0">m</span><span style="color:#AAA">a</span><span style="color:#555">t</span><span style="color:#55F">i</span><span style="color:#5F5">c</span>',
-				"latine non ego operor",
-				"🦜 + 🍪 = 😲",
-				":woozy:",
-				"brrrrrrrrrrrrrrr",
-				"Generated with HTJS; Hyperjavastyles.",
-				"Fortran, 4chan.",
-				"navigator.onLine",
-				"D6siLKL3PipmP5kyii5FSx9DomgggYtYKK",
-				"bananananas",
-				"See also: Bloxxing",
-				"ℵ₀",
-				"com.apple.macintosh.sierra.games.heroes-quest",
-				"1 Nanobyte of Everyone's Access Memory",
-				".gitawesome",
-				"--do-not-track",
-				"&lt;yesscript&gt;JAVASCRIPT EPIC&lt;/yesscript&gt;",
-				"$kajillion",
-				"<code>&lt;?php echo 'where are my parenthesis?' ?&gt;</code>",
-				"stick",
-				"<code>null</code>",
-				"motd: undefined",
-				"elgiigngsh pls",
-				"not your normal 'found this random developer but I don't have a use for any of their creations' developer",
-				"is ?q= question or query?",
-				"psychology is disappointing",
-				"no regrets",
-				"人間",
-				"1 goose, 2 geese, so 1 moose, 2 meese?",
-				"ayokumala",
-				"p = b with more air",
-				"てびよ",
-				"awesome!",
-				"conga",
-				"<code>giveCookies(Math.pow(10, 1000))</code>",
-				"1337",
-				"Cosinetangent",
-				"🔨⌚",
-				"100% reason to remember the name",
-				"not yet awakened",
-				"ES6",
-				"green needle",
-				"do the flop",
-				"1273 Rockefeller Street",
-				"127.0.0.1",
-				"YAEEEAEEEEEEEEEEEEEE",
-				"click my name to read more about me",
-				"<code>ping 8.8.8.8</code>",
-				"<a href='https://mastodon.online/@ethanmcbloxxer/106148303314282645'>i-=-1</a>",
-				"zero-width non-joiner is the real invisible space",
-				"&lt;fake html tags are cool /&gt;",
-				"Segmentation fault (core dumped)",
-				"HACKERMAN",
-				"Files can be seen at <a href='/files'>/files</a>",
-				"I eat <a href='bitcoin:bc1qge4uj4kmcldn9l7vm7k6886e4e28pjr5h5r5xf'>Bitcoin</a>, <a href='ethereum:0x5f7176057c0dcff283DB61C99075d50FCa3B9E1F'>Ethereum</a>, <a href='litecoin:ltc1q7stzp8ecmrncrgplvpkd8z5kq69uajmn5fgv0t'>Litecoin</a>, <a href='dogecoin:D6siLKL3PipmP5kyii5FSx9DomgggYtYKK'>Dogecoin</a>, <a href='dash:Xbryf4MN1JP2PAukSLkD1WEbuSS7Wy1fUZ'>Dash</a>, and <a href='zcash:t1VDwr7AFw5632YNQJS7NtWL39Go9am6oPN'>ZCash</a>.",
-				"&quot;All the breath in your lungs is stronger than the tears in your eyes&quot; &mdash; Avicci in <a href='https://www.youtube.com/watch?v=Y_SR7V5qglc'><cite>Hold The Line</cite></a>",
-				"Livin' on a Tor Node 16",
-				"Yeah, I dualboot Ubuntu.",
-				"my favorite word is gadjabink",
-				"The 404 page is very intuitive and allows for backwards-compatibility with the old site.",
-			];
-			document.getElementById("motd").innerHTML = motds[Math.floor(Math.random() * motds.length)];
-			
-			function giveCookies(cookies) {
-				for (i = 0; true; i++) {
-					console.log("🍪")
-				}
-			}
-		</script>
-	</body>
-</html>
+	function giveCookies(cookies) {
+		for (i = 0; true; i++) {
+			console.log("🍪");
+		}
+	}
+</script>

@@ -1,8 +1,7 @@
-# Device Naming Guidelines
-
-*The guidelines in which I name my devices*
-
-## Quick Syntax
+---
+title: Device Naming Guidelines
+subtitle: The guidelines in which I name my devices
+---
 
 TP-OS(ver)_Name.
 

@@ -1,8 +1,9 @@
-# The Great Discord War
+---
+title: The Great Discord War
+subtitle: Accidentally recreating human history on Discord
+---
 
-March 3rd, 2021
-
-*Accidentally recreating human history on Discord*
+<time datetime="2021-03-03">March 3rd, 2021</time>
 
 It all started from humble beginnings, in a simple, limited messaging group on chat platform Discord. We all talked this way for a long time, until we, 10 people, all unanimously decided that we should create a server to bring about many upgrades such as multiple (text and voice) channels, more members, and customizable permissions.
 

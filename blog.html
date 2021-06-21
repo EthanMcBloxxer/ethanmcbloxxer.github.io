@@ -1,0 +1,22 @@
+---
+layout: content
+class: 'content list'
+title: Blog
+anchors: false
+---
+
+{% assign posts = site.posts | sort %}
+
+<ul>
+	{% for post in posts %}
+	<li>
+		<article>
+			<h2 class="title"><a href="{{ post.url }}">{{ post.title | markdownify }}</a></h2>
+			{% if post.subtitle %}
+				<h4 class="subtitle">{{ post.subtitle | markdownify }}</h4>
+			{% endif %}
+			<p>{{ post.excerpt | truncatewords: 250 }}</p>
+		</article>
+	</li>
+	{% endfor %}
+</ul>

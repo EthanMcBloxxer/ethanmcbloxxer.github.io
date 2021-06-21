@@ -1,8 +1,8 @@
-# Message of the Day System
+---
+title: MOTD System
+---
 
-Personally, I corrolate the term "MOTD" with the Minecraft Server configuration option, where you can specify a two-line description for your server. Hold that thought.
-
-I recently implemented a "message-of-the-day" system on the homepage with JavaScript. Unfortunately, this doesn't actually do a different message for every day.
+Personally, I corrolate the term "MOTD" with the Minecraft Server configuration option, where you can specify a two-line description for your server. I recently implemented a "message-of-the-day" system similar to that of Minecraft on the homepage with JavaScript. Unfortunately, this doesn't actually do a different message for every day.
 
 Originally, there was only one caption for "EthanMcBloxxer" on the homepage, which had a few of my known programming languages.
 

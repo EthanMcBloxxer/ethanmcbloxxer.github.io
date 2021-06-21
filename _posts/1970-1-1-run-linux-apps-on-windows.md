@@ -1,6 +1,7 @@
-# Run Linux GUI Applications on Windows 10
-
-*Using WSL, Ubuntu, and VcXsrv to open Linux programs*
+---
+title: Run Linux GUI Applications on Windows 10
+subtitle: Using WSL, Ubuntu, and VcXsrv to open Linux programs
+---
 
 With Windows Subsystem for Linux, you can now run "Linux" on top of Windows. You can get certain distributions from the Microsoft Store, like Ubuntu, Debian, Kali, OpenSUSE (Server), and Fedora. You can also use PowerShell or curl to download them. Before anything, though, you need to make sure that you have WSL enabled.
 

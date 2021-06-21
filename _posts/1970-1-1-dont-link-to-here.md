@@ -1,6 +1,7 @@
-# Don't link to "Here"
-
-*Why you shouldn't use "here" for links*
+---
+title: Don't link to "Here"
+subtitle: Why you shouldn't use "here" for links
+---
 
 TL;DR: Stop saying you can download something "[here](https://example.com/)" or that you should "[click here](https://example.com/)" to see something since it doesn't make sense in most occasions, like mobile devices, screen readers, or grammar cohesion.
 

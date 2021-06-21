@@ -1,8 +1,7 @@
-# EthanMcBloxxer's Subtitle Etiquette
-
-*A simple and minimal syntax for writing subtitles*  
-
-## Reference
+---
+title: EthanMcBloxxer's Subtitle Etiquette
+subtitle: A simple and minimal syntax for writing subtitles
+---
 
 - Keep periods on the inside of open/close tags (like this.)
 - Never use UPPERCASE for tag insides and use strictly lowercase for sounds

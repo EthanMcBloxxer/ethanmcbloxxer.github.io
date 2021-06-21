@@ -1,0 +1,51 @@
+---
+---
+
+<!doctype html>
+<!-- Copyright © 2021 "EthanMcBloxxer", under CC by NC-ND 3. -->
+<html lang="en" class="{{ page.class | default: layout.class }}">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		
+		<meta property="og:site_name" content="EthanMcBloxxer" />
+		<meta property="og:type" content="website" />
+		
+		<title>{% unless site.title == page.title %}{{ page.title }} | {% endunless %}{{ site.title }}</title>
+		<meta name="title" content="{% unless site.title == page.title %}{{ page.title | default: 'Unnamed Page' }} | {% endunless %}EthanMcBloxxer" />
+		<meta property="og:title" content="{{ page.title }}" />
+		<meta property="twitter:title" content="{% unless site.title == page.title %}{{ page.title }} | {% endunless %}EthanMcBloxxer" />
+		
+		<meta name="description" content="{{ page.description }}" />
+		<meta property="og:description" content="{{ page.description }}" />
+		<meta property="twitter:description" content="{{ page.description }}" />
+		
+		<meta name="author" content="{{ page.authors | join: ', ' | default: EthanMcBloxxer }}" />
+		
+		<meta property="og:type" content="website" />
+		<meta property="twitter:card" content="summary_large_image" />
+		
+		<meta property="og:image" content="{{ page.splash | default: '/e5ac-88e4-a019-943c.png' }}" />
+		<meta property="twitter:image" content="{{ page.splash | default: '/e5ac-88e4-a019-943c.png' }}" />
+		
+		<meta name="theme-color" content="#363e49" />
+		<meta name="color-scheme" content="normal" />
+		
+		<meta name="keywords" content="{{ page.keywords | join: ' ' }}" />
+		
+		<meta property="og:url" content="{{ page.url | absolute_url }}" />
+		<link rel="canonical" href="{{ page.url | absolute_url }}" />
+		<meta property="twitter:url" content="{{ page.url | absolute_url }}" />
+		
+		<link rel="directory" href="/files" />
+
+		<link rel="stylesheet" href="/compiled.css" />
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	</head>
+	<body>
+		{{ content }}
+	</body>
+</html>

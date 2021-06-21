@@ -1,0 +1,35 @@
+@import "viewport";
+
+main {
+	height: 100%;
+	user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+
+	& > div {
+		margin: 0;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+}
+
+#title {
+	font-size: 5vw;
+	font-family: "Lato", $sans-serif;
+	color: hsl(65, 89%, 56%);
+	margin: 0;
+	word-break: break-word;
+	transition: all 0.25s ease;
+
+	&:hover {
+		text-shadow: 0 0 2.5px white;
+	}
+
+	@media #{$viewport-7} {
+		font-size: 7.5vh;
+	}
+}

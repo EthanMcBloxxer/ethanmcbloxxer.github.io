@@ -1,99 +1,38 @@
 ---
+layout: default
+class: center
+title: 404
+description: A homepage for EthanMcBloxxer, with information, a blog, and some random CC by NC-ND 4-licensed files.
+authors:
+  - EthanMcBloxxer
 ---
 
-
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>EthanMcBloxxer</title>
-		<meta property="og:site_name" content="EthanMcBloxxer">
-		<meta property="og:title" content="Homepage">
-		<meta name="description" content="A homepage for EthanMcBloxxer, with information, a blog, and some random CC by NC-ND 4-licensed files.">
-		<meta name="keywords" content="ethanmcbloxxer">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://ethanmcbloxxer.github.io/">
-		<link rel="canonical" href="https://ethanmcbloxxer.github.io/">
-		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
-		<style id="landing">
-			html {
-				position: relative;
-				min-height: 100%;
-			}
-			body {
-				color: white;
-				margin-bottom: 2rem;
-				font-size: 1.5rem;
-				font-family: 'Lato', 'Open Sans', 'Calibri', 'Ubuntu', 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif, monospace;
-				-webkit-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-				background-color: hsl(213, 16%, 24%);
-				background-image: url("/background.webp");
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-			}
-			div.center { 
-				height: 100%;
-			}
-			div.center > * {
-				margin: 0;
-				text-align: center;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				-ms-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
-			}
-			#title {
-				font-size: 4rem;
-				color: hsl(65, 89%, 56%);
-				margin: 0;
-			}
-			
-			a {
-				color: inherit;
-				text-decoration: none;
-			}
-			a:hover {
-				text-decoration: underline;
-			}
-		</style>
-	</head>
+<main>
+	<div>
+		<h1 id="title">404</h1>
+		<p id="tip"><a href="/"><code>to root</code></a></p>
+	</div>
+</main>
+<script>
+	if (document.location.pathname == "/.public" || document.location.pathname == "/.public/") {
+		document.location = document.location.origin + "/files";
+	}
+	else if (document.location.pathname.includes(".public")) {
+		document.location.href = document.location.href.replace("/.public/", "/");
+	};
 	
-	<body>
-		<main>
-			<div class="center">
-				<div>
-					<h1 id="title">404</h1>
-					<p id="tip"><a href="/"><code>to root</code></a></p>
-				</div>
-			</div>
-		</main>
-		<script>
-			if (document.location.pathname == "/.public" || document.location.pathname == "/.public/") {
-				document.location = document.location.origin + "/files";
-			}
-			else if (document.location.pathname.includes(".public")) {
-				document.location.href = document.location.href.replace("/.public/", "/");
-			};
-			
-			var old = document.location.origin + "//old/" + document.location.pathname;
-			let xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					document.getElementById("tip").innerHTML = "<a href='" + old + "'>did you mean <samp>/old" + document.location.pathname + "</samp>?</a>";
-				};
-			};
-			
-			xhttp.open("GET", old, true);
-			xhttp.send();
-			
-			old += "/";
-			xhttp.open("GET", old, true);
-			xhttp.send();
-		</script>
-	</body>
-</html>
+	var old = document.location.origin + "//old/" + document.location.pathname;
+	let xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("tip").innerHTML = "<a href='" + old + "'>did you mean <samp>/old" + document.location.pathname + "</samp>?</a>";
+		};
+	};
+	
+	xhttp.open("GET", old, true);
+	xhttp.send();
+	
+	old += "/";
+	xhttp.open("GET", old, true);
+	xhttp.send();
+</script>

@@ -1,0 +1,11 @@
+---
+layout: default
+class: content
+---
+
+<h1 class="title">{{ page.title | markdownify | strip_html }}{% if page.editable %}<a href="https://github.com/EthanMcBloxxer/ethanmcbloxxer.github.io/edit/main/{{ page.path }}" style="font-size: 0.33em;">[edit]</a>{% endif %}</h1>
+{% if page.subtitle %}<em style="font-size: 125%;">{{ page.subtitle | markdownify }}</em>{% endif %}
+{{ content | markdownify | smartify }}
+<button class="fab"><span class="material-icons"><a href="{{ '/' | relative_url }}">&#xE88A;</a></span></button>
+<script id="analytics" src="/track.js" defer></script>
+{% unless page.anchors == false %}<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script><script type="text/javascript">anchors.options = {placement: 'left', visible: 'touch'}; anchors.add();</script>{% endunless %}

@@ -1,0 +1,115 @@
+title: EthanMcBloxxer
+
+permalink: /:title/
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      authors:
+        - EthanMcBloxxer
+    scope:
+      path: "_posts"
+    values:
+      layout: content
+      editable: true
+
+footer:
+  -
+    About: /about
+    Blog: /blog
+    Files: /files
+    Accounts: /accounts.json
+    Cryptocurrencies: /crypto.csv
+    PGP: /ed25519.asc
+  -
+    Email: mailto:ethanmcbloxxer@protonmail.com
+    Discord: javascript:alert('EthanMcBloxxer#2089');
+    YouTube: https://youtube.com/channel/UCzLnGcurZJ3heHBbseFBRKg
+    Twitch: https://twitch.tv/EthanMcBloxxer
+    GitHub: https://github.com/EthanMcBloxxer
+    Fediverse: https://mastodon.online/@ethanmcbloxxer
+    Twitter: https://twitter.com/EthanMcBloxxer
+    Reddit: https://reddit.com/u/EthanMcBloxxer
+    StackOverflow: https://stackoverflow.com/users/11653162/ethanmcbloxxer
+
+motds:
+  - "C++ &bull; C# &bull; <abbr title='HTML, CSS, SASS, JavaScript, jQuery, and more'>Web</abbr> &bull; <abbr title='Roblox&apos;s Lua'>LuaU</abbr>"
+  - "<code>ethanmb@VM:/mnt/c/site#</code>"
+  - "josh fight"
+  - "Now in Technicolor!"
+  - "日本ハロー！"
+  - "99.9% object-orientated"
+  - "'yello'.upcase"
+  - "the home of epic face"
+  - "f5"
+  - "Exclamation point‽"
+  - "<a href='https://www.fitnessgrampacertest.com'>The FitnessGram Pacer test</a> is a multistage aerobic capacity test that progressively gets more difficult as it continues."
+  - "Memes are memes"
+  - "dopamine levels stable."
+  - "IF '$MY-NAME' IS 0 THEN SAY 'I AM BROKEN' END"
+  - "PROCEDURE DIVISION."
+  - "using namespace std;"
+  - '<span style=\"color:#00A\">C</span><span style=\"color:#0A0\">o</span><span style=\"color:#0AA\">l</span><span style=\"color:#A00\">o</span><span style=\"color:#A0A\">r</span><span style=\"color:#FA0\">m</span><span style=\"color:#AAA\">a</span><span style=\"color:#555\">t</span><span style=\"color:#55F\">i</span><span style=\"color:#5F5\">c</span>'
+  - "latine non ego operor"
+  - "🦜 + 🍪 = 😲"
+  - ":woozy:"
+  - "brrrrrrrrrrrrrrr"
+  - "Generated with HTJS; Hyperjavastyles."
+  - "Fortran, 4chan."
+  - "navigator.onLine"
+  - "D6siLKL3PipmP5kyii5FSx9DomgggYtYKK"
+  - "bananananas"
+  - "See also: Bloxxing"
+  - "ℵ₀"
+  - "com.apple.macintosh.sierra.games.heroes-quest"
+  - "1 Nanobyte of Everyone's Access Memory"
+  - ".gitawesome"
+  - "--do-not-track"
+  - "&lt;yesscript&gt;JAVASCRIPT EPIC&lt;/yesscript&gt;"
+  - "$kajillion"
+  - "<code>&lt;?php echo 'where are my parenthesis?' ?&gt;</code>"
+  - "stick"
+  - "<code>null</code>"
+  - "motd: undefined"
+  - "elgiigngsh pls"
+  - "not your normal 'found this random developer but I don't have a use for any of their creations' developer"
+  - "is ?q= question or query?"
+  - "psychology is disappointing"
+  - "no regrets"
+  - "人間"
+  - "1 goose, 2 geese, so 1 moose, 2 meese?"
+  - "ayokumala"
+  - "p = b with more air"
+  - "てびよ"
+  - "awesome!"
+  - "conga"
+  - "<code>giveCookies(Math.pow(10, 1000))</code>"
+  - "1337"
+  - "Cosinetangent"
+  - "🔨⌚"
+  - "100% reason to remember the name"
+  - "not yet awakened"
+  - "ES6"
+  - "green needle"
+  - "do the flop"
+  - "1273 Rockefeller Street"
+  - "127.0.0.1"
+  - "YAEEEAEEEEEEEEEEEEEE"
+  - "click my name to read more about me"
+  - "<code>ping 8.8.8.8</code>"
+  - "<a href='https://mastodon.online/@ethanmcbloxxer/106148303314282645'>i-=-1</a>"
+  - "zero-width non-joiner is the real invisible space"
+  - "&lt;fake html tags are cool /&gt;"
+  - "Segmentation fault (core dumped)"
+  - "HACKERMAN"
+  - "Files can be seen at <a href='/files'>/files</a>"
+  - "I eat <a href='bitcoin:bc1qge4uj4kmcldn9l7vm7k6886e4e28pjr5h5r5xf'>Bitcoin</a>, <a href='ethereum:0x5f7176057c0dcff283DB61C99075d50FCa3B9E1F'>Ethereum</a>, <a href='litecoin:ltc1q7stzp8ecmrncrgplvpkd8z5kq69uajmn5fgv0t'>Litecoin</a>, <a href='dogecoin:D6siLKL3PipmP5kyii5FSx9DomgggYtYKK'>Dogecoin</a>, <a href='dash:Xbryf4MN1JP2PAukSLkD1WEbuSS7Wy1fUZ'>Dash</a>, and <a href='zcash:t1VDwr7AFw5632YNQJS7NtWL39Go9am6oPN'>ZCash</a>."
+  - "&quot;All the breath in your lungs is stronger than the tears in your eyes&quot; &mdash; Avicci in <a href='https://www.youtube.com/watch?v=Y_SR7V5qglc'><cite>Hold The Line</cite></a>"
+  - "Livin' on a Tor Node 16"
+  - "Yeah, I dualboot Ubuntu."
+  - "my favorite word is gadjabink"
+  - "The 404 page is very intuitive and allows for backwards-compatibility with the old site."
+  - "faaaaaaanshiiiiiiiiiiiii"
+  - "I'll instantly stop tracking you whenever you turn on Do-not-track or Global Privacy Control. Either or. No need to intercept requests with extensions."
