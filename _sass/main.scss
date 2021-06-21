@@ -3,8 +3,8 @@
 $body-background: hsl(213, 16%, 24%);
 $body-foreground: #fff;
 
-$serif: 'New York', 'Georgia', 'Garamond', 'Times New Roman', serif;
 $sans-serif: -apple-system, 'BlinkMacSystemFont', 'Open Sans', 'Ubuntu', 'Segoe UI', 'Trebuchet MS', 'Calibri', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$serif: 'New York', 'Georgia', 'Garamond', 'Times New Roman', serif;
 $monospace: 'MonoLisa', 'Fira Code VF', 'Fira Code', 'Hasklig', 'Source Code Pro', 'San Francisco Mono', 'SF Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Cascadia Code', 'Roboto Mono', 'Consolas', 'Courier New', 'Courier', monospace, monospace;
 
 html {
@@ -151,7 +151,7 @@ button.fab {
 	border: none;
 	outline: none;
 	color: #ffffff;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	bottom: 0;
 	right: 0;
 }
@@ -168,6 +168,14 @@ a {
 	text-decoration: none;
 }
 
+dd {
+	margin-left: 0;
+	&::before {
+		content: "	";
+		tab-size: 4;
+		-moz-tab-size: 4;
+	}
+}
 
 summary {
 	h1, h2, h3, h4, h5, h6 {
