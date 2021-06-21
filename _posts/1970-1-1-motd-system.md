@@ -16,12 +16,12 @@ If you'd like to implement something similar on your website, you can just make 
 
 ```js
 const motds = [
-    "Message of the Day 1",
-    "Tacos are the best food",
-    "hammertime",
-    "Remember&colon; Escape special characters with entities&excl;",
-    "<span style='color: #000'>Tags are also supported here</span>",
-    // etc
+	"Message of the Day 1",
+	"Tacos are the best food",
+	"hammertime",
+	"Remember&colon; Escape special characters with entities&excl;",
+	"<span style='color: #000'>Tags are also supported here</span>",
+	// etc
 ];
 
 document.getElementById("motd").innerHTML = motds[Math.floor(Math.random() * motds.length)];
