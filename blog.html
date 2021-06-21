@@ -37,7 +37,7 @@ SimpleJekyllSearch({
 		}{% unless forloop.last %},{% endunless %} \
 		{% endfor %} \
 	]'),
-	searchResultTemplate: "<li><article><h2 class='title'><a href='{url}'>{title}</a></h2><h4 class='subtitle'>{subtitle}</h4><p>{excerpt}</p></article></li>",
+	searchResultTemplate: "<li><article><h2 class='title'><a href='{url}'>{title}</a></h2></article></li>",
 	noResultsText: "<samp>no results found</samp>",
 	fuzzy: true,
 })
