@@ -8,4 +8,4 @@ class: content
 {{ content | markdownify | smartify }}
 <button class="fab"><span class="material-icons"><a href="{{ '/' | relative_url }}">&#xE88A;</a></span></button>
 <script id="analytics" src="/track.js" defer></script>
-{% unless page.anchors == false %}<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script><script type="text/javascript">anchors.options = {placement: 'left', visible: 'touch'}; anchors.add();</script>{% endunless %}
+{% unless page.anchors == false %}<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script><script type="text/javascript">anchors.options = {placement: 'left', visible: 'hover'}; anchors.add();</script>{% endunless %}
