@@ -3,41 +3,57 @@ title: Device Naming Guidelines
 subtitle: The guidelines in which I name my devices
 ---
 
-TP-OS(ver)_Name.
+TP-OS(ver)\_Name.
 
 PC-Win_EthanMB would be a Windows (latest) named "EthanMB".
 
 ## OS
 
-| Type | Name | Abbreviation |
-|:--|:--|:--|
-| Computer | Windows | WIN |
-| Computer | MacOS | MAC, OSX |
-| Computer | Linux | LNX |
-| Computer | Linux (Ubuntu) | UBN |
-| Computer | Linux (Debian) | DEB |
-| Computer | Linux (Mint) | LMT |
-| Computer | Chromebook | CRB |
-| Phone | Android | AND |
-| Phone | iOS | iOS |
-| Console | Xbox | XBX |
-| Console | Playstation | PST |
+### Computer
+
+| Name | Abbreviation |
+|------|--------------|
+| Windows | WIN |
+| MacOS | MAC, OSX |
+| Linux | LNX |
+| Linux (Ubuntu) | UBN |
+| Linux (Debian) | DEB |
+| Linux (Mint) | LMT |
+| Chromebook | CRB |
+
+### Phone
+
+| Name | Abbreviation |
+|------|--------------|
+| Android | AND |
+| iOS | iOS |
+
+### Console
+
+| Name | Abbreviation |
+|------|--------------|
+| Xbox | XBX |
+| Playstation | PST |
+
+### TV
+
+| Name | Abbreviation |
+|------|--------------|
 | TV | KODI | KDI |
 | TV | Chromecast | CRC |
-{: rules="groups"}
 
-You can lowercase the first letter of the OS. This is recommended.
+You can use proper case for the abbreviation. This is recommended in most scenarios.
 
 ## ver
 
-If necessary, also provide the version of the OS after the OS itself, like so: MP-iOS14_Name.
+If necessary, also provide the version of the OS after the OS itself.
 
 ## TP
 
 The 'type' of device it is. Use two-character formats, but 3-5 if it is absolutely necessary.
 
 | Name | Abbreviation |
-|:--|:--|
+|------|--------------|
 | Server | SV, SRV |
 | Workstation | WS, WKS |
 | Computer | PC |
@@ -52,7 +68,6 @@ The 'type' of device it is. Use two-character formats, but 3-5 if it is absolute
 | Printer | PT, PTR, PRNT |
 | Virtual Machine | VM |
 | Other | DV |
-{: rules="groups"}
 
 Do not make any of the letters here lowercase unless it is required by the computer.
 
