@@ -3,8 +3,6 @@ layout: content
 title: About
 ---
 
-# Hey, I'm Ethan.
-
 I'm EthanMcBloxxer, a programmer, gamer, and photoshopper. I skipped first grade and have had experience with coding for quite a while. I can speak English, Spanish, and a bit of Japanese.
 
 I don't reveal my face or age because I like to stay somewhat anonymous while expressing myself. I like getting credit for what I do, but not messing anything up or wasting anyone's time. I first learned to program in QBasic and HTML as use GIMP for image manipulation. I've have been into programming since, but also played Minecraft and Roblox before I started doing so. I watch anime, which started after I began to study Japanese (I wanted to learn the easiest, most widespread non indo-euoropean (non-latin based) langauge). I wanted to get to know the culture and looked up first-time animes, and settled on [ERASED](https://www.crunchyroll.com/erased).
