@@ -45,7 +45,7 @@ var sha256=function r(t){function n(r,t){return r>>>t|r<<32-t}for(var o,e,f=Math
 document.getElementById("search-input").addEventListener("input", function(e) {
 	if (sha256(e.target.value) == "308e17ade29b6d75ea9d984f458adf2eeb396e13868d063218e7f538dc1fdf59") {
 		var element = document.createElement("div");
-		element.style = "position: fixed; display: block; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Rainbow-gradient-fully-saturated.svg/2048px-Rainbow-gradient-fully-saturated.svg.png'); z-index: 2; opacity: 0.33;";
+		element.style = "position: fixed; display: block; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); z-index: 2; opacity: 0.33;";
 		document.body.appendChild(element);
 	}
 });
