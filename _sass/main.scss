@@ -169,12 +169,7 @@ a {
 }
 
 dd {
-	margin-left: 0;
-	&::before {
-		content: "	";
-		tab-size: 4;
-		-moz-tab-size: 4;
-	}
+	margin-left: 2.5rem;
 }
 
 summary {
