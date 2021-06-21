@@ -3,8 +3,6 @@ title: The Great Discord War
 subtitle: Accidentally recreating human history on Discord
 ---
 
-<time datetime="2021-03-03">March 3rd, 2021</time>
-
 It all started from humble beginnings, in a simple, limited messaging group on chat platform Discord. We all talked this way for a long time, until we, 10 people, all unanimously decided that we should create a server to bring about many upgrades such as multiple (text and voice) channels, more members, and customizable permissions.
 
 I was the one to make that server, called "The Gang". It had a neat logo, a bit like the introduction to a Star Wars film: the Star Wars font displaying "The Gang", a sans-serif font saying "The Best Chat", and a night sky background dotted with stars. The permissions were fine, everyone was happy, and we had a stable server. Organization, music, bots. Everyone had what they wanted.
@@ -43,5 +41,7 @@ Avocado
 But we don't have any of the present-day servers as countries yet, other than Avocado. That might be because I'm only in the Avocado server.
 
 Anyways, I hope you enjoyed more than I did. I'm still confused at why we can't just have a single server. I might even try to go back to a simple 10-person group.
+
+<time datetime="2021-03-03">March 3rd, 2021</time>
 
 !["Never Again" meme: Maybe we should create a server](/img/discord-war-meme.png)

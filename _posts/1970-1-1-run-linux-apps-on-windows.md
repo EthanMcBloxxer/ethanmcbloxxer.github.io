@@ -7,13 +7,13 @@ With Windows Subsystem for Linux, you can now run "Linux" on top of Windows. You
 
 ## Enabling WSL
 
-The simplest way to go checking that you have WSL installed is to type in `cmd` into Start, then type `wsl`. If the default Windows `C:\Users\admin>` turns into `root@PC:/mnt/c/Users/admin#`, then you have WSL installed. If this isn't the case, you'll need to open Windows Features. You can either search "Turn Windows features on or off" in Start or open Run with Win+R and type "OptionalFeatures". Make sure you can use administrator permissions, because this requires it.
+The simplest way to go checking that you have WSL installed is to type in `cmd` into Start, then type `wsl`. If the default Windows <samp>C:\Users\admin></samp> turns into <samp>root@PC:/mnt/c/Users/admin#</samp>, then you have WSL installed. If this isn't the case, you'll need to open Windows Features. You can either search "Turn Windows features on or off" in Start or open Run with Win+R and type "OptionalFeatures". Make sure you can use administrator permissions, because this requires it.
 
 ![Run OptionalFeatures](/img/run-optionalfeatures.png)
 
 Then, check "Windows Subsystem for Linux". Click OK and restart if prompted. Now, you can use WSL. Alternatively, without using OptionalFeatures, you can open PowerShell (as Administrator) and use this command:
 
-```powershell
+```ps
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
