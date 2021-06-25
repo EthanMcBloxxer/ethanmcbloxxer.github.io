@@ -3,9 +3,9 @@ title: Device Naming Guidelines
 subtitle: The guidelines in which I name my devices
 ---
 
-TP-OS(ver)\_Name.
+TPos(ver)-Name.
 
-PC-Win_EthanMB would be a Windows (latest) named "EthanMB".
+PCwin-EthanMB would be a Windows (latest) named "EthanMB".
 
 ## OS
 
@@ -13,36 +13,35 @@ PC-Win_EthanMB would be a Windows (latest) named "EthanMB".
 
 | Name | Abbreviation |
 |------|--------------|
-| Windows | WIN |
-| MacOS | MAC, OSX |
-| Linux | LNX |
-| Linux (Ubuntu) | UBN |
-| Linux (Debian) | DEB |
-| Linux (Mint) | LMT |
-| Chromebook | CRB |
+| Windows | win |
+| MacOS | mac, osx |
+| Linux | lnx |
+| Linux (Zorin) | zrn |
+| Linux (Ubuntu) | ubn |
+| Linux (Debian) | deb |
+| Linux (Mint) | lmt |
+| Chromebook | crb |
 
 ### Phone
 
 | Name | Abbreviation |
 |------|--------------|
-| Android | AND |
-| iOS | iOS |
+| Android | and |
+| iOS | ios |
 
 ### Console
 
 | Name | Abbreviation |
 |------|--------------|
-| Xbox | XBX |
-| Playstation | PST |
+| Xbox | xbx |
+| Playstation | pst |
 
 ### TV
 
 | Name | Abbreviation |
 |------|--------------|
-| TV | KODI | KDI |
-| TV | Chromecast | CRC |
-
-You can use proper case for the abbreviation. This is recommended in most scenarios.
+| TV | KODI | kdi |
+| TV | Chromecast | crc |
 
 ## ver
 
@@ -69,12 +68,12 @@ The 'type' of device it is. Use two-character formats, but 3-5 if it is absolute
 | Virtual Machine | VM |
 | Other | DV |
 
-Do not make any of the letters here lowercase unless it is required by the computer.
+Do not make any of the letters here lowercase unless it is required by the computer, in which case you should separate the type from the os with a hyphen `-`.
 
 ## Name
 
-Simple- give your device a name.
+Name the device with a short name that summarizes its purpose.
 
-This also works with fLast, like PC-Win_jDoe (a Windows computer owned by John Doe). If preferred, you can also use the full name or add the middle name.
+In enterprise situations, using fLast would be a good option, like PCwin-jDoe being a Windows computer owned by John Doe. If preferred, you can also use the full name or add the middle name.
 
-It is recommended to append `.admin`, `.administrator`, or `.sudo` to the profile name when there is an alternative account that does not have administrator permissions (and this one does). This should only really be used in enterprise situations. Use a hyphen if a period is unavailable or bad practice.
+It is recommended to append `.admin`, `.administrator`, or `.sudo` to the **user account name** when there is an alternative account that does not have administrator permissions (and this one does), like when `EthanMcBloxxer` and `EthanMcBloxxer.admin` are both two accounts. Never use a vague `admin` account in enterprise situations. Use a hyphen if a period is unavailable or bad practice.
