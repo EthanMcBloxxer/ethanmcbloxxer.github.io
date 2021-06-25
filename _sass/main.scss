@@ -193,6 +193,13 @@ abbr, abbr[title] {
 	text-decoration: none !important;
 }
 
+select {
+	background: none;
+	border: none;
+	outline: none;
+	color: inherit;
+}
+
 ::-webkit-scrollbar {background-color: #363e49;}
 ::-webkit-scrollbar-thumb {background-color: #363e49;}
 ::-webkit-scrollbar-thumb:hover {background-color: #49525f;}

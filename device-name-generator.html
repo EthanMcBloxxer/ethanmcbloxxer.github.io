@@ -1,0 +1,63 @@
+---
+layout: default
+class: center
+title: Device Name Generator
+description: Generate a device name using the device naming guidelines.
+---
+
+<main>
+	<div>
+		<h1 id="title" onclick="if (this.textContent != 'Device Name Generator<sub>(requires JavaScript on)</sub>') {navigator.clipboard.writeText(this.textContent);};"><label for="generator">Device Name Generator</label><noscript><sub>(requires JavaScript on)</sub></noscript></h1>
+		<p id="generator">
+            <select name="generator" id="generator" onchange="if (this.selectedIndex) {document.getElementById('title').innerHTML = this.options[this.selectedIndex].value + '<small style=font-size:50%;>-name</small>';};">
+                <optgroup label="Desktop">
+                    <option value="PCwin">Windows</option>
+                    <option value="PCmac">MacOS</option>
+                    <option value="PClnx">Linux</option>
+                    <option value="PCubn">Linux (Ubuntu)</option>
+                    <option value="PClmt">Linux (Mint)</option>
+                    <option value="PCdeb">Linux (Debian)</option>
+                    <option value="PCach">Linux (Arch)</option>
+                    <option value="PCcrb">Chromebook</option>
+                    <option value="PCbsd">*BSD</option>
+                </optgroup>
+                <optgroup label="Laptop">
+                    <option value="PCwin">Windows</option>
+                    <option value="PCmac">MacOS</option>
+                    <option value="PClnx">Linux</option>
+                    <option value="PCubn">Linux (Ubuntu)</option>
+                    <option value="PClmt">Linux (Mint)</option>
+                    <option value="PCdeb">Linux (Debian)</option>
+                    <option value="PCach">Linux (Arch)</option>
+                    <option value="PCcrb">Chromebook</option>
+                    <option value="PCbsd">*BSD</option>
+                </optgroup>
+                <optgroup label="Tablet">
+                    <option value="MPand">Android</option>
+                    <option value="MPios">iOS</option>
+                </optgroup>
+                <optgroup label="Phone">
+                    <option value="MPand">Android</option>
+                    <option value="MPios">iOS</option>
+                </optgroup>
+                <optgroup label="Console">
+                    <option value="CNxbx">Xbox</option>
+                    <option value="CNpst">Playstation</option>
+                </optgroup>
+                <optgroup label="Television">
+                    <option value="TVkdi">KODI</option>
+                    <option value="TVcrc">Chromecast</option>
+                </optgroup>
+                <optgroup label="Server">
+                    <option value="SVwin">Windows</option>
+                    <option value="SVmac">MacOS</option>
+                    <option value="SVlnx">Linux</option>
+                    <option value="SVtcc">Linux (TinyCore Core)</option>
+                    <option value="SVbsd">*BSD</option>
+                    <option value="SVsol">Solaris</option>
+                </optgroup>
+                <option value="pt">Printer</option>
+            </select>
+        </p>
+	</div>
+</main>

@@ -3,7 +3,7 @@ title: Device Naming Guidelines
 subtitle: The guidelines in which I name my devices
 ---
 
-TPos(ver)-Name.
+[TPos(ver)-Name.](/device-name-generator/)
 
 PCwin-EthanMB would be a Windows (latest) named "EthanMB".
 
