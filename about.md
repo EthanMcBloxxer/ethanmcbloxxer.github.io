@@ -33,7 +33,7 @@ Favorite Animal
 First Username
 : cekc3 (then `ilove_superdogs`)
 
-First Computer
+First Computer (kind of)
 : A [Panasonic Toughbook](https://www.bhphotovideo.com/images/images2500x2500/panasonic_toughbook_19_cf_19ze001dm_10_1_1284619.jpg)
 
 Vaccinations
@@ -83,15 +83,17 @@ Bam. It's called RoForums now.
 
 I continued to do what I know, and kept putting off learning C++ until April 2021, where I began to learn C++ off of [w3schools](https://www.w3schools.com/cpp/).
 
+A little bit later and I became very interested in Macs and their software, but Xcode is proprietary...
+
 ## Gaming
 
-I started gaming very young. And got pretty addicted.
+I started gaming quite young. And got pretty addicted.
 
-I would often play *just* [Minecraft](https://minecraft.net/) for hours, and only played peaceful. I resided in a village, and gave myself a bed with cheating. That's all I did for the longest time (that I can remember). I did also play SkyWars on [The Hive](https://www.hivemc.com/), when it was still cool. I was terrible at it. I didn't win, once.
+I would often play *just* [Minecraft](https://minecraft.net/) for hours, and only played peaceful. I resided in a village, and gave myself a bed with cheating. That's all I did for the longest time (that I can remember). I did also play SkyWars. I was terrible at it. I didn't win, once.
 
-I also had a neighboring friend who showed me [Roblox](https://roblox.com/) while playing [Jailbreak](https://web.roblox.com/games/606849621/). I decided to make an account on it called `ilove_superdogs`, with a terrible password. I was told I should've set my username as my password, and my password as my username. I now agree.
+I also had a neighboring friend who showed me [Roblox](https://roblox.com/). I decided to make an account on it called `ilove_superdogs`, with a terrible password. I was told I should've set my username as my password, and my password as my username. I now agree.
 
-Anyways, I changed my username **much** later under the influence of ReeseMcBlox and the "Bloxxer" badge and t-shirt.
+I changed my username **much** later under the influence of ReeseMcBlox and the "Bloxxer" badge and t-shirt.
 
 Additionally to my Roblox-playing, I also played console games, like Plants vs Zombies.
 
@@ -106,6 +108,8 @@ Much later, after going back to Roblox and (now modded) Minecraft and [SkyFactor
 Because of my exploiting with Roblox, I had a contact that gave me a pirated version of the game when the source was leaked. I played it a little bit, and didn't really understand the craze. I now have a legitimate copy, as Epic Games gave it away for free.
 
 I was also later introduced to [Rocket League](https://www.rocketleague.com/) by my stepsister. I got it from Epic Games, as this was about the time Season 2.1 was in full effect. I started to play it all the time, and got okay skills. I'm still a Platinum 1 in 1v1s, but have a Diamond 3's MMR in casual. I guess it was my teammates all along.
+
+Quite a while later during my great GNULinux migration, I did some configuration on WINE and [Lutris](https://lutris.net/). I more or less hack the games to work here now.
 
 ## Photoshop
 
