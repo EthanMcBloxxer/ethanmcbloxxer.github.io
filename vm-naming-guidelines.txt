@@ -1,0 +1,9 @@
+OS_Name(?Major_Version)?-latest|rel|beta|alpha|'Minor_Version'
+
+Examples:
+- msDOS6
+- Windows-latest
+- Mac16-19F101
+- Arch-20210601
+- SteamOS-beta
+- Tails4-19
