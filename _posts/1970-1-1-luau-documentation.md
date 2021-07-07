@@ -452,7 +452,7 @@ end
 
 There are 3 different loop types to choose from. Two of them are very similar, and one is a conventional thing you'd think of as a loop.
 
-You can also use `do`{:.language-lua} and `end`{:.language-lua} without a loop to [alter the variable scope](https://stackoverflow.com/questions/23895406/why-use-a-do-end-block-in-lua).
+You can also use `do`{:.language-lua} and `end`{:.language-lua} without a loop to [alter the variable scope](https://stackoverflow.com/questions/23895406/why-use-a-do-end-block-in-lua) as an empty block.
 
 ### `for`
 
@@ -473,7 +473,7 @@ for i = 1, 10, 1 do
 end
 ```
 
-For those who don't know, the first thing we're doing is assigning the locally scoped <var>i</var> to 1, which is where the loop starts at. The second parameter is the maximum (ending) value, where the loop should stop. The final value is the *step* value, which is how much <var>i</var> is automatically incremented by. This is automatically `1` when not specified.
+For those who don't know, the first thing we're doing is assigning the locally scoped <var>i</var> to 1, which is where the loop starts at. The second parameter is the maximum (ending) value, where the loop should stop. The final value is the *step* value, which is how much <var>i</var> is incremented by. This is set to `1` when not specified.
 
 You may also count down with this loop, just make <var>i</var> larger than the maximum value, and specify a negative step.
 
@@ -505,7 +505,7 @@ for i = 1, 10, 1 do
 end
 ```
 
-This can be used in every loop type.
+These keywords can be used in every loop type.
 
 For loops also allow [iterator functions](https://devforum.roblox.com/t/all-you-need-to-know-about-iterator-functions/572366) to pass variables to them:
 
@@ -515,7 +515,7 @@ for ... in x do
 end
 ```
 
-Where `...` are the arguments that function <var>x</var> has passed to the loop. <var>x</var> is not the iterator function, but the function that returns the iterator function. <var>x</var> could look like this:
+Where `...` are the arguments that function <var>x</var> has passed to the loop. <var>x</var> is not the iterator function, but the function that returns the iterator function (a "factory"). <var>x</var> could look like this:
 
 ```lua
 local function x(t)
@@ -534,7 +534,7 @@ and with it, you could make a loop to go through all of the values in a table:
 for value in x({"item", "meti", 528}) do
 	print(value) --[[> "item"
 	                   "meti"
-			   528 <]]--
+	                   528 <]]--
 end
 ```
 
@@ -550,9 +550,9 @@ end
 
 `ipairs`{:.language-lua} is a function that returns both the current index and value of the table to the loop.
 
-`pairs`{:.language-lua} has similar behavior, but it is used on dictionaries to return the current key and value to the loop. It can be used in place of `ipairs`{:.language-lua}, but `ipairs`{:.language-lua} cannot be used in place of this.
+`pairs`{:.language-lua} has similar behavior, but it is used on dictionaries to return the current key and value to the loop. It can be used in place of `ipairs`{:.language-lua}, but not the other way around.
 
-When using `ipairs`{:.language-lua} or `pairs`{:.language-lua}, it is common practice to abbreviate "index" to `i`, "key" to `k`, and "value" to `v`:
+When using `ipairs`{:.language-lua} or `pairs`{:.language-lua}, it is common practice to abbreviate "index" to <var>i</var>, "key" to <var>k</var>, and "value" to <var>v</var>:
 
 ```lua
 local variable = {}
@@ -698,7 +698,7 @@ return Exports
 
 and some even utilize Metatables or Methods.
 
-Another thing to note is that code inside of the ModuleScript will be ran. Functions inside of them don't run automatically (as functions don't run without being called), so you can make code inside of the ModuleScript run on calling:
+Another thing to note is that code inside of the ModuleScript will be ran. Functions inside of them don't run automatically (as functions don't run without being called), so you can make code inside of the ModuleScript run on calling, but only once:
 
 ```lua
 print("Ran ModuleScript")
@@ -709,7 +709,8 @@ return true
 which would do the following in a Script:
 
 ```lua
-local bool = require(ModuleScript) --> "Ran ModuleScript"
+require(ModuleScript) --> "Ran ModuleScript"
+local bool = require(ModuleScript) -- this outputs nothing
 print(tostring(bool)) --> "true"
 ```
 
