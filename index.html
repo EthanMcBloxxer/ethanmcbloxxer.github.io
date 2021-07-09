@@ -19,7 +19,6 @@ authors:
 	</p>
 	{% endfor %}
 </footer>
-<script id="analytics" src="/track.js" defer></script>
 <script async>
 	const motds = [{% for motd in site.motds %}"{{ motd }}",{% endfor %}];
 	document.getElementById("motd").innerHTML = motds[Math.floor(Math.random() * motds.length)];
