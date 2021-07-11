@@ -41,3 +41,7 @@ restarted Windows multiple times,
 ran `os-prober`,
 
 and finally, Zorin is on my bigger NVMe and Windows is on my SSD. Yeah, then I decided to use VirtualBox to boot to a logical drive (my SSD), so I never have to touch GRUB again. I now have two Windows virtual machines, one logical, one virtual and ameliorated. This is complicated.
+
+Later, I ended up pressing <kbd>Control</kbd> + <kbd>Meta</kbd> + <kbd>F2</kbd> and getting into a terminal interface. I thought I uninstalled both X and GNOME somehow, so this entire process half repeated itself. Had to reinstall everything, and later figured out what I did and how I get back.
+
+Fair warning, please don't do that. To get out of the terminal, just press <kbd>Control</kbd> + <kbd>Meta</kbd> + <kbd>F1</kbd>. Nice to know I can just *move to a terminal interface* though.
